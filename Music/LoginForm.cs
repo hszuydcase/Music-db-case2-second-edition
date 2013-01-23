@@ -37,10 +37,6 @@ namespace Music
                 MessageBox.Show("Welkom terug " + inputUsername.Text + "");
                 
                  this.Close();
-                 
-
-                 
-                 
              }
          }
          catch (Exception)
