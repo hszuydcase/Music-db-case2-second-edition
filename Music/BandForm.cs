@@ -27,5 +27,37 @@ namespace Music
                 tbbandimage.Text = openFileDialog1.FileName;
             }
         }
+
+        private void bt_annuleren_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void bt_add_Click(object sender, EventArgs e)
+        {
+                        try
+            {
+                SQLService sqlService = new SQLService();
+                if (
+                    sqlService.Bestaat("SELECT band_naam FROM band WHERE band_naam = '" + tbbandnaam.Text +"' ") == true)
+                {
+                    throw new ExistsException("band");
+                }
+                sqlService.Insert(
+    "INSERT INTO artiest(band_naam,band_opgericht_datum,band_stop_datum,band_biografie,band_oorsprong) VALUES ('" + tbbandnaam.Text + "','" + tbbandopgericht.Text + "','" + tbbandgestopt.Text + "','" + tbbandbiografie.Text + "','" + tbbandoorsprong.Text + "')");
+            }
+            catch (ExistsException obj)
+            {
+                MessageBox.Show(obj.Message + " is al reeds in gebruik", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+            }
+            catch (FormatException obj)
+            {
+                MessageBox.Show(obj.Message);
+            }
+            catch (Exception obj)
+            {
+                MessageBox.Show(obj.Message);
+            }
+         }
     }
 }

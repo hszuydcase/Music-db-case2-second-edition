@@ -64,6 +64,7 @@
             this.bt_annuleren.TabIndex = 1;
             this.bt_annuleren.Text = "Annuleren";
             this.bt_annuleren.UseVisualStyleBackColor = true;
+            this.bt_annuleren.Click += new System.EventHandler(this.bt_annuleren_Click);
             // 
             // tbartiestennaam
             // 

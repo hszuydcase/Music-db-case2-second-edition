@@ -34,12 +34,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.tbbandbiografie = new System.Windows.Forms.RichTextBox();
+            this.tbbandoorsprong = new System.Windows.Forms.TextBox();
             this.tbbandimage = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbbandgestopt = new System.Windows.Forms.TextBox();
+            this.tbbandopgericht = new System.Windows.Forms.TextBox();
+            this.tbbandnaam = new System.Windows.Forms.TextBox();
             this.bt_annuleren = new System.Windows.Forms.Button();
             this.bt_add = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
@@ -100,20 +100,20 @@
             this.label1.TabIndex = 25;
             this.label1.Text = "Biografie";
             // 
-            // richTextBox1
+            // tbbandbiografie
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(305, 39);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(250, 204);
-            this.richTextBox1.TabIndex = 24;
-            this.richTextBox1.Text = "";
+            this.tbbandbiografie.Location = new System.Drawing.Point(305, 39);
+            this.tbbandbiografie.Name = "tbbandbiografie";
+            this.tbbandbiografie.Size = new System.Drawing.Size(250, 204);
+            this.tbbandbiografie.TabIndex = 24;
+            this.tbbandbiografie.Text = "";
             // 
-            // textBox5
+            // tbbandoorsprong
             // 
-            this.textBox5.Location = new System.Drawing.Point(103, 219);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(147, 20);
-            this.textBox5.TabIndex = 22;
+            this.tbbandoorsprong.Location = new System.Drawing.Point(103, 219);
+            this.tbbandoorsprong.Name = "tbbandoorsprong";
+            this.tbbandoorsprong.Size = new System.Drawing.Size(147, 20);
+            this.tbbandoorsprong.TabIndex = 22;
             // 
             // tbbandimage
             // 
@@ -122,28 +122,28 @@
             this.tbbandimage.Size = new System.Drawing.Size(147, 20);
             this.tbbandimage.TabIndex = 21;
             // 
-            // textBox3
+            // tbbandgestopt
             // 
-            this.textBox3.Location = new System.Drawing.Point(103, 127);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(147, 20);
-            this.textBox3.TabIndex = 20;
-            this.textBox3.Text = "YYYY/MM/DD";
+            this.tbbandgestopt.Location = new System.Drawing.Point(103, 127);
+            this.tbbandgestopt.Name = "tbbandgestopt";
+            this.tbbandgestopt.Size = new System.Drawing.Size(147, 20);
+            this.tbbandgestopt.TabIndex = 20;
+            this.tbbandgestopt.Text = "YYYY/MM/DD";
             // 
-            // textBox2
+            // tbbandopgericht
             // 
-            this.textBox2.Location = new System.Drawing.Point(103, 81);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(147, 20);
-            this.textBox2.TabIndex = 19;
-            this.textBox2.Text = "YYYY/MM/DD";
+            this.tbbandopgericht.Location = new System.Drawing.Point(103, 81);
+            this.tbbandopgericht.Name = "tbbandopgericht";
+            this.tbbandopgericht.Size = new System.Drawing.Size(147, 20);
+            this.tbbandopgericht.TabIndex = 19;
+            this.tbbandopgericht.Text = "YYYY/MM/DD";
             // 
-            // textBox1
+            // tbbandnaam
             // 
-            this.textBox1.Location = new System.Drawing.Point(103, 39);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(147, 20);
-            this.textBox1.TabIndex = 18;
+            this.tbbandnaam.Location = new System.Drawing.Point(103, 39);
+            this.tbbandnaam.Name = "tbbandnaam";
+            this.tbbandnaam.Size = new System.Drawing.Size(147, 20);
+            this.tbbandnaam.TabIndex = 18;
             // 
             // bt_annuleren
             // 
@@ -153,6 +153,7 @@
             this.bt_annuleren.TabIndex = 17;
             this.bt_annuleren.Text = "Annuleren";
             this.bt_annuleren.UseVisualStyleBackColor = true;
+            this.bt_annuleren.Click += new System.EventHandler(this.bt_annuleren_Click);
             // 
             // bt_add
             // 
@@ -162,6 +163,7 @@
             this.bt_add.TabIndex = 16;
             this.bt_add.Text = "Add";
             this.bt_add.UseVisualStyleBackColor = true;
+            this.bt_add.Click += new System.EventHandler(this.bt_add_Click);
             // 
             // openFileDialog1
             // 
@@ -189,12 +191,12 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.tbbandbiografie);
+            this.Controls.Add(this.tbbandoorsprong);
             this.Controls.Add(this.tbbandimage);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbbandgestopt);
+            this.Controls.Add(this.tbbandopgericht);
+            this.Controls.Add(this.tbbandnaam);
             this.Controls.Add(this.bt_annuleren);
             this.Controls.Add(this.bt_add);
             this.Name = "BandForm";
@@ -212,12 +214,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.RichTextBox tbbandbiografie;
+        private System.Windows.Forms.TextBox tbbandoorsprong;
         private System.Windows.Forms.TextBox tbbandimage;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbbandgestopt;
+        private System.Windows.Forms.TextBox tbbandopgericht;
+        private System.Windows.Forms.TextBox tbbandnaam;
         private System.Windows.Forms.Button bt_annuleren;
         private System.Windows.Forms.Button bt_add;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;

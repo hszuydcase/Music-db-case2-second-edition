@@ -29,8 +29,8 @@ namespace Music
                     throw new ExistsException("artiest");
                 }
                 sqlService.Insert(
-    "INSERT INTO artiest(artiest_naam,voornaam,achternaam,geb_dat,geb_plaats,geb_land,biografie) VALUES ('" +
-    tbartiestennaam.Text + "','" + tbvoornaam.Text + "','" + tbachternaam.Text + "','" + tbgebdat.Text + "','" + tbgebplaats.Text + "','" + tbgebland.Text + "','" + tbbiografie.Text + "')");
+    "INSERT INTO artiest(artiest_naam,voornaam,achternaam,geb_dat,geb_plaats) VALUES ('" +
+    tbartiestennaam.Text + "','" + tbvoornaam.Text + "','" + tbachternaam.Text + "','" + tbgebdat.Text + "','" + tbgebplaats.Text + "')");
             }
             catch (ExistsException obj)
             {
@@ -45,5 +45,10 @@ namespace Music
                 MessageBox.Show(obj.Message);
             }
          }
-      }   
+
+        private void bt_annuleren_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+    }   
 }

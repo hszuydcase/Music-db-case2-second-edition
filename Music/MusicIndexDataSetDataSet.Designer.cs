@@ -1649,10 +1649,6 @@ namespace Music {
             
             private global::System.Data.DataColumn columnartiest_id;
             
-            private global::System.Data.DataColumn columngeb_land;
-            
-            private global::System.Data.DataColumn columnbiografie;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public artiestDataTable() {
@@ -1736,22 +1732,6 @@ namespace Music {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn geb_landColumn {
-                get {
-                    return this.columngeb_land;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn biografieColumn {
-                get {
-                    return this.columnbiografie;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1787,7 +1767,7 @@ namespace Music {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public artiestRow AddartiestRow(string artiest_naam, string voornaam, string achternaam, System.DateTime geb_datum, string geb_plaats, string geb_land, string biografie) {
+            public artiestRow AddartiestRow(string artiest_naam, string voornaam, string achternaam, System.DateTime geb_datum, string geb_plaats) {
                 artiestRow rowartiestRow = ((artiestRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         artiest_naam,
@@ -1795,9 +1775,7 @@ namespace Music {
                         achternaam,
                         geb_datum,
                         geb_plaats,
-                        null,
-                        geb_land,
-                        biografie};
+                        null};
                 rowartiestRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowartiestRow);
                 return rowartiestRow;
@@ -1833,8 +1811,6 @@ namespace Music {
                 this.columngeb_datum = base.Columns["geb_datum"];
                 this.columngeb_plaats = base.Columns["geb_plaats"];
                 this.columnartiest_id = base.Columns["artiest_id"];
-                this.columngeb_land = base.Columns["geb_land"];
-                this.columnbiografie = base.Columns["biografie"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1852,10 +1828,6 @@ namespace Music {
                 base.Columns.Add(this.columngeb_plaats);
                 this.columnartiest_id = new global::System.Data.DataColumn("artiest_id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnartiest_id);
-                this.columngeb_land = new global::System.Data.DataColumn("geb_land", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columngeb_land);
-                this.columnbiografie = new global::System.Data.DataColumn("biografie", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnbiografie);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnartiest_id}, true));
                 this.columnartiest_naam.AllowDBNull = false;
@@ -5599,62 +5571,6 @@ namespace Music {
                     this[this.tableartiest.artiest_idColumn] = value;
                 }
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string geb_land {
-                get {
-                    try {
-                        return ((string)(this[this.tableartiest.geb_landColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'geb_land\' in table \'artiest\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableartiest.geb_landColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string biografie {
-                get {
-                    try {
-                        return ((string)(this[this.tableartiest.biografieColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'biografie\' in table \'artiest\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableartiest.biografieColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Isgeb_landNull() {
-                return this.IsNull(this.tableartiest.geb_landColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setgeb_landNull() {
-                this[this.tableartiest.geb_landColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsbiografieNull() {
-                return this.IsNull(this.tableartiest.biografieColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetbiografieNull() {
-                this[this.tableartiest.biografieColumn] = global::System.Convert.DBNull;
-            }
         }
         
         /// <summary>
@@ -8244,8 +8160,8 @@ namespace Music.MusicIndexDataSetDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlServerCe.SqlCeCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlServerCe.SqlCeCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT [artiest_naam], [voornaam], [achternaam], [geb_datum], [geb_plaats], [arti" +
-                "est_id] FROM [artiest]";
+            this._commandCollection[0].CommandText = "SELECT artiest_naam, voornaam, achternaam, geb_datum, geb_plaats, artiest_id FROM" +
+                " artiest";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
