@@ -35,15 +35,17 @@ namespace Music
 
         private void bt_add_Click(object sender, EventArgs e)
         {
-                        try
+            try
             {
+                DateTime bandopgericht = DateTime.ParseExact(tbbandopgericht.Text, "yyyy-MM-dd", null);
+
                 SQLService sqlService = new SQLService();
                 if (
                     sqlService.Bestaat("SELECT band_naam FROM band WHERE band_naam = '" + tbbandnaam.Text +"' ") == true)
                 {
                     throw new ExistsException("band");
                 }
-                sqlService.Insert("INSERT INTO band (band_naam,band_opgericht_datum,band_stop_datum,band_biografie,band_oorsprong) VALUES ('" + tbbandnaam.Text + "','" + tbbandopgericht.Text + "','" + tbbandgestopt.Text + "','" + tbbandbiografie.Text + "','" + tbbandoorsprong.Text + "')");
+                sqlService.Insert("INSERT INTO band (band_naam,band_opgericht_datum,band_stop_datum,band_biografie,band_oorsprong) VALUES ('" + tbbandnaam.Text + "','" + bandopgericht + "','" + bandopgericht + "','" + tbbandbiografie.Text + "','" + tbbandoorsprong.Text + "')");
             }
             catch (ExistsException obj)
             {
@@ -58,5 +60,12 @@ namespace Music
                 MessageBox.Show(obj.Message);
             }
          }
+
+        private void BandForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'musicIndexDataSetDataSet.Band' table. You can move, or remove it, as needed.
+            this.bandTableAdapter.Fill(this.musicIndexDataSetDataSet.Band);
+
+        }
     }
 }
