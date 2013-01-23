@@ -19,7 +19,31 @@ namespace Music
 
         private void bt_add_Click(object sender, EventArgs e)
         {
-
-        }
-    }
+            try
+            {
+                SQLService sqlService = new SQLService();
+                if (
+                    sqlService.Bestaat("SELECT artiest_naam FROM artiest WHERE artiest_naam = '" + tbartiestennaam.Text +
+                                       "' ") == true)
+                {
+                    throw new ExistsException("artiest");
+                }
+                sqlService.Insert(
+    "INSERT INTO artiest(artiest_naam,voornaam,achternaam,geb_dat,geb_plaats,geb_land,biografie) VALUES ('" +
+    tbartiestennaam.Text + "','" + tbvoornaam.Text + "','" + tbachternaam.Text + "','" + tbgebdat.Text + "','" + tbgebplaats.Text + "','" + tbgebland.Text + "','" + tbbiografie.Text + "')");
+            }
+            catch (ExistsException obj)
+            {
+                MessageBox.Show(obj.Message + " is al reeds in gebruik", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+            }
+            catch (FormatException obj)
+            {
+                MessageBox.Show(obj.Message);
+            }
+            catch (Exception obj)
+            {
+                MessageBox.Show(obj.Message);
+            }
+         }
+      }   
 }

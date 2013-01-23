@@ -78,17 +78,11 @@
     <Compile Include="CategorieForm.Designer.cs">
       <DependentUpon>CategorieForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ExistsException.cs" />
-    <Compile Include="ForgottenInfoException.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MusicIndexDataSetDataSet.cs">
-      <DependentUpon>MusicIndexDataSetDataSet.xsd</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="MusicIndexDataSetDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -140,8 +134,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <EmbeddedResource Include="TrackForm.resx">
       <DependentUpon>TrackForm.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="RegistreerForm.resx">
+      <DependentUpon>RegistreerForm.cs</DependentUpon>
+>>>>>>> 65b994418af0e5595b3c23fae3378943e8be1a70
     </EmbeddedResource>
     <None Include="MusicIndexDataSetDataSet.xsc">
       <DependentUpon>MusicIndexDataSetDataSet.xsd</DependentUpon>

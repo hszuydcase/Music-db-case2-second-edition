@@ -16,7 +16,11 @@ namespace Music
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ArtiestForm());
+<<<<<<< HEAD
+            Application.Run(new CategorieForm());
+=======
+            Application.Run(new NavigatieForm());
+>>>>>>> 65b994418af0e5595b3c23fae3378943e8be1a70
         }
     }
 }

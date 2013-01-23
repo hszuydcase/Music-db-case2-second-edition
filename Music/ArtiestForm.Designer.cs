@@ -30,13 +30,13 @@
         {
             this.bt_add = new System.Windows.Forms.Button();
             this.bt_annuleren = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.tbartiestennaam = new System.Windows.Forms.TextBox();
+            this.tbvoornaam = new System.Windows.Forms.TextBox();
+            this.tbachternaam = new System.Windows.Forms.TextBox();
+            this.tbgebdat = new System.Windows.Forms.TextBox();
+            this.tbgebplaats = new System.Windows.Forms.TextBox();
+            this.tbgebland = new System.Windows.Forms.TextBox();
+            this.tbbiografie = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -65,56 +65,56 @@
             this.bt_annuleren.Text = "Annuleren";
             this.bt_annuleren.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // tbartiestennaam
             // 
-            this.textBox1.Location = new System.Drawing.Point(112, 30);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(147, 20);
-            this.textBox1.TabIndex = 2;
+            this.tbartiestennaam.Location = new System.Drawing.Point(112, 30);
+            this.tbartiestennaam.Name = "tbartiestennaam";
+            this.tbartiestennaam.Size = new System.Drawing.Size(147, 20);
+            this.tbartiestennaam.TabIndex = 2;
             // 
-            // textBox2
+            // tbvoornaam
             // 
-            this.textBox2.Location = new System.Drawing.Point(112, 72);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(147, 20);
-            this.textBox2.TabIndex = 3;
+            this.tbvoornaam.Location = new System.Drawing.Point(112, 72);
+            this.tbvoornaam.Name = "tbvoornaam";
+            this.tbvoornaam.Size = new System.Drawing.Size(147, 20);
+            this.tbvoornaam.TabIndex = 3;
             // 
-            // textBox3
+            // tbachternaam
             // 
-            this.textBox3.Location = new System.Drawing.Point(112, 118);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(147, 20);
-            this.textBox3.TabIndex = 4;
+            this.tbachternaam.Location = new System.Drawing.Point(112, 118);
+            this.tbachternaam.Name = "tbachternaam";
+            this.tbachternaam.Size = new System.Drawing.Size(147, 20);
+            this.tbachternaam.TabIndex = 4;
             // 
-            // textBox4
+            // tbgebdat
             // 
-            this.textBox4.Location = new System.Drawing.Point(112, 164);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(147, 20);
-            this.textBox4.TabIndex = 5;
-            this.textBox4.Text = "YYYY/MM/DD";
+            this.tbgebdat.Location = new System.Drawing.Point(112, 164);
+            this.tbgebdat.Name = "tbgebdat";
+            this.tbgebdat.Size = new System.Drawing.Size(147, 20);
+            this.tbgebdat.TabIndex = 5;
+            this.tbgebdat.Text = "YYYY/MM/DD";
             // 
-            // textBox5
+            // tbgebplaats
             // 
-            this.textBox5.Location = new System.Drawing.Point(112, 210);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(147, 20);
-            this.textBox5.TabIndex = 6;
+            this.tbgebplaats.Location = new System.Drawing.Point(112, 210);
+            this.tbgebplaats.Name = "tbgebplaats";
+            this.tbgebplaats.Size = new System.Drawing.Size(147, 20);
+            this.tbgebplaats.TabIndex = 6;
             // 
-            // textBox6
+            // tbgebland
             // 
-            this.textBox6.Location = new System.Drawing.Point(112, 256);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(147, 20);
-            this.textBox6.TabIndex = 7;
+            this.tbgebland.Location = new System.Drawing.Point(112, 256);
+            this.tbgebland.Name = "tbgebland";
+            this.tbgebland.Size = new System.Drawing.Size(147, 20);
+            this.tbgebland.TabIndex = 7;
             // 
-            // richTextBox1
+            // tbbiografie
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(287, 76);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(250, 204);
-            this.richTextBox1.TabIndex = 8;
-            this.richTextBox1.Text = "";
+            this.tbbiografie.Location = new System.Drawing.Point(287, 76);
+            this.tbbiografie.Name = "tbbiografie";
+            this.tbbiografie.Size = new System.Drawing.Size(250, 204);
+            this.tbbiografie.TabIndex = 8;
+            this.tbbiografie.Text = "";
             // 
             // label1
             // 
@@ -191,13 +191,13 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbbiografie);
+            this.Controls.Add(this.tbgebland);
+            this.Controls.Add(this.tbgebplaats);
+            this.Controls.Add(this.tbgebdat);
+            this.Controls.Add(this.tbachternaam);
+            this.Controls.Add(this.tbvoornaam);
+            this.Controls.Add(this.tbartiestennaam);
             this.Controls.Add(this.bt_annuleren);
             this.Controls.Add(this.bt_add);
             this.Name = "ArtiestForm";
@@ -211,13 +211,13 @@
 
         private System.Windows.Forms.Button bt_add;
         private System.Windows.Forms.Button bt_annuleren;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.TextBox tbartiestennaam;
+        private System.Windows.Forms.TextBox tbvoornaam;
+        private System.Windows.Forms.TextBox tbachternaam;
+        private System.Windows.Forms.TextBox tbgebdat;
+        private System.Windows.Forms.TextBox tbgebplaats;
+        private System.Windows.Forms.TextBox tbgebland;
+        private System.Windows.Forms.RichTextBox tbbiografie;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
