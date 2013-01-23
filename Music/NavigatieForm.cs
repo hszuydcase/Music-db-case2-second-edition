@@ -15,12 +15,15 @@ namespace Music
         public NavigatieForm()
         {
             InitializeComponent();
+            LoginForm form = new LoginForm();
+            form.ShowDialog();
+            this.WindowState = FormWindowState.Maximized;
+            
         }
 
         private void NavigatieForm_Load(object sender, EventArgs e)
         {
-            LoginForm form = new LoginForm();
-            form.ShowDialog();
+            
             
         }
     }
