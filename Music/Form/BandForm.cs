@@ -43,7 +43,7 @@ namespace Music
                 {
                     throw new ExistsException("band");
                 }
-                sqlService.Insert("INSERT INTO band (band_naam,band_opgericht_datum,band_stop_datum,band_biografie,band_oorsprong) VALUES ('" + tbbandnaam.Text + "','" + tbbandopgericht.Text + "','" + tbbandgestopt.Text + "','" + tbbandbiografie.Text + "','" + tbbandoorsprong.Text + "')");
+                sqlService.Insert("INSERT INTO artiest(band_naam,band_opgericht_datum,band_stop_datum,band_biografie,band_oorsprong) VALUES ('" + tbbandnaam.Text + "','" + tbbandopgericht.Text + "','" + tbbandgestopt.Text + "','" + tbbandbiografie.Text + "','" + tbbandoorsprong.Text + "')");
             }
             catch (ExistsException obj)
             {
