@@ -37,7 +37,7 @@ namespace Music
         {
             try
             {
-                DateTime bandopgericht = DateTime.ParseExact(tbbandopgericht.Text, "yyyy-MM-dd", null);
+                DateTime bandopgericht = DateTime.ParseExact(tbbandopgericht.Text, "dd/MM/yyyy", null);
 
                 SQLService sqlService = new SQLService();
                 if (

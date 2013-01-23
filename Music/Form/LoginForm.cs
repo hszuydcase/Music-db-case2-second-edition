@@ -29,7 +29,7 @@ namespace Music
 
              if (bestaat == false)
              {
-                 MessageBox.Show("Bestaat niet");
+                 MessageBox.Show("Gegevens zijn niet bekend.");
              }
              else
              {
