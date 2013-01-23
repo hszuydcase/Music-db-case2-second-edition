@@ -54,6 +54,7 @@
             this.bt_add.TabIndex = 0;
             this.bt_add.Text = "Add";
             this.bt_add.UseVisualStyleBackColor = true;
+            this.bt_add.Click += new System.EventHandler(this.bt_add_Click);
             // 
             // bt_annuleren
             // 
@@ -178,7 +179,7 @@
             this.label7.TabIndex = 15;
             this.label7.Text = "Geboorteland";
             // 
-            // Artiest
+            // ArtiestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -199,7 +200,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.bt_annuleren);
             this.Controls.Add(this.bt_add);
-            this.Name = "Artiest";
+            this.Name = "ArtiestForm";
             this.Text = "Artiest";
             this.ResumeLayout(false);
             this.PerformLayout();

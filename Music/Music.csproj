@@ -98,6 +98,15 @@
     <Compile Include="TrackForm.Designer.cs">
       <DependentUpon>TrackForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ArtiestForm.resx">
+      <DependentUpon>ArtiestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BandForm.resx">
+      <DependentUpon>BandForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CategorieForm.resx">
+      <DependentUpon>CategorieForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -110,6 +119,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TrackForm.resx">
+      <DependentUpon>TrackForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="MusicIndexDataSetDataSet.xsc">
       <DependentUpon>MusicIndexDataSetDataSet.xsd</DependentUpon>
     </None>

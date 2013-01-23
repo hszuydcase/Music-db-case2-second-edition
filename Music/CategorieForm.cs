@@ -16,5 +16,11 @@ namespace Music
         {
             InitializeComponent();
         }
+
+        private void bt_Add_Click(object sender, EventArgs e)
+        {
+            SQLService sqlService = new SQLService();
+            sqlService.Insert("INSERT INTO categorie (cat_naam) VALUES ('" + tbcategorie.Text + "')");
+        }
     }
 }
