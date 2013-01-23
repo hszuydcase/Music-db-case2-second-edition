@@ -42,17 +42,19 @@ namespace Music
 
         }
 
-        private void btRegistreer_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                SQLService sqlService = new SQLService();
-                sqlService.Insert("INSERT INTO gebruiker (username,password,user_voornaam,user_achternaam,email,admin_level) VALUES ('Josh', 'Josh','Josh','Josh','Josh',1) ");
-            }
-            catch (Exception obj)
-            {
+                private void btRegistreer_Click(object sender, EventArgs e)
+                {
+                    try
+                    {
+                        SQLService sqlService = new SQLService();
+                        sqlService.Insert(
+                            "INSERT INTO gebruiker (username,password,user_voornaam,user_achternaam,email,admin_level) VALUES ('Josh', 'Josh','Josh','Josh','Josh',1) ");
+                    }
+                    catch (Exception obj)
+                    {
 
-                MessageBox.Show(obj.Message);
-            }
+                        MessageBox.Show(obj.Message);
+                    }
+                }
     }
 }

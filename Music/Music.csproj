@@ -60,6 +60,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArtiestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ArtiestForm.Designer.cs">
+      <DependentUpon>ArtiestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BandForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BandForm.Designer.cs">
+      <DependentUpon>BandForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CategorieForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CategorieForm.Designer.cs">
+      <DependentUpon>CategorieForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +92,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQLService.cs" />
+    <Compile Include="TrackForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrackForm.Designer.cs">
+      <DependentUpon>TrackForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
