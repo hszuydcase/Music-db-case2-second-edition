@@ -38,6 +38,7 @@ namespace Music
             try
             {
                 DateTime bandopgericht = DateTime.ParseExact(tbbandopgericht.Text, "dd/MM/yyyy", null);
+                DateTime bandgestopt = DateTime.ParseExact(tbbandgestopt.Text, "dd/MM/yyyy", null);
 
                 SQLService sqlService = new SQLService();
                 if (
@@ -45,7 +46,7 @@ namespace Music
                 {
                     throw new ExistsException("band");
                 }
-                sqlService.Insert("INSERT INTO band (band_naam,band_opgericht_datum,band_stop_datum,band_biografie,band_oorsprong) VALUES ('" + tbbandnaam.Text + "','" + bandopgericht + "','" + bandopgericht + "','" + tbbandbiografie.Text + "','" + tbbandoorsprong.Text + "')");
+                sqlService.Insert("INSERT INTO band (band_naam,band_opgericht_datum,band_stop_datum,band_biografie,band_oorsprong) VALUES ('" + tbbandnaam.Text + "','" + bandopgericht + "','" + bandgestopt + "','" + tbbandbiografie.Text + "','" + tbbandoorsprong.Text + "')");
             }
             catch (ExistsException obj)
             {
@@ -63,8 +64,7 @@ namespace Music
 
         private void BandForm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'musicIndexDataSetDataSet.Band' table. You can move, or remove it, as needed.
-            this.bandTableAdapter.Fill(this.musicIndexDataSetDataSet.Band);
+        
 
         }
     }
