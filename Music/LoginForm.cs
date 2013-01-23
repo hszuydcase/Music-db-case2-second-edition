@@ -17,44 +17,44 @@ namespace Music
             InitializeComponent();
         }
 
-                private void btLogin_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                SQLService sqlService = new SQLService();
-                bool bestaat = sqlService.Bestaat("SELECT * FROM gebruiker WHERE username = '" + inputUsername.Text + "' AND password = '" + inputPassword.Text + "' ");
+ 
 
-                if (bestaat == false)
-                {
-                    MessageBox.Show("Bestaat niet");
-                }
-                else
-                {
-                    MessageBox.Show("Bestaat");
-                }
-            }
-            catch (Exception)
-            {
+
+     private void btLogin_Click_1(object sender, EventArgs e)
+     {
+         try
+         {
+             SQLService sqlService = new SQLService();
+             bool bestaat = sqlService.Bestaat("SELECT * FROM gebruiker WHERE username = '" + inputUsername.Text + "' AND password = '" + inputPassword.Text + "' ");
+
+             if (bestaat == false)
+             {
+                 MessageBox.Show("Bestaat niet");
+             }
+             else
+             {
+                 
+                MessageBox.Show("Welkom terug " + inputUsername.Text + "");
                 
-                throw;
-            }
+                 this.Close();
+                 
 
+                 
+                 
+             }
+         }
+         catch (Exception)
+         {
 
-        }
+             throw;
+         }
+     }
 
-                private void btRegistreer_Click(object sender, EventArgs e)
-                {
-                    try
-                    {
-                        SQLService sqlService = new SQLService();
-                        sqlService.Insert(
-                            "INSERT INTO gebruiker (username,password,user_voornaam,user_achternaam,email,admin_level) VALUES ('Josh', 'Josh','Josh','Josh','Josh',1) ");
-                    }
-                    catch (Exception obj)
-                    {
+      private void btRegistreer_Click(object sender, EventArgs e)
+      {
+          RegistreerForm form = new RegistreerForm();
+          form.ShowDialog();
+      }
 
-                        MessageBox.Show(obj.Message);
-                    }
-                }
     }
 }

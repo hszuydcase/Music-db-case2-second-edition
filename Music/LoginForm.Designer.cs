@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.label1 = new System.Windows.Forms.Label();
             this.btLogin = new System.Windows.Forms.Button();
             this.btRegistreer = new System.Windows.Forms.Button();
@@ -53,6 +54,7 @@
             this.btLogin.TabIndex = 1;
             this.btLogin.Text = "Login";
             this.btLogin.UseVisualStyleBackColor = true;
+            this.btLogin.Click += new System.EventHandler(this.btLogin_Click_1);
             // 
             // btRegistreer
             // 
@@ -62,6 +64,7 @@
             this.btRegistreer.TabIndex = 2;
             this.btRegistreer.Text = "Registreer";
             this.btRegistreer.UseVisualStyleBackColor = true;
+            this.btRegistreer.Click += new System.EventHandler(this.btRegistreer_Click);
             // 
             // inputUsername
             // 
@@ -90,6 +93,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.inputPassword);
@@ -97,8 +104,10 @@
             this.Controls.Add(this.btRegistreer);
             this.Controls.Add(this.btLogin);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginForm";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Login";
             this.ResumeLayout(false);
             this.PerformLayout();
 

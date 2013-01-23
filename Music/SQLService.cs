@@ -67,7 +67,10 @@ namespace Music
                 }
 
             }
-
+            /// <summary>
+            /// Methode om een update SQL statement uit te voeren
+            /// </summary>
+            /// <param name="command">Typ hier het UPDATE commando in</param>
             public void Update(string command)
             {
                 try
@@ -99,9 +102,9 @@ namespace Music
 
             }
             /// <summary>
-            /// 
+            /// Methode om te controleren of EEN variable bestaat of niet, returend een bool
             /// </summary>
-            /// <param name="command"></param>
+            /// <param name="command">SELECT</param>
             public bool Bestaat(string command)
             {
 
