@@ -54,6 +54,42 @@ namespace Music {
         
         private TrackDataTable tableTrack;
         
+        private global::System.Data.DataRelation relationFK_alb_tra_Album;
+        
+        private global::System.Data.DataRelation relationFK_Track_art_tra;
+        
+        private global::System.Data.DataRelation relationFK_band_art_artiest;
+        
+        private global::System.Data.DataRelation relationFK_art_tra_artiest;
+        
+        private global::System.Data.DataRelation relationFK_band_art_Band;
+        
+        private global::System.Data.DataRelation relationband_tra_Band;
+        
+        private global::System.Data.DataRelation relationTrack_band_tra;
+        
+        private global::System.Data.DataRelation relationFK_categorie_cat_tra;
+        
+        private global::System.Data.DataRelation relationFK_Track_cat_tra;
+        
+        private global::System.Data.DataRelation relationFK_geschiedenis_gebruiker;
+        
+        private global::System.Data.DataRelation relationFK_favoriet_gebruiker;
+        
+        private global::System.Data.DataRelation relationFK_Rating_gebruiker;
+        
+        private global::System.Data.DataRelation relationFK_review_gebruiker;
+        
+        private global::System.Data.DataRelation relationFK_alb_tra_Track;
+        
+        private global::System.Data.DataRelation relationFK_geschiedenis_Track;
+        
+        private global::System.Data.DataRelation relationreview_Track;
+        
+        private global::System.Data.DataRelation relationFK_favoriet_Track;
+        
+        private global::System.Data.DataRelation relationFK_Rating_Track;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -530,6 +566,24 @@ namespace Music {
                     this.tableTrack.InitVars();
                 }
             }
+            this.relationFK_alb_tra_Album = this.Relations["FK_alb_tra_Album"];
+            this.relationFK_Track_art_tra = this.Relations["FK_Track_art_tra"];
+            this.relationFK_band_art_artiest = this.Relations["FK_band_art_artiest"];
+            this.relationFK_art_tra_artiest = this.Relations["FK_art_tra_artiest"];
+            this.relationFK_band_art_Band = this.Relations["FK_band_art_Band"];
+            this.relationband_tra_Band = this.Relations["band_tra_Band"];
+            this.relationTrack_band_tra = this.Relations["Track_band_tra"];
+            this.relationFK_categorie_cat_tra = this.Relations["FK_categorie_cat_tra"];
+            this.relationFK_Track_cat_tra = this.Relations["FK_Track_cat_tra"];
+            this.relationFK_geschiedenis_gebruiker = this.Relations["FK_geschiedenis_gebruiker"];
+            this.relationFK_favoriet_gebruiker = this.Relations["FK_favoriet_gebruiker"];
+            this.relationFK_Rating_gebruiker = this.Relations["FK_Rating_gebruiker"];
+            this.relationFK_review_gebruiker = this.Relations["FK_review_gebruiker"];
+            this.relationFK_alb_tra_Track = this.Relations["FK_alb_tra_Track"];
+            this.relationFK_geschiedenis_Track = this.Relations["FK_geschiedenis_Track"];
+            this.relationreview_Track = this.Relations["review_Track"];
+            this.relationFK_favoriet_Track = this.Relations["FK_favoriet_Track"];
+            this.relationFK_Rating_Track = this.Relations["FK_Rating_Track"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -570,6 +624,205 @@ namespace Music {
             base.Tables.Add(this.tablereview);
             this.tableTrack = new TrackDataTable();
             base.Tables.Add(this.tableTrack);
+            global::System.Data.ForeignKeyConstraint fkc;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_alb_tra_Album", new global::System.Data.DataColumn[] {
+                        this.tablealb_tra.album_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableAlbum.album_idColumn});
+            this.tableAlbum.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.Cascade;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_Track_art_tra", new global::System.Data.DataColumn[] {
+                        this.tableTrack.track_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableart_tra.track_idColumn});
+            this.tableart_tra.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.Cascade;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_band_art_artiest", new global::System.Data.DataColumn[] {
+                        this.tableband_art.artiest_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableartiest.artiest_idColumn});
+            this.tableartiest.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.Cascade;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_art_tra_artiest", new global::System.Data.DataColumn[] {
+                        this.tableart_tra.artiest_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableartiest.artiest_idColumn});
+            this.tableartiest.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.Cascade;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_band_art_Band", new global::System.Data.DataColumn[] {
+                        this.tableband_art.band_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableBand.band_idColumn});
+            this.tableBand.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.Cascade;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
+            fkc = new global::System.Data.ForeignKeyConstraint("band_tra_Band", new global::System.Data.DataColumn[] {
+                        this.tableband_tra.band_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableBand.band_idColumn});
+            this.tableBand.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.Cascade;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
+            fkc = new global::System.Data.ForeignKeyConstraint("Track_band_tra", new global::System.Data.DataColumn[] {
+                        this.tableTrack.track_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableband_tra.track_idColumn});
+            this.tableband_tra.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.Cascade;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_categorie_cat_tra", new global::System.Data.DataColumn[] {
+                        this.tablecategorie.cat_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tablecat_tra.cat_idColumn});
+            this.tablecat_tra.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.Cascade;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_Track_cat_tra", new global::System.Data.DataColumn[] {
+                        this.tableTrack.track_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tablecat_tra.cat_idColumn});
+            this.tablecat_tra.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.Cascade;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_geschiedenis_gebruiker", new global::System.Data.DataColumn[] {
+                        this.tablegeschiedenis.user_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tablegebruiker.user_idColumn});
+            this.tablegebruiker.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.Cascade;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_favoriet_gebruiker", new global::System.Data.DataColumn[] {
+                        this.tablefavoriet.user_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tablegebruiker.user_idColumn});
+            this.tablegebruiker.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.Cascade;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_Rating_gebruiker", new global::System.Data.DataColumn[] {
+                        this.tableRating.user_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tablegebruiker.admin_levelColumn});
+            this.tablegebruiker.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.Cascade;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_review_gebruiker", new global::System.Data.DataColumn[] {
+                        this.tablereview.user_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tablegebruiker.user_idColumn});
+            this.tablegebruiker.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.Cascade;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_alb_tra_Track", new global::System.Data.DataColumn[] {
+                        this.tablealb_tra.track_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableTrack.track_idColumn});
+            this.tableTrack.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.Cascade;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_geschiedenis_Track", new global::System.Data.DataColumn[] {
+                        this.tablegeschiedenis.track_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableTrack.track_idColumn});
+            this.tableTrack.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.Cascade;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
+            fkc = new global::System.Data.ForeignKeyConstraint("review_Track", new global::System.Data.DataColumn[] {
+                        this.tablereview.track_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableTrack.track_idColumn});
+            this.tableTrack.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.Cascade;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_favoriet_Track", new global::System.Data.DataColumn[] {
+                        this.tablefavoriet.track_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableTrack.track_idColumn});
+            this.tableTrack.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.Cascade;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_Rating_Track", new global::System.Data.DataColumn[] {
+                        this.tableRating.track_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableTrack.track_idColumn});
+            this.tableTrack.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.Cascade;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
+            this.relationFK_alb_tra_Album = new global::System.Data.DataRelation("FK_alb_tra_Album", new global::System.Data.DataColumn[] {
+                        this.tablealb_tra.album_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableAlbum.album_idColumn}, false);
+            this.Relations.Add(this.relationFK_alb_tra_Album);
+            this.relationFK_Track_art_tra = new global::System.Data.DataRelation("FK_Track_art_tra", new global::System.Data.DataColumn[] {
+                        this.tableTrack.track_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableart_tra.track_idColumn}, false);
+            this.Relations.Add(this.relationFK_Track_art_tra);
+            this.relationFK_band_art_artiest = new global::System.Data.DataRelation("FK_band_art_artiest", new global::System.Data.DataColumn[] {
+                        this.tableband_art.artiest_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableartiest.artiest_idColumn}, false);
+            this.Relations.Add(this.relationFK_band_art_artiest);
+            this.relationFK_art_tra_artiest = new global::System.Data.DataRelation("FK_art_tra_artiest", new global::System.Data.DataColumn[] {
+                        this.tableart_tra.artiest_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableartiest.artiest_idColumn}, false);
+            this.Relations.Add(this.relationFK_art_tra_artiest);
+            this.relationFK_band_art_Band = new global::System.Data.DataRelation("FK_band_art_Band", new global::System.Data.DataColumn[] {
+                        this.tableband_art.band_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableBand.band_idColumn}, false);
+            this.Relations.Add(this.relationFK_band_art_Band);
+            this.relationband_tra_Band = new global::System.Data.DataRelation("band_tra_Band", new global::System.Data.DataColumn[] {
+                        this.tableband_tra.band_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableBand.band_idColumn}, false);
+            this.Relations.Add(this.relationband_tra_Band);
+            this.relationTrack_band_tra = new global::System.Data.DataRelation("Track_band_tra", new global::System.Data.DataColumn[] {
+                        this.tableTrack.track_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableband_tra.track_idColumn}, false);
+            this.Relations.Add(this.relationTrack_band_tra);
+            this.relationFK_categorie_cat_tra = new global::System.Data.DataRelation("FK_categorie_cat_tra", new global::System.Data.DataColumn[] {
+                        this.tablecategorie.cat_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tablecat_tra.cat_idColumn}, false);
+            this.Relations.Add(this.relationFK_categorie_cat_tra);
+            this.relationFK_Track_cat_tra = new global::System.Data.DataRelation("FK_Track_cat_tra", new global::System.Data.DataColumn[] {
+                        this.tableTrack.track_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tablecat_tra.cat_idColumn}, false);
+            this.Relations.Add(this.relationFK_Track_cat_tra);
+            this.relationFK_geschiedenis_gebruiker = new global::System.Data.DataRelation("FK_geschiedenis_gebruiker", new global::System.Data.DataColumn[] {
+                        this.tablegeschiedenis.user_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tablegebruiker.user_idColumn}, false);
+            this.Relations.Add(this.relationFK_geschiedenis_gebruiker);
+            this.relationFK_favoriet_gebruiker = new global::System.Data.DataRelation("FK_favoriet_gebruiker", new global::System.Data.DataColumn[] {
+                        this.tablefavoriet.user_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tablegebruiker.user_idColumn}, false);
+            this.Relations.Add(this.relationFK_favoriet_gebruiker);
+            this.relationFK_Rating_gebruiker = new global::System.Data.DataRelation("FK_Rating_gebruiker", new global::System.Data.DataColumn[] {
+                        this.tableRating.user_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tablegebruiker.admin_levelColumn}, false);
+            this.Relations.Add(this.relationFK_Rating_gebruiker);
+            this.relationFK_review_gebruiker = new global::System.Data.DataRelation("FK_review_gebruiker", new global::System.Data.DataColumn[] {
+                        this.tablereview.user_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tablegebruiker.user_idColumn}, false);
+            this.Relations.Add(this.relationFK_review_gebruiker);
+            this.relationFK_alb_tra_Track = new global::System.Data.DataRelation("FK_alb_tra_Track", new global::System.Data.DataColumn[] {
+                        this.tablealb_tra.track_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableTrack.track_idColumn}, false);
+            this.Relations.Add(this.relationFK_alb_tra_Track);
+            this.relationFK_geschiedenis_Track = new global::System.Data.DataRelation("FK_geschiedenis_Track", new global::System.Data.DataColumn[] {
+                        this.tablegeschiedenis.track_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableTrack.track_idColumn}, false);
+            this.Relations.Add(this.relationFK_geschiedenis_Track);
+            this.relationreview_Track = new global::System.Data.DataRelation("review_Track", new global::System.Data.DataColumn[] {
+                        this.tablereview.track_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableTrack.track_idColumn}, false);
+            this.Relations.Add(this.relationreview_Track);
+            this.relationFK_favoriet_Track = new global::System.Data.DataRelation("FK_favoriet_Track", new global::System.Data.DataColumn[] {
+                        this.tablefavoriet.track_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableTrack.track_idColumn}, false);
+            this.Relations.Add(this.relationFK_favoriet_Track);
+            this.relationFK_Rating_Track = new global::System.Data.DataRelation("FK_Rating_Track", new global::System.Data.DataColumn[] {
+                        this.tableRating.track_idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableTrack.track_idColumn}, false);
+            this.Relations.Add(this.relationFK_Rating_Track);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -908,8 +1161,14 @@ namespace Music {
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnalbum_id,
                                 this.columntrack_id}, true));
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint2", new global::System.Data.DataColumn[] {
+                                this.columntrack_id}, false));
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint3", new global::System.Data.DataColumn[] {
+                                this.columnalbum_id}, false));
                 this.columnalbum_id.AllowDBNull = false;
+                this.columnalbum_id.Unique = true;
                 this.columntrack_id.AllowDBNull = false;
+                this.columntrack_id.Unique = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1453,11 +1712,14 @@ namespace Music {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public art_traRow Addart_traRow(int track_id, int artiest_id) {
+            public art_traRow Addart_traRow(TrackRow parentTrackRowByFK_Track_art_tra, int artiest_id) {
                 art_traRow rowart_traRow = ((art_traRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        track_id,
+                        null,
                         artiest_id};
+                if ((parentTrackRowByFK_Track_art_tra != null)) {
+                    columnValuesArray[0] = parentTrackRowByFK_Track_art_tra[7];
+                }
                 rowart_traRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowart_traRow);
                 return rowart_traRow;
@@ -1502,8 +1764,11 @@ namespace Music {
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columntrack_id,
                                 this.columnartiest_id}, true));
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint2", new global::System.Data.DataColumn[] {
+                                this.columnartiest_id}, false));
                 this.columntrack_id.AllowDBNull = false;
                 this.columnartiest_id.AllowDBNull = false;
+                this.columnartiest_id.Unique = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2452,8 +2717,14 @@ namespace Music {
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnband_id,
                                 this.columnartiest_id}, true));
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint2", new global::System.Data.DataColumn[] {
+                                this.columnband_id}, false));
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint3", new global::System.Data.DataColumn[] {
+                                this.columnartiest_id}, false));
                 this.columnband_id.AllowDBNull = false;
+                this.columnband_id.Unique = true;
                 this.columnartiest_id.AllowDBNull = false;
+                this.columnartiest_id.Unique = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2677,11 +2948,14 @@ namespace Music {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public band_traRow Addband_traRow(int band_id, int track_id) {
+            public band_traRow Addband_traRow(int band_id, TrackRow parentTrackRowByTrack_band_tra) {
                 band_traRow rowband_traRow = ((band_traRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         band_id,
-                        track_id};
+                        null};
+                if ((parentTrackRowByTrack_band_tra != null)) {
+                    columnValuesArray[1] = parentTrackRowByTrack_band_tra[7];
+                }
                 rowband_traRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowband_traRow);
                 return rowband_traRow;
@@ -2726,7 +3000,10 @@ namespace Music {
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnband_id,
                                 this.columntrack_id}, true));
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint2", new global::System.Data.DataColumn[] {
+                                this.columnband_id}, false));
                 this.columnband_id.AllowDBNull = false;
+                this.columnband_id.Unique = true;
                 this.columntrack_id.AllowDBNull = false;
             }
             
@@ -2951,11 +3228,14 @@ namespace Music {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public cat_traRow Addcat_traRow(int cat_id, int track_id) {
+            public cat_traRow Addcat_traRow(categorieRow parentcategorieRowByFK_categorie_cat_tra, int track_id) {
                 cat_traRow rowcat_traRow = ((cat_traRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        cat_id,
+                        null,
                         track_id};
+                if ((parentcategorieRowByFK_categorie_cat_tra != null)) {
+                    columnValuesArray[0] = parentcategorieRowByFK_categorie_cat_tra[1];
+                }
                 rowcat_traRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowcat_traRow);
                 return rowcat_traRow;
@@ -3565,8 +3845,14 @@ namespace Music {
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnuser_id,
                                 this.columntrack_id}, true));
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint2", new global::System.Data.DataColumn[] {
+                                this.columntrack_id}, false));
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint3", new global::System.Data.DataColumn[] {
+                                this.columnuser_id}, false));
                 this.columnuser_id.AllowDBNull = false;
+                this.columnuser_id.Unique = true;
                 this.columntrack_id.AllowDBNull = false;
+                this.columntrack_id.Unique = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3840,7 +4126,7 @@ namespace Music {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public gebruikerRow AddgebruikerRow(string username, string password, string user_voornaam, string user_achternaam, string email, int admin_level) {
+            public gebruikerRow AddgebruikerRow(string username, string password, string user_voornaam, string user_achternaam, string email, RatingRow parentRatingRowByFK_Rating_gebruiker) {
                 gebruikerRow rowgebruikerRow = ((gebruikerRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         username,
@@ -3848,8 +4134,11 @@ namespace Music {
                         user_voornaam,
                         user_achternaam,
                         email,
-                        admin_level,
+                        null,
                         null};
+                if ((parentRatingRowByFK_Rating_gebruiker != null)) {
+                    columnValuesArray[5] = parentRatingRowByFK_Rating_gebruiker[0];
+                }
                 rowgebruikerRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowgebruikerRow);
                 return rowgebruikerRow;
@@ -4210,8 +4499,14 @@ namespace Music {
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnuser_id,
                                 this.columntrack_id}, true));
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint2", new global::System.Data.DataColumn[] {
+                                this.columntrack_id}, false));
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint3", new global::System.Data.DataColumn[] {
+                                this.columnuser_id}, false));
                 this.columnuser_id.AllowDBNull = false;
+                this.columnuser_id.Unique = true;
                 this.columntrack_id.AllowDBNull = false;
+                this.columntrack_id.Unique = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4498,8 +4793,14 @@ namespace Music {
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnuser_id,
                                 this.columntrack_id}, true));
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint2", new global::System.Data.DataColumn[] {
+                                this.columntrack_id}, false));
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint3", new global::System.Data.DataColumn[] {
+                                this.columnuser_id}, false));
                 this.columnuser_id.AllowDBNull = false;
+                this.columnuser_id.Unique = true;
                 this.columntrack_id.AllowDBNull = false;
+                this.columntrack_id.Unique = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4789,6 +5090,12 @@ namespace Music {
                 base.Columns.Add(this.columnreview_tekst);
                 this.columnreview_cijfer = new global::System.Data.DataColumn("review_cijfer", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnreview_cijfer);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columntrack_id}, false));
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint2", new global::System.Data.DataColumn[] {
+                                this.columnuser_id}, false));
+                this.columnuser_id.Unique = true;
+                this.columntrack_id.Unique = true;
                 this.columnreview_tekst.MaxLength = 536870911;
             }
             
@@ -5315,6 +5622,28 @@ namespace Music {
                     this[this.tablealb_tra.track_idColumn] = value;
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TrackRow[] GetTrackRows() {
+                if ((this.Table.ChildRelations["FK_alb_tra_Track"] == null)) {
+                    return new TrackRow[0];
+                }
+                else {
+                    return ((TrackRow[])(base.GetChildRows(this.Table.ChildRelations["FK_alb_tra_Track"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public AlbumRow[] GetAlbumRows() {
+                if ((this.Table.ChildRelations["FK_alb_tra_Album"] == null)) {
+                    return new AlbumRow[0];
+                }
+                else {
+                    return ((AlbumRow[])(base.GetChildRows(this.Table.ChildRelations["FK_alb_tra_Album"])));
+                }
+            }
         }
         
         /// <summary>
@@ -5408,6 +5737,17 @@ namespace Music {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public alb_traRow alb_traRow {
+                get {
+                    return ((alb_traRow)(this.GetParentRow(this.Table.ParentRelations["FK_alb_tra_Album"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_alb_tra_Album"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool Isalbum_naamNull() {
                 return this.IsNull(this.tableAlbum.album_naamColumn);
             }
@@ -5490,6 +5830,28 @@ namespace Music {
                     this[this.tableart_tra.artiest_idColumn] = value;
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TrackRow TrackRow {
+                get {
+                    return ((TrackRow)(this.GetParentRow(this.Table.ParentRelations["FK_Track_art_tra"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Track_art_tra"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public artiestRow[] GetartiestRows() {
+                if ((this.Table.ChildRelations["FK_art_tra_artiest"] == null)) {
+                    return new artiestRow[0];
+                }
+                else {
+                    return ((artiestRow[])(base.GetChildRows(this.Table.ChildRelations["FK_art_tra_artiest"])));
+                }
+            }
         }
         
         /// <summary>
@@ -5569,6 +5931,28 @@ namespace Music {
                 }
                 set {
                     this[this.tableartiest.artiest_idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public band_artRow band_artRow {
+                get {
+                    return ((band_artRow)(this.GetParentRow(this.Table.ParentRelations["FK_band_art_artiest"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_band_art_artiest"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public art_traRow art_traRow {
+                get {
+                    return ((art_traRow)(this.GetParentRow(this.Table.ParentRelations["FK_art_tra_artiest"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_art_tra_artiest"]);
                 }
             }
         }
@@ -5680,6 +6064,28 @@ namespace Music {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public band_artRow band_artRow {
+                get {
+                    return ((band_artRow)(this.GetParentRow(this.Table.ParentRelations["FK_band_art_Band"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_band_art_Band"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public band_traRow band_traRow {
+                get {
+                    return ((band_traRow)(this.GetParentRow(this.Table.ParentRelations["band_tra_Band"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["band_tra_Band"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool Isband_naamNull() {
                 return this.IsNull(this.tableBand.band_naamColumn);
             }
@@ -5774,6 +6180,28 @@ namespace Music {
                     this[this.tableband_art.artiest_idColumn] = value;
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public BandRow[] GetBandRows() {
+                if ((this.Table.ChildRelations["FK_band_art_Band"] == null)) {
+                    return new BandRow[0];
+                }
+                else {
+                    return ((BandRow[])(base.GetChildRows(this.Table.ChildRelations["FK_band_art_Band"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public artiestRow[] GetartiestRows() {
+                if ((this.Table.ChildRelations["FK_band_art_artiest"] == null)) {
+                    return new artiestRow[0];
+                }
+                else {
+                    return ((artiestRow[])(base.GetChildRows(this.Table.ChildRelations["FK_band_art_artiest"])));
+                }
+            }
         }
         
         /// <summary>
@@ -5811,6 +6239,28 @@ namespace Music {
                     this[this.tableband_tra.track_idColumn] = value;
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TrackRow TrackRow {
+                get {
+                    return ((TrackRow)(this.GetParentRow(this.Table.ParentRelations["Track_band_tra"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["Track_band_tra"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public BandRow[] GetBandRows() {
+                if ((this.Table.ChildRelations["band_tra_Band"] == null)) {
+                    return new BandRow[0];
+                }
+                else {
+                    return ((BandRow[])(base.GetChildRows(this.Table.ChildRelations["band_tra_Band"])));
+                }
+            }
         }
         
         /// <summary>
@@ -5846,6 +6296,28 @@ namespace Music {
                 }
                 set {
                     this[this.tablecat_tra.track_idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public categorieRow categorieRow {
+                get {
+                    return ((categorieRow)(this.GetParentRow(this.Table.ParentRelations["FK_categorie_cat_tra"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_categorie_cat_tra"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TrackRow TrackRow {
+                get {
+                    return ((TrackRow)(this.GetParentRow(this.Table.ParentRelations["FK_Track_cat_tra"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Track_cat_tra"]);
                 }
             }
         }
@@ -5901,6 +6373,17 @@ namespace Music {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setcat_naamNull() {
                 this[this.tablecategorie.cat_naamColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public cat_traRow[] Getcat_traRows() {
+                if ((this.Table.ChildRelations["FK_categorie_cat_tra"] == null)) {
+                    return new cat_traRow[0];
+                }
+                else {
+                    return ((cat_traRow[])(base.GetChildRows(this.Table.ChildRelations["FK_categorie_cat_tra"])));
+                }
             }
         }
         
@@ -5966,6 +6449,28 @@ namespace Music {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setdatum_toegevoegdNull() {
                 this[this.tablefavoriet.datum_toegevoegdColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TrackRow[] GetTrackRows() {
+                if ((this.Table.ChildRelations["FK_favoriet_Track"] == null)) {
+                    return new TrackRow[0];
+                }
+                else {
+                    return ((TrackRow[])(base.GetChildRows(this.Table.ChildRelations["FK_favoriet_Track"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public gebruikerRow[] GetgebruikerRows() {
+                if ((this.Table.ChildRelations["FK_favoriet_gebruiker"] == null)) {
+                    return new gebruikerRow[0];
+                }
+                else {
+                    return ((gebruikerRow[])(base.GetChildRows(this.Table.ChildRelations["FK_favoriet_gebruiker"])));
+                }
             }
         }
         
@@ -6059,6 +6564,50 @@ namespace Music {
                     this[this.tablegebruiker.user_idColumn] = value;
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public geschiedenisRow geschiedenisRow {
+                get {
+                    return ((geschiedenisRow)(this.GetParentRow(this.Table.ParentRelations["FK_geschiedenis_gebruiker"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_geschiedenis_gebruiker"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public favorietRow favorietRow {
+                get {
+                    return ((favorietRow)(this.GetParentRow(this.Table.ParentRelations["FK_favoriet_gebruiker"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_favoriet_gebruiker"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public RatingRow RatingRow {
+                get {
+                    return ((RatingRow)(this.GetParentRow(this.Table.ParentRelations["FK_Rating_gebruiker"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Rating_gebruiker"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public reviewRow reviewRow {
+                get {
+                    return ((reviewRow)(this.GetParentRow(this.Table.ParentRelations["FK_review_gebruiker"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_review_gebruiker"]);
+                }
+            }
         }
         
         /// <summary>
@@ -6124,6 +6673,28 @@ namespace Music {
             public void Setdatum_bezochtNull() {
                 this[this.tablegeschiedenis.datum_bezochtColumn] = global::System.Convert.DBNull;
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TrackRow[] GetTrackRows() {
+                if ((this.Table.ChildRelations["FK_geschiedenis_Track"] == null)) {
+                    return new TrackRow[0];
+                }
+                else {
+                    return ((TrackRow[])(base.GetChildRows(this.Table.ChildRelations["FK_geschiedenis_Track"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public gebruikerRow[] GetgebruikerRows() {
+                if ((this.Table.ChildRelations["FK_geschiedenis_gebruiker"] == null)) {
+                    return new gebruikerRow[0];
+                }
+                else {
+                    return ((gebruikerRow[])(base.GetChildRows(this.Table.ChildRelations["FK_geschiedenis_gebruiker"])));
+                }
+            }
         }
         
         /// <summary>
@@ -6188,6 +6759,28 @@ namespace Music {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setrating_cijferNull() {
                 this[this.tableRating.rating_cijferColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TrackRow[] GetTrackRows() {
+                if ((this.Table.ChildRelations["FK_Rating_Track"] == null)) {
+                    return new TrackRow[0];
+                }
+                else {
+                    return ((TrackRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Rating_Track"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public gebruikerRow[] GetgebruikerRows() {
+                if ((this.Table.ChildRelations["FK_Rating_gebruiker"] == null)) {
+                    return new gebruikerRow[0];
+                }
+                else {
+                    return ((gebruikerRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Rating_gebruiker"])));
+                }
             }
         }
         
@@ -6315,6 +6908,28 @@ namespace Music {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setreview_cijferNull() {
                 this[this.tablereview.review_cijferColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TrackRow[] GetTrackRows() {
+                if ((this.Table.ChildRelations["review_Track"] == null)) {
+                    return new TrackRow[0];
+                }
+                else {
+                    return ((TrackRow[])(base.GetChildRows(this.Table.ChildRelations["review_Track"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public gebruikerRow[] GetgebruikerRows() {
+                if ((this.Table.ChildRelations["FK_review_gebruiker"] == null)) {
+                    return new gebruikerRow[0];
+                }
+                else {
+                    return ((gebruikerRow[])(base.GetChildRows(this.Table.ChildRelations["FK_review_gebruiker"])));
+                }
             }
         }
         
@@ -6457,6 +7072,61 @@ namespace Music {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public alb_traRow alb_traRow {
+                get {
+                    return ((alb_traRow)(this.GetParentRow(this.Table.ParentRelations["FK_alb_tra_Track"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_alb_tra_Track"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public geschiedenisRow geschiedenisRow {
+                get {
+                    return ((geschiedenisRow)(this.GetParentRow(this.Table.ParentRelations["FK_geschiedenis_Track"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_geschiedenis_Track"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public reviewRow reviewRow {
+                get {
+                    return ((reviewRow)(this.GetParentRow(this.Table.ParentRelations["review_Track"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["review_Track"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public favorietRow favorietRow {
+                get {
+                    return ((favorietRow)(this.GetParentRow(this.Table.ParentRelations["FK_favoriet_Track"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_favoriet_Track"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public RatingRow RatingRow {
+                get {
+                    return ((RatingRow)(this.GetParentRow(this.Table.ParentRelations["FK_Rating_Track"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Rating_Track"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IstitelNull() {
                 return this.IsNull(this.tableTrack.titelColumn);
             }
@@ -6537,6 +7207,39 @@ namespace Music {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setyoutube_linkNull() {
                 this[this.tableTrack.youtube_linkColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public cat_traRow[] Getcat_traRows() {
+                if ((this.Table.ChildRelations["FK_Track_cat_tra"] == null)) {
+                    return new cat_traRow[0];
+                }
+                else {
+                    return ((cat_traRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Track_cat_tra"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public band_traRow[] Getband_traRows() {
+                if ((this.Table.ChildRelations["Track_band_tra"] == null)) {
+                    return new band_traRow[0];
+                }
+                else {
+                    return ((band_traRow[])(base.GetChildRows(this.Table.ChildRelations["Track_band_tra"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public art_traRow[] Getart_traRows() {
+                if ((this.Table.ChildRelations["FK_Track_art_tra"] == null)) {
+                    return new art_traRow[0];
+                }
+                else {
+                    return ((art_traRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Track_art_tra"])));
+                }
             }
         }
         
@@ -12242,93 +12945,12 @@ namespace Music.MusicIndexDataSetDataSetTableAdapters {
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._albumTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Album.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._albumTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._art_traTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.art_tra.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._art_traTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._artiestTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.artiest.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._artiestTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._bandTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Band.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._bandTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._band_artTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.band_art.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._band_artTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._band_traTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.band_tra.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._band_traTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._cat_traTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.cat_tra.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._cat_traTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._categorieTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.categorie.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._categorieTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._favorietTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.favoriet.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._favorietTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._gebruikerTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.gebruiker.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._gebruikerTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -12368,6 +12990,87 @@ namespace Music.MusicIndexDataSetDataSetTableAdapters {
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._art_traTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.art_tra.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._art_traTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._band_artTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.band_art.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._band_artTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._band_traTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.band_tra.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._band_traTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._categorieTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.categorie.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._categorieTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._albumTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Album.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._albumTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._artiestTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.artiest.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._artiestTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._bandTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Band.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._bandTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._cat_traTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.cat_tra.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._cat_traTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._gebruikerTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.gebruiker.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._gebruikerTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             return result;
         }
         
@@ -12386,83 +13089,11 @@ namespace Music.MusicIndexDataSetDataSetTableAdapters {
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._albumTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Album.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._albumTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._art_traTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.art_tra.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._art_traTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._artiestTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.artiest.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._artiestTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._bandTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Band.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._bandTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._band_artTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.band_art.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._band_artTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._band_traTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.band_tra.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._band_traTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._cat_traTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.cat_tra.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._cat_traTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._categorieTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.categorie.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._categorieTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._favorietTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.favoriet.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._favorietTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._gebruikerTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.gebruiker.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._gebruikerTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -12498,6 +13129,78 @@ namespace Music.MusicIndexDataSetDataSetTableAdapters {
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._art_traTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.art_tra.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._art_traTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._band_artTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.band_art.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._band_artTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._band_traTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.band_tra.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._band_traTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._categorieTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.categorie.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._categorieTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._albumTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Album.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._albumTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._artiestTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.artiest.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._artiestTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._bandTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Band.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._bandTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._cat_traTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.cat_tra.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._cat_traTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._gebruikerTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.gebruiker.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._gebruikerTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             return result;
         }
         
@@ -12508,6 +13211,78 @@ namespace Music.MusicIndexDataSetDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateDeletedRows(MusicIndexDataSetDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
+            if ((this._gebruikerTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.gebruiker.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._gebruikerTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._cat_traTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.cat_tra.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._cat_traTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._bandTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Band.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._bandTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._artiestTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.artiest.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._artiestTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._albumTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Album.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._albumTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._categorieTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.categorie.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._categorieTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._band_traTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.band_tra.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._band_traTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._band_artTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.band_art.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._band_artTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._art_traTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.art_tra.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._art_traTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._trackTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Track.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -12540,83 +13315,11 @@ namespace Music.MusicIndexDataSetDataSetTableAdapters {
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._gebruikerTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.gebruiker.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._gebruikerTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._favorietTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.favoriet.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._favorietTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._categorieTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.categorie.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._categorieTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._cat_traTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.cat_tra.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._cat_traTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._band_traTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.band_tra.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._band_traTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._band_artTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.band_art.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._band_artTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._bandTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Band.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._bandTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._artiestTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.artiest.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._artiestTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._art_traTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.art_tra.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._art_traTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._albumTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Album.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._albumTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
