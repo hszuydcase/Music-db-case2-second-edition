@@ -78,6 +78,8 @@
     <Compile Include="CategorieForm.Designer.cs">
       <DependentUpon>CategorieForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ExistsException.cs" />
+    <Compile Include="ForgottenInfoException.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>

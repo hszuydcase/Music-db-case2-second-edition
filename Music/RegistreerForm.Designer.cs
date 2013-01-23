@@ -30,11 +30,11 @@
         {
             this.btRegistreer = new System.Windows.Forms.Button();
             this.btCancel = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.inputUsername = new System.Windows.Forms.TextBox();
+            this.inputPassword = new System.Windows.Forms.TextBox();
+            this.inputVoornaam = new System.Windows.Forms.TextBox();
+            this.inputEmail = new System.Windows.Forms.TextBox();
+            this.inputAchternaam = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -62,40 +62,40 @@
             this.btCancel.UseVisualStyleBackColor = true;
             this.btCancel.Click += new System.EventHandler(this.btCancel_Click);
             // 
-            // textBox1
+            // inputUsername
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 25);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(434, 20);
-            this.textBox1.TabIndex = 1;
+            this.inputUsername.Location = new System.Drawing.Point(12, 25);
+            this.inputUsername.Name = "inputUsername";
+            this.inputUsername.Size = new System.Drawing.Size(434, 20);
+            this.inputUsername.TabIndex = 1;
             // 
-            // textBox2
+            // inputPassword
             // 
-            this.textBox2.Location = new System.Drawing.Point(12, 64);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(434, 20);
-            this.textBox2.TabIndex = 2;
+            this.inputPassword.Location = new System.Drawing.Point(12, 64);
+            this.inputPassword.Name = "inputPassword";
+            this.inputPassword.Size = new System.Drawing.Size(434, 20);
+            this.inputPassword.TabIndex = 2;
             // 
-            // textBox3
+            // inputVoornaam
             // 
-            this.textBox3.Location = new System.Drawing.Point(12, 103);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(434, 20);
-            this.textBox3.TabIndex = 3;
+            this.inputVoornaam.Location = new System.Drawing.Point(12, 103);
+            this.inputVoornaam.Name = "inputVoornaam";
+            this.inputVoornaam.Size = new System.Drawing.Size(434, 20);
+            this.inputVoornaam.TabIndex = 3;
             // 
-            // textBox4
+            // inputEmail
             // 
-            this.textBox4.Location = new System.Drawing.Point(12, 181);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(434, 20);
-            this.textBox4.TabIndex = 5;
+            this.inputEmail.Location = new System.Drawing.Point(12, 181);
+            this.inputEmail.Name = "inputEmail";
+            this.inputEmail.Size = new System.Drawing.Size(434, 20);
+            this.inputEmail.TabIndex = 5;
             // 
-            // textBox5
+            // inputAchternaam
             // 
-            this.textBox5.Location = new System.Drawing.Point(12, 142);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(434, 20);
-            this.textBox5.TabIndex = 4;
+            this.inputAchternaam.Location = new System.Drawing.Point(12, 142);
+            this.inputAchternaam.Name = "inputAchternaam";
+            this.inputAchternaam.Size = new System.Drawing.Size(434, 20);
+            this.inputAchternaam.TabIndex = 4;
             // 
             // label1
             // 
@@ -152,11 +152,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.inputAchternaam);
+            this.Controls.Add(this.inputEmail);
+            this.Controls.Add(this.inputVoornaam);
+            this.Controls.Add(this.inputPassword);
+            this.Controls.Add(this.inputUsername);
             this.Controls.Add(this.btCancel);
             this.Controls.Add(this.btRegistreer);
             this.Name = "RegistreerForm";
@@ -170,11 +170,11 @@
 
         private System.Windows.Forms.Button btRegistreer;
         private System.Windows.Forms.Button btCancel;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox inputUsername;
+        private System.Windows.Forms.TextBox inputPassword;
+        private System.Windows.Forms.TextBox inputVoornaam;
+        private System.Windows.Forms.TextBox inputEmail;
+        private System.Windows.Forms.TextBox inputAchternaam;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
