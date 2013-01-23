@@ -60,30 +60,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArtiestForm.cs">
+    <Compile Include="Form\ArtiestForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ArtiestForm.Designer.cs">
+    <Compile Include="Form\ArtiestForm.Designer.cs">
       <DependentUpon>ArtiestForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="BandForm.cs">
+    <Compile Include="Form\BandForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BandForm.Designer.cs">
+    <Compile Include="Form\BandForm.Designer.cs">
       <DependentUpon>BandForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="CategorieForm.cs">
+    <Compile Include="Form\CategorieForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CategorieForm.Designer.cs">
+    <Compile Include="Form\CategorieForm.Designer.cs">
       <DependentUpon>CategorieForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ExistsException.cs" />
-    <Compile Include="ForgottenInfoException.cs" />
-    <Compile Include="LoginForm.cs">
+    <Compile Include="Classes\ExistsException.cs" />
+    <Compile Include="Classes\ForgottenInfoException.cs" />
+    <Compile Include="Form\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginForm.Designer.cs">
+    <Compile Include="Form\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MusicIndexDataSetDataSet.cs">
@@ -95,40 +95,40 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MusicIndexDataSetDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="NavigatieForm.cs">
+    <Compile Include="Form\NavigatieForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NavigatieForm.Designer.cs">
+    <Compile Include="Form\NavigatieForm.Designer.cs">
       <DependentUpon>NavigatieForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="Classes\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RegistreerForm.cs">
+    <Compile Include="Form\RegistreerForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegistreerForm.Designer.cs">
+    <Compile Include="Form\RegistreerForm.Designer.cs">
       <DependentUpon>RegistreerForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="SQLService.cs" />
-    <Compile Include="TrackForm.cs">
+    <Compile Include="Classes\SQLService.cs" />
+    <Compile Include="Form\TrackForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TrackForm.Designer.cs">
+    <Compile Include="Form\TrackForm.Designer.cs">
       <DependentUpon>TrackForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ArtiestForm.resx">
+    <EmbeddedResource Include="Form\ArtiestForm.resx">
       <DependentUpon>ArtiestForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BandForm.resx">
+    <EmbeddedResource Include="Form\BandForm.resx">
       <DependentUpon>BandForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CategorieForm.resx">
+    <EmbeddedResource Include="Form\CategorieForm.resx">
       <DependentUpon>CategorieForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
+    <EmbeddedResource Include="Form\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NavigatieForm.resx">
+    <EmbeddedResource Include="Form\NavigatieForm.resx">
       <DependentUpon>NavigatieForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -140,7 +140,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="TrackForm.resx">
+    <EmbeddedResource Include="Form\TrackForm.resx">
       <DependentUpon>TrackForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="MusicIndexDataSetDataSet.xsc">
