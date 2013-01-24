@@ -60,6 +60,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form\User.cs" />
     <Compile Include="ViewForm\AlbumViewForm.cs">
       <SubType>Form</SubType>
     </Compile>
