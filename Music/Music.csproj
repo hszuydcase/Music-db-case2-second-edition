@@ -60,6 +60,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form\AlbumForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\AlbumForm.Designer.cs">
+      <DependentUpon>AlbumForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\ArtiestForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,9 @@
     <Compile Include="Form\TrackForm.Designer.cs">
       <DependentUpon>TrackForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Form\AlbumForm.resx">
+      <DependentUpon>AlbumForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\ArtiestForm.resx">
       <DependentUpon>ArtiestForm.cs</DependentUpon>
     </EmbeddedResource>

@@ -26,15 +26,14 @@ namespace Music
          {
              SQLService sqlService = new SQLService();
              bool bestaat = sqlService.Bestaat("SELECT * FROM gebruiker WHERE username = '" + inputUsername.Text + "' AND password = '" + inputPassword.Text + "' ");
-
-             if (bestaat == false)
+             if(bestaat == false)
              {
                  MessageBox.Show("Gegevens zijn niet bekend.");
              }
              else
              {
                  
-                MessageBox.Show("Welkom terug " + inputUsername.Text + "");
+                MessageBox.Show("Welkom " + inputUsername.Text + "");
                 
                  this.Close();
              }
@@ -42,7 +41,7 @@ namespace Music
          catch (Exception)
          {
 
-             throw;
+             MessageBox.Show("U moet een gebruikersnaam en wachtwoord invoeren. Als u niet geregistreerd bent klink dan op de knop \"registreer\".");
          }
      }
 

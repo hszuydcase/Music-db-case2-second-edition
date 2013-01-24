@@ -34,11 +34,12 @@
             this.btart = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btcat
             // 
-            this.btcat.Location = new System.Drawing.Point(91, 135);
+            this.btcat.Location = new System.Drawing.Point(90, 169);
             this.btcat.Name = "btcat";
             this.btcat.Size = new System.Drawing.Size(75, 23);
             this.btcat.TabIndex = 0;
@@ -48,7 +49,7 @@
             // 
             // bttra
             // 
-            this.bttra.Location = new System.Drawing.Point(91, 164);
+            this.bttra.Location = new System.Drawing.Point(90, 198);
             this.bttra.Name = "bttra";
             this.bttra.Size = new System.Drawing.Size(75, 23);
             this.bttra.TabIndex = 1;
@@ -58,7 +59,7 @@
             // 
             // btband
             // 
-            this.btband.Location = new System.Drawing.Point(91, 106);
+            this.btband.Location = new System.Drawing.Point(90, 140);
             this.btband.Name = "btband";
             this.btband.Size = new System.Drawing.Size(75, 23);
             this.btband.TabIndex = 2;
@@ -68,7 +69,7 @@
             // 
             // btart
             // 
-            this.btart.Location = new System.Drawing.Point(91, 77);
+            this.btart.Location = new System.Drawing.Point(90, 111);
             this.btart.Name = "btart";
             this.btart.Size = new System.Drawing.Size(75, 23);
             this.btart.TabIndex = 3;
@@ -95,11 +96,22 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Inserts";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(90, 82);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Album";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // NavigatieForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(380, 416);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.btart);
@@ -122,5 +134,6 @@
         private System.Windows.Forms.Button btart;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }

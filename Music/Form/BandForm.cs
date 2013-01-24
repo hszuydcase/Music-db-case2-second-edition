@@ -23,7 +23,6 @@ namespace Music
             openFileDialog1.InitialDirectory = startdir;
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                MessageBox.Show(openFileDialog1.FileName);
                 tbbandimage.Text = openFileDialog1.FileName;
             }
         }
