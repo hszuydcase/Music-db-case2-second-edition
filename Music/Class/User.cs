@@ -67,9 +67,29 @@ namespace Music
             }
         }
 
-        public void Login(int id)
+        public void Login(string username, string password)
         {
-            this._id = id;
+            
+            try
+            {
+                SQLService sqlService = new SQLService();
+                bool bestaat = sqlService.Bestaat("SELECT * FROM gebruiker WHERE username = '" + username + "' AND password = '" + password + "' ");
+                if (bestaat == false)
+                {
+                    MessageBox.Show("Gegevens zijn niet bekend.");
+                }
+                else
+                {
+
+                    MessageBox.Show("Welkom " + username + "");
+                        
+                }
+            }
+            catch (ArgumentNullException)
+            {
+
+                MessageBox.Show("U moet een gebruikersnaam en wachtwoord invoeren. Als u niet geregistreerd bent klink dan op de knop \"registreer\".");
+            }
         }
 
         public string GetUsername()

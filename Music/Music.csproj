@@ -60,7 +60,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form\User.cs" />
+    <Compile Include="Class\User.cs" />
     <Compile Include="ViewForm\AlbumViewForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\NavigatieForm.resx">
       <DependentUpon>NavigatieForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\RegistreerForm.resx">
+      <DependentUpon>RegistreerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
