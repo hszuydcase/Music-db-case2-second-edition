@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -38,18 +37,13 @@
             this.tbbandbiografie = new System.Windows.Forms.RichTextBox();
             this.tbbandoorsprong = new System.Windows.Forms.TextBox();
             this.tbbandimage = new System.Windows.Forms.TextBox();
-            this.bandBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.musicIndexDataSetDataSet = new Music.MusicIndexDataSetDataSet();
             this.tbbandnaam = new System.Windows.Forms.TextBox();
             this.bt_annuleren = new System.Windows.Forms.Button();
             this.bt_add = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.btopenfiledialog = new System.Windows.Forms.Button();
-            this.bandTableAdapter = new Music.MusicIndexDataSetDataSetTableAdapters.BandTableAdapter();
             this.tbbandopgericht = new System.Windows.Forms.MaskedTextBox();
             this.tbbandgestopt = new System.Windows.Forms.MaskedTextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.bandBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.musicIndexDataSetDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // label6
@@ -128,16 +122,6 @@
             this.tbbandimage.Size = new System.Drawing.Size(147, 20);
             this.tbbandimage.TabIndex = 21;
             // 
-            // bandBindingSource
-            // 
-            this.bandBindingSource.DataMember = "Band";
-            this.bandBindingSource.DataSource = this.musicIndexDataSetDataSet;
-            // 
-            // musicIndexDataSetDataSet
-            // 
-            this.musicIndexDataSetDataSet.DataSetName = "MusicIndexDataSetDataSet";
-            this.musicIndexDataSetDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // tbbandnaam
             // 
             this.tbbandnaam.Location = new System.Drawing.Point(103, 39);
@@ -178,10 +162,6 @@
             this.btopenfiledialog.Text = "...";
             this.btopenfiledialog.UseVisualStyleBackColor = true;
             this.btopenfiledialog.Click += new System.EventHandler(this.btopenfiledialog_Click);
-            // 
-            // bandTableAdapter
-            // 
-            this.bandTableAdapter.ClearBeforeFill = true;
             // 
             // tbbandopgericht
             // 
@@ -224,8 +204,6 @@
             this.Name = "BandForm";
             this.Text = "Band";
             this.Load += new System.EventHandler(this.BandForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.bandBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.musicIndexDataSetDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -247,9 +225,6 @@
         private System.Windows.Forms.Button bt_add;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button btopenfiledialog;
-        private MusicIndexDataSetDataSet musicIndexDataSetDataSet;
-        private System.Windows.Forms.BindingSource bandBindingSource;
-        private MusicIndexDataSetDataSetTableAdapters.BandTableAdapter bandTableAdapter;
         private System.Windows.Forms.MaskedTextBox tbbandopgericht;
         private System.Windows.Forms.MaskedTextBox tbbandgestopt;
     }
