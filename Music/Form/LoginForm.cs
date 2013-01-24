@@ -38,7 +38,7 @@ namespace Music
                  this.Close();
              }
          }
-         catch (Exception)
+         catch (ArgumentNullException)
          {
 
              MessageBox.Show("U moet een gebruikersnaam en wachtwoord invoeren. Als u niet geregistreerd bent klink dan op de knop \"registreer\".");

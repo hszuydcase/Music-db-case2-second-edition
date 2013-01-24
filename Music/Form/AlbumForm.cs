@@ -27,14 +27,13 @@ namespace Music
               try
             {
                 DateTime albumdat = DateTime.ParseExact(tbalbumdat.Text, "dd/MM/yyyy", null);
-
                 SQLService sqlService = new SQLService();
                 if (
                     sqlService.Bestaat("SELECT album_naam FROM album WHERE album_naam = '" + tbalbumnaam.Text +"' ") == true)
                 {
                     throw new ExistsException("album");
                 }
-                sqlService.Insert("INSERT INTO album (album_naam,album_datum,album_image,album_medium) VALUES ('" + tbalbumnaam.Text + "','" + albumdat + "','" + tbalbumimage.Text + "','" + cbmedium.Text + "')");
+                sqlService.Insert("INSERT INTO album (album_naam,album_datum,album_medium) VALUES ('" + tbalbumnaam.Text + "','" + albumdat + "','" + cbmedium.SelectedValue + "')");
             }
             catch (ExistsException obj)
             {
