@@ -52,7 +52,7 @@ namespace Music
 
                     // Execute het commando
                     adapter.InsertCommand.ExecuteNonQuery();
-                    MessageBox.Show("SQL DONE");
+                    MessageBox.Show("SQL DONE\n\r" + commando);
                 }
 
                 // Catch de exception indien deze ontstaat.
