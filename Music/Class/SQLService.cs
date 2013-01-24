@@ -117,6 +117,31 @@ namespace Music
                 return count != 0;
 
             }
+        public List<string[]> Gettabel(string commando)
+        {
+            tabel = new DataTable();
+            OleDbDataAdapter adapter = new OleDbDataAdapter(commando, databaseString);
+            tabel.Clear();
+            adapter.Fill(tabel);
 
+            List<string[]> inhoud = new List<string[]>();
+            string[] veldnaam = new string[tabel.Columns.Count];
+            for (int i = 0; i < tabel.Columns.Count; i++)
+            {
+                veldnaam[i] = tabel.Columns[i].ColumnName;
+            }
+            inhoud.Add(veldnaam);
+            string[] rij;
+            for (int i = 0; i < tabel.Rows.Count; i++)
+            {
+                rij = new string[tabel.Columns.Count];
+                for (int j = 0; j < tabel.Columns.Count; j++)
+                {
+                    rij[j] = tabel.Rows[i][j].ToString();
+                }
+                inhoud.Add(rij);
+            }
+            return inhoud;
+            }
         }
-    }
+}

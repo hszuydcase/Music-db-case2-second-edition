@@ -60,6 +60,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ViewForm\AlbumViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewForm\AlbumViewForm.Designer.cs">
+      <DependentUpon>AlbumViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewForm\ArtiestViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewForm\ArtiestViewForm.Designer.cs">
+      <DependentUpon>ArtiestViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewForm\BandViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewForm\BandViewForm.Designer.cs">
+      <DependentUpon>BandViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewForm\CategorieViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewForm\CategorieViewForm.Designer.cs">
+      <DependentUpon>CategorieViewForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\AlbumForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +146,12 @@
     <Compile Include="Form\TrackForm.Designer.cs">
       <DependentUpon>TrackForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewForm\TrackViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewForm\TrackViewForm.Designer.cs">
+      <DependentUpon>TrackViewForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form\AlbumForm.resx">
       <DependentUpon>AlbumForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -151,6 +181,9 @@
     </Compile>
     <EmbeddedResource Include="Form\TrackForm.resx">
       <DependentUpon>TrackForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewForm\CategorieViewForm.resx">
+      <DependentUpon>CategorieViewForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="MusicIndexDataSetDataSet.xsc">
       <DependentUpon>MusicIndexDataSetDataSet.xsd</DependentUpon>
