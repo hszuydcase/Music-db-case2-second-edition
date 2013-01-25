@@ -49,14 +49,23 @@
             // 
             // cbFrom
             // 
+            this.cbFrom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbFrom.FormattingEnabled = true;
+            this.cbFrom.Items.AddRange(new object[] {
+            "Album",
+            "Artiest",
+            "Band",
+            "Categorie",
+            "Track"});
             this.cbFrom.Location = new System.Drawing.Point(12, 76);
             this.cbFrom.Name = "cbFrom";
             this.cbFrom.Size = new System.Drawing.Size(121, 21);
             this.cbFrom.TabIndex = 1;
+            this.cbFrom.SelectedIndexChanged += new System.EventHandler(this.cbFrom_SelectedIndexChanged);
             // 
             // cbselect
             // 
+            this.cbselect.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbselect.FormattingEnabled = true;
             this.cbselect.Location = new System.Drawing.Point(174, 76);
             this.cbselect.Name = "cbselect";
