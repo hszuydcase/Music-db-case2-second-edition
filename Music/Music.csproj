@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\User.cs" />
+    <Compile Include="TestClassView.cs" />
     <Compile Include="TestFormCBview.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -29,6 +29,12 @@ namespace Music
             
             string from = cbfrom.Text;
              
+        }
+
+        private void cbFrom_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string from = cbFrom.SelectedText;
+            TestClassView test = new TestClassView();
             switch (from)
             {
                 case "Artiest":
