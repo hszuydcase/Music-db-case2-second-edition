@@ -57,5 +57,11 @@ namespace Music
             AlbumForm form = new AlbumForm();
             form.ShowDialog();
         }
+
+        private void btcatview_Click(object sender, EventArgs e)
+        {
+            CategorieViewForm form = new CategorieViewForm();
+            form.ShowDialog();
+        }
     }
 }

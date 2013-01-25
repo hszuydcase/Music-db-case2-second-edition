@@ -143,5 +143,19 @@ namespace Music
             }
             return inhoud;
             }
+                public void fillDataGridView(DataGridView dgv, string sqlcommando)
+        {
+            SQLService sqlService = new SQLService();
+            List<string[]> inhoud = sqlService.Gettabel(sqlcommando);
+            dgv.Rows.Clear();
+            dgv.Columns.Clear();
+            for (int i = 0; i < inhoud[0].Length; i++)
+            {
+                dgv.Columns.Add(inhoud[0][i], inhoud[0][i]);
+            }
+            for (int i = 0; i < inhoud.Count; i++)
+            {
+                dgv.Rows.Add(inhoud[i]);
+            }
         }
 }

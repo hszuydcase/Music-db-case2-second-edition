@@ -15,15 +15,8 @@ namespace Music
         public CategorieViewForm()
         {
             InitializeComponent();
-
-        }
-        private void fillDataGridView(DataGridView dgv, string sqlcommando)
-        {
             SQLService sqlService = new SQLService();
-            List<string[]> content = sqlService.Gettabel(sqlcommando);
-            dgv.Rows.Clear();
-            dgv.Columns.Clear();
-
+            sqlService.fillDataGridView(dataGridView1, "SELECT * FROM categorie");
         }
     }
 }
