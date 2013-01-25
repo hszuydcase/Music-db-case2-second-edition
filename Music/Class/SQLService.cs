@@ -12,111 +12,116 @@ namespace Music
 {
     public class SQLService
     {
-            // gegevens vooraf declareren
-            private string databaseString = @"Provider=Microsoft.SQLSERVER.CE.OLEDB.4.0;Data Source=|DataDirectory|\MusicIndexDataSet.sdf";
-            private OleDbConnection connectie;
-            private DataTable tabel;
+        // gegevens vooraf declareren
+        private string databaseString =
+            @"Provider=Microsoft.SQLSERVER.CE.OLEDB.4.0;Data Source=|DataDirectory|\MusicIndexDataSet.sdf";
 
-            //Verbinding maken met de database, gebruikmakende van de OleDbConnectie en de databasestring
-            public SQLService()
+        private OleDbConnection connectie;
+        private DataTable tabel;
+
+        //Verbinding maken met de database, gebruikmakende van de OleDbConnectie en de databasestring
+        public SQLService()
+        {
+            try
             {
-                try
-                {
-                    connectie = new OleDbConnection(databaseString);
-                }
-                catch (Exception e)
-                {
-                    MessageBox.Show(e.Message);
-                }
+                connectie = new OleDbConnection(databaseString);
             }
-
-            /// <summary>
-            /// Het commando om een Insert query aan te maken
-            /// </summary>
-            /// <param name="commando">het INSERT commando</param>
-            public void Insert(string commando)
+            catch (Exception e)
             {
-                try
-                {
-                    // Definieer het command en de adapter
-                    OleDbCommand insertCommand = new OleDbCommand();
-                    OleDbDataAdapter adapter = new OleDbDataAdapter();
+                MessageBox.Show(e.Message);
+            }
+        }
 
-                    // Open de connectie
-                    connectie.Open();
+        /// <summary>
+        /// Het commando om een Insert query aan te maken
+        /// </summary>
+        /// <param name="commando">het INSERT commando</param>
+        public void Insert(string commando)
+        {
+            try
+            {
+                // Definieer het command en de adapter
+                OleDbCommand insertCommand = new OleDbCommand();
+                OleDbDataAdapter adapter = new OleDbDataAdapter();
 
-                    // Zet het commando in de adapter
-                    insertCommand.Connection = connectie;
-                    insertCommand.CommandText = commando;
-                    adapter.InsertCommand = insertCommand;
+                // Open de connectie
+                connectie.Open();
 
-                    // Execute het commando
-                    adapter.InsertCommand.ExecuteNonQuery();
-                    MessageBox.Show("SQL DONE\n\r" + commando);
-                }
+                // Zet het commando in de adapter
+                insertCommand.Connection = connectie;
+                insertCommand.CommandText = commando;
+                adapter.InsertCommand = insertCommand;
+
+                // Execute het commando
+                adapter.InsertCommand.ExecuteNonQuery();
+                MessageBox.Show("SQL DONE\n\r" + commando);
+            }
 
                 // Catch de exception indien deze ontstaat.
-                catch (Exception obj)
-                {
-                    MessageBox.Show(obj.Message);
-                }
+            catch (Exception obj)
+            {
+                MessageBox.Show(obj.Message);
+            }
                 //Uiteindelijk de SQL Connectie weer sluiten
-                finally
-                {
-                    connectie.Close();
-                }
-
-            }
-            /// <summary>
-            /// Methode om een update SQL statement uit te voeren
-            /// </summary>
-            /// <param name="command">Typ hier het UPDATE commando in</param>
-            public void Update(string command)
+            finally
             {
-                try
-                {
-                    OleDbCommand updateCommand = new OleDbCommand();
-                    OleDbDataAdapter adapter = new OleDbDataAdapter();
-                    connectie.Open();
-
-                    // put the command in the adapter
-                    updateCommand.Connection = connectie;
-                    updateCommand.CommandText = command;
-                    adapter.UpdateCommand = updateCommand;
-
-                    // do the update
-                    adapter.UpdateCommand.ExecuteNonQuery();
-                    connectie.Close();
-
-
-
-                }
-                catch (Exception obj)
-                {
-                    MessageBox.Show(obj.Message);
-                }
-                finally
-                {
-                    connectie.Close();
-                }
-
+                connectie.Close();
             }
-            /// <summary>
-            /// Methode om te controleren of EEN variable bestaat of niet, returend een bool
-            /// </summary>
-            /// <param name="command">SELECT</param>
-            public bool Bestaat(string command)
+
+        }
+
+        /// <summary>
+        /// Methode om een update SQL statement uit te voeren
+        /// </summary>
+        /// <param name="command">Typ hier het UPDATE commando in</param>
+        public void Update(string command)
+        {
+            try
             {
+                OleDbCommand updateCommand = new OleDbCommand();
+                OleDbDataAdapter adapter = new OleDbDataAdapter();
+                connectie.Open();
 
-                tabel = new DataTable();
+                // put the command in the adapter
+                updateCommand.Connection = connectie;
+                updateCommand.CommandText = command;
+                adapter.UpdateCommand = updateCommand;
 
-                OleDbDataAdapter adapter = new OleDbDataAdapter(command, databaseString);
-                tabel.Clear();
-                int count = adapter.Fill(tabel);
+                // do the update
+                adapter.UpdateCommand.ExecuteNonQuery();
+                connectie.Close();
 
-                return count != 0;
+
 
             }
+            catch (Exception obj)
+            {
+                MessageBox.Show(obj.Message);
+            }
+            finally
+            {
+                connectie.Close();
+            }
+
+        }
+
+        /// <summary>
+        /// Methode om te controleren of EEN variable bestaat of niet, returend een bool
+        /// </summary>
+        /// <param name="command">SELECT</param>
+        public bool Bestaat(string command)
+        {
+
+            tabel = new DataTable();
+
+            OleDbDataAdapter adapter = new OleDbDataAdapter(command, databaseString);
+            tabel.Clear();
+            int count = adapter.Fill(tabel);
+
+            return count != 0;
+
+        }
+
         public List<string[]> Gettabel(string commando)
         {
             tabel = new DataTable();
@@ -142,20 +147,7 @@ namespace Music
                 inhoud.Add(rij);
             }
             return inhoud;
-            }
-                public void fillDataGridView(DataGridView dgv, string sqlcommando)
-        {
-            SQLService sqlService = new SQLService();
-            List<string[]> inhoud = sqlService.Gettabel(sqlcommando);
-            dgv.Rows.Clear();
-            dgv.Columns.Clear();
-            for (int i = 0; i < inhoud[0].Length; i++)
-            {
-                dgv.Columns.Add(inhoud[0][i], inhoud[0][i]);
-            }
-            for (int i = 0; i < inhoud.Count; i++)
-            {
-                dgv.Rows.Add(inhoud[i]);
-            }
         }
-}
+
+        }
+    }

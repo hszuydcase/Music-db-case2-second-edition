@@ -15,8 +15,11 @@ namespace Music
         public CategorieViewForm()
         {
             InitializeComponent();
-            SQLService sqlService = new SQLService();
-            sqlService.fillDataGridView(dataGridView1, "SELECT * FROM categorie");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

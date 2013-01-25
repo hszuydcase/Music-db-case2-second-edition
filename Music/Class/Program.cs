@@ -16,7 +16,7 @@ namespace Music
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new NavigatieForm());
+            Application.Run(new CategorieViewForm());
         }
     }
 }

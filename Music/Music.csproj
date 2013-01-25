@@ -61,6 +61,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\User.cs" />
+    <Compile Include="TestFormCBview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestFormCBview.Designer.cs">
+      <DependentUpon>TestFormCBview.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewForm\AlbumViewForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,6 +191,9 @@
     </Compile>
     <EmbeddedResource Include="Form\TrackForm.resx">
       <DependentUpon>TrackForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestFormCBview.resx">
+      <DependentUpon>TestFormCBview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewForm\CategorieViewForm.resx">
       <DependentUpon>CategorieViewForm.cs</DependentUpon>
