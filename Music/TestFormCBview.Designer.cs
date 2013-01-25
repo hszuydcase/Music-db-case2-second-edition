@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.cbFrom = new System.Windows.Forms.ComboBox();
+            this.cbfrom = new System.Windows.Forms.ComboBox();
             this.cbselect = new System.Windows.Forms.ComboBox();
             this.cbwhere = new System.Windows.Forms.ComboBox();
             this.From = new System.Windows.Forms.Label();
@@ -47,16 +47,31 @@
             this.dataGridView1.Size = new System.Drawing.Size(622, 228);
             this.dataGridView1.TabIndex = 0;
             // 
-            // cbFrom
+            // cbfrom
             // 
-            this.cbFrom.FormattingEnabled = true;
-            this.cbFrom.Location = new System.Drawing.Point(12, 76);
-            this.cbFrom.Name = "cbFrom";
-            this.cbFrom.Size = new System.Drawing.Size(121, 21);
-            this.cbFrom.TabIndex = 1;
+            this.cbfrom.AutoCompleteCustomSource.AddRange(new string[] {
+            "Album",
+            "Artiest",
+            "Band",
+            "Categorie",
+            "Track"});
+            this.cbfrom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbfrom.FormattingEnabled = true;
+            this.cbfrom.Items.AddRange(new object[] {
+            "Album",
+            "Artiest",
+            "Band",
+            "Categorie",
+            "Track"});
+            this.cbfrom.Location = new System.Drawing.Point(12, 76);
+            this.cbfrom.Name = "cbfrom";
+            this.cbfrom.Size = new System.Drawing.Size(121, 21);
+            this.cbfrom.TabIndex = 1;
+            this.cbfrom.SelectedIndexChanged += new System.EventHandler(this.cbfrom_SelectedIndexChanged);
             // 
             // cbselect
             // 
+            this.cbselect.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbselect.FormattingEnabled = true;
             this.cbselect.Location = new System.Drawing.Point(174, 76);
             this.cbselect.Name = "cbselect";
@@ -119,7 +134,7 @@
             this.Controls.Add(this.From);
             this.Controls.Add(this.cbwhere);
             this.Controls.Add(this.cbselect);
-            this.Controls.Add(this.cbFrom);
+            this.Controls.Add(this.cbfrom);
             this.Controls.Add(this.dataGridView1);
             this.Name = "TestFormCBview";
             this.Text = "TestFormCBview";
@@ -132,7 +147,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ComboBox cbFrom;
+        private System.Windows.Forms.ComboBox cbfrom;
         private System.Windows.Forms.ComboBox cbselect;
         private System.Windows.Forms.ComboBox cbwhere;
         private System.Windows.Forms.Label From;

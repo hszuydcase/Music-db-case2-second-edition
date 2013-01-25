@@ -67,6 +67,7 @@
     <Compile Include="TestFormCBview.Designer.cs">
       <DependentUpon>TestFormCBview.cs</DependentUpon>
     </Compile>
+    <Compile Include="TestFormViewClass.cs" />
     <Compile Include="ViewForm\AlbumViewForm.cs">
       <SubType>Form</SubType>
     </Compile>
