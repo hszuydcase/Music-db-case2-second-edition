@@ -37,13 +37,13 @@
             this.tbbandbiografie = new System.Windows.Forms.RichTextBox();
             this.tbbandoorsprong = new System.Windows.Forms.TextBox();
             this.tbbandimage = new System.Windows.Forms.TextBox();
-            this.tbbandgestopt = new System.Windows.Forms.TextBox();
-            this.tbbandopgericht = new System.Windows.Forms.TextBox();
             this.tbbandnaam = new System.Windows.Forms.TextBox();
             this.bt_annuleren = new System.Windows.Forms.Button();
             this.bt_add = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.btopenfiledialog = new System.Windows.Forms.Button();
+            this.tbbandopgericht = new System.Windows.Forms.MaskedTextBox();
+            this.tbbandgestopt = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // label6
@@ -122,22 +122,6 @@
             this.tbbandimage.Size = new System.Drawing.Size(147, 20);
             this.tbbandimage.TabIndex = 21;
             // 
-            // tbbandgestopt
-            // 
-            this.tbbandgestopt.Location = new System.Drawing.Point(103, 127);
-            this.tbbandgestopt.Name = "tbbandgestopt";
-            this.tbbandgestopt.Size = new System.Drawing.Size(147, 20);
-            this.tbbandgestopt.TabIndex = 20;
-            this.tbbandgestopt.Text = "YYYY/MM/DD";
-            // 
-            // tbbandopgericht
-            // 
-            this.tbbandopgericht.Location = new System.Drawing.Point(103, 81);
-            this.tbbandopgericht.Name = "tbbandopgericht";
-            this.tbbandopgericht.Size = new System.Drawing.Size(147, 20);
-            this.tbbandopgericht.TabIndex = 19;
-            this.tbbandopgericht.Text = "YYYY/MM/DD";
-            // 
             // tbbandnaam
             // 
             this.tbbandnaam.Location = new System.Drawing.Point(103, 39);
@@ -179,11 +163,31 @@
             this.btopenfiledialog.UseVisualStyleBackColor = true;
             this.btopenfiledialog.Click += new System.EventHandler(this.btopenfiledialog_Click);
             // 
+            // tbbandopgericht
+            // 
+            this.tbbandopgericht.Location = new System.Drawing.Point(103, 84);
+            this.tbbandopgericht.Mask = "00/00/0000";
+            this.tbbandopgericht.Name = "tbbandopgericht";
+            this.tbbandopgericht.Size = new System.Drawing.Size(147, 20);
+            this.tbbandopgericht.TabIndex = 32;
+            this.tbbandopgericht.ValidatingType = typeof(System.DateTime);
+            // 
+            // tbbandgestopt
+            // 
+            this.tbbandgestopt.Location = new System.Drawing.Point(103, 130);
+            this.tbbandgestopt.Mask = "00/00/0000";
+            this.tbbandgestopt.Name = "tbbandgestopt";
+            this.tbbandgestopt.Size = new System.Drawing.Size(147, 20);
+            this.tbbandgestopt.TabIndex = 33;
+            this.tbbandgestopt.ValidatingType = typeof(System.DateTime);
+            // 
             // BandForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(567, 317);
+            this.Controls.Add(this.tbbandgestopt);
+            this.Controls.Add(this.tbbandopgericht);
             this.Controls.Add(this.btopenfiledialog);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -194,13 +198,12 @@
             this.Controls.Add(this.tbbandbiografie);
             this.Controls.Add(this.tbbandoorsprong);
             this.Controls.Add(this.tbbandimage);
-            this.Controls.Add(this.tbbandgestopt);
-            this.Controls.Add(this.tbbandopgericht);
             this.Controls.Add(this.tbbandnaam);
             this.Controls.Add(this.bt_annuleren);
             this.Controls.Add(this.bt_add);
             this.Name = "BandForm";
             this.Text = "Band";
+            this.Load += new System.EventHandler(this.BandForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -217,12 +220,12 @@
         private System.Windows.Forms.RichTextBox tbbandbiografie;
         private System.Windows.Forms.TextBox tbbandoorsprong;
         private System.Windows.Forms.TextBox tbbandimage;
-        private System.Windows.Forms.TextBox tbbandgestopt;
-        private System.Windows.Forms.TextBox tbbandopgericht;
         private System.Windows.Forms.TextBox tbbandnaam;
         private System.Windows.Forms.Button bt_annuleren;
         private System.Windows.Forms.Button bt_add;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button btopenfiledialog;
+        private System.Windows.Forms.MaskedTextBox tbbandopgericht;
+        private System.Windows.Forms.MaskedTextBox tbbandgestopt;
     }
 }

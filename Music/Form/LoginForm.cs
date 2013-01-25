@@ -22,28 +22,7 @@ namespace Music
 
      private void btLogin_Click_1(object sender, EventArgs e)
      {
-         try
-         {
-             SQLService sqlService = new SQLService();
-             bool bestaat = sqlService.Bestaat("SELECT * FROM gebruiker WHERE username = '" + inputUsername.Text + "' AND password = '" + inputPassword.Text + "' ");
 
-             if (bestaat == false)
-             {
-                 MessageBox.Show("Bestaat niet");
-             }
-             else
-             {
-                 
-                MessageBox.Show("Welkom terug " + inputUsername.Text + "");
-                
-                 this.Close();
-             }
-         }
-         catch (Exception)
-         {
-
-             throw;
-         }
      }
 
       private void btRegistreer_Click(object sender, EventArgs e)

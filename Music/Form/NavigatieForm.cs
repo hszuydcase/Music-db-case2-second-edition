@@ -51,5 +51,17 @@ namespace Music
             form.ShowDialog();
             this.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AlbumForm form = new AlbumForm();
+            form.ShowDialog();
+        }
+
+        private void btcatview_Click(object sender, EventArgs e)
+        {
+            CategorieViewForm form = new CategorieViewForm();
+            form.ShowDialog();
+        }
     }
 }
