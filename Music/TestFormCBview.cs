@@ -20,7 +20,7 @@ namespace Music
         private void btsearch_Click(object sender, EventArgs e)
         {
             SQLService sqlService = new SQLService();
-            sqlService.Gettabel("SELECT " + cbselect.Text + "FROM " + cbfrom.Text);
+            sqlService.VulDGV(dataGridView1, "SELECT " + cbselect.Text + "FROM" + cbfrom.Text);
 
         }
         private void cbfrom_SelectedIndexChanged(object sender, EventArgs e)
