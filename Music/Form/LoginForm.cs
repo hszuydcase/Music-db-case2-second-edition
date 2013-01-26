@@ -22,7 +22,15 @@ namespace Music
 
      private void btLogin_Click_1(object sender, EventArgs e)
      {
-
+         User user = new User();
+         bool ingelogd = user.Login(inputUsername.Text, inputPassword.Text);
+         
+         if (ingelogd == true)
+         {
+             NavigatieForm form = new NavigatieForm();
+             form.Show();
+             this.Hide();
+         }
      }
 
       private void btRegistreer_Click(object sender, EventArgs e)

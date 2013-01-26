@@ -22,6 +22,7 @@ namespace Music
 
             User user = new User();
             user.CreateUser(inputUsername.Text, inputPassword.Text, inputVoornaam.Text, inputAchternaam.Text, inputEmail.Text);
+            this.Close();
         }
 
         private void btCancel_Click(object sender, EventArgs e)

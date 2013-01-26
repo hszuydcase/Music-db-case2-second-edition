@@ -9,7 +9,7 @@ namespace Music
 {
     public class User
     {
-        private string _username, _password, _voornaam, _achternaam, _email;
+        private string _username ;
         private int _admin_level, _id;
 
         // Constructor
@@ -67,28 +67,33 @@ namespace Music
             }
         }
 
-        public void Login(string username, string password)
+        public bool Login(string username, string password)
         {
             
             try
             {
                 SQLService sqlService = new SQLService();
                 bool bestaat = sqlService.Bestaat("SELECT * FROM gebruiker WHERE username = '" + username + "' AND password = '" + password + "' ");
+                bool ingelogd = false;
                 if (bestaat == false)
                 {
                     MessageBox.Show("Gegevens zijn niet bekend.");
+                    
                 }
                 else
                 {
 
                     MessageBox.Show("Welkom " + username + "");
-                        
+                    this._username = username;
+                    ingelogd = true;
                 }
+                return ingelogd;
             }
             catch (ArgumentNullException)
             {
 
                 MessageBox.Show("U moet een gebruikersnaam en wachtwoord invoeren. Als u niet geregistreerd bent klink dan op de knop \"registreer\".");
+                return false;
             }
         }
 
@@ -99,7 +104,8 @@ namespace Music
 
         public void Logout()
         {
-            this._id = 0;
+            this._username = "";
+
         }
     }
 }

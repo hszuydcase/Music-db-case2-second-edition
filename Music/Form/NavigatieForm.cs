@@ -15,9 +15,9 @@ namespace Music
         public NavigatieForm()
         {
             InitializeComponent();
-            LoginForm form = new LoginForm();
-            form.ShowDialog();
             this.WindowState = FormWindowState.Maximized;
+           
+            
             
         }
 
@@ -47,9 +47,13 @@ namespace Music
 
         private void button5_Click(object sender, EventArgs e)
         {
+            User user = new User();
+            user.Logout();
             LoginForm form = new LoginForm();
+            this.Hide();
             form.ShowDialog();
-            this.Close();
+            
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
