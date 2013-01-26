@@ -9,7 +9,7 @@ namespace Music
 {
     public class User
     {
-        private string _username ;
+        public string _username;
         private int _admin_level, _id;
 
         // Constructor
@@ -97,7 +97,7 @@ namespace Music
             }
         }
 
-        public string GetUsername()
+        public static string GetUsername()
         {
             return this._username;
         }

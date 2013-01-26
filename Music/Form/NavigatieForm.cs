@@ -16,9 +16,9 @@ namespace Music
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
-           
-            
-            
+            lbUsername.Text = User.GetUsername();
+
+
         }
 
         private void btart_Click(object sender, EventArgs e)
@@ -66,6 +66,11 @@ namespace Music
         {
             CategorieViewForm form = new CategorieViewForm();
             form.ShowDialog();
+        }
+
+        private void NavigatieForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -35,6 +35,7 @@
             this.inputUsername = new System.Windows.Forms.TextBox();
             this.inputPassword = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.btCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -90,6 +91,16 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Password";
             // 
+            // btCancel
+            // 
+            this.btCancel.Location = new System.Drawing.Point(198, 216);
+            this.btCancel.Name = "btCancel";
+            this.btCancel.Size = new System.Drawing.Size(75, 23);
+            this.btCancel.TabIndex = 6;
+            this.btCancel.Text = "Cancel";
+            this.btCancel.UseVisualStyleBackColor = true;
+            this.btCancel.Click += new System.EventHandler(this.btCancel_Click);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -99,6 +110,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.btCancel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.inputPassword);
             this.Controls.Add(this.inputUsername);
@@ -122,6 +134,7 @@
         private System.Windows.Forms.TextBox inputUsername;
         private System.Windows.Forms.TextBox inputPassword;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btCancel;
     }
 }
 

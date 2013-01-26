@@ -41,11 +41,12 @@
             this.button4 = new System.Windows.Forms.Button();
             this.btcatview = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
+            this.lbUsername = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btcat
             // 
-            this.btcat.Location = new System.Drawing.Point(90, 169);
+            this.btcat.Location = new System.Drawing.Point(92, 235);
             this.btcat.Name = "btcat";
             this.btcat.Size = new System.Drawing.Size(75, 23);
             this.btcat.TabIndex = 0;
@@ -55,7 +56,7 @@
             // 
             // bttra
             // 
-            this.bttra.Location = new System.Drawing.Point(90, 198);
+            this.bttra.Location = new System.Drawing.Point(92, 264);
             this.bttra.Name = "bttra";
             this.bttra.Size = new System.Drawing.Size(75, 23);
             this.bttra.TabIndex = 1;
@@ -65,7 +66,7 @@
             // 
             // btband
             // 
-            this.btband.Location = new System.Drawing.Point(90, 140);
+            this.btband.Location = new System.Drawing.Point(92, 206);
             this.btband.Name = "btband";
             this.btband.Size = new System.Drawing.Size(75, 23);
             this.btband.TabIndex = 2;
@@ -75,7 +76,7 @@
             // 
             // btart
             // 
-            this.btart.Location = new System.Drawing.Point(90, 111);
+            this.btart.Location = new System.Drawing.Point(92, 177);
             this.btart.Name = "btart";
             this.btart.Size = new System.Drawing.Size(75, 23);
             this.btart.TabIndex = 3;
@@ -85,7 +86,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(293, 12);
+            this.button5.Location = new System.Drawing.Point(293, 381);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 4;
@@ -96,7 +97,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(108, 61);
+            this.label1.Location = new System.Drawing.Point(110, 127);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 13);
             this.label1.TabIndex = 5;
@@ -104,7 +105,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(90, 82);
+            this.button1.Location = new System.Drawing.Point(92, 148);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 6;
@@ -115,7 +116,7 @@
             // Label
             // 
             this.Label.AutoSize = true;
-            this.Label.Location = new System.Drawing.Point(243, 61);
+            this.Label.Location = new System.Drawing.Point(245, 127);
             this.Label.Name = "Label";
             this.Label.Size = new System.Drawing.Size(30, 13);
             this.Label.TabIndex = 7;
@@ -123,7 +124,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(220, 82);
+            this.button2.Location = new System.Drawing.Point(222, 148);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 8;
@@ -131,7 +132,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(220, 111);
+            this.button3.Location = new System.Drawing.Point(222, 177);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 9;
@@ -140,7 +141,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(220, 140);
+            this.button4.Location = new System.Drawing.Point(222, 206);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 10;
@@ -149,7 +150,7 @@
             // 
             // btcatview
             // 
-            this.btcatview.Location = new System.Drawing.Point(221, 169);
+            this.btcatview.Location = new System.Drawing.Point(223, 235);
             this.btcatview.Name = "btcatview";
             this.btcatview.Size = new System.Drawing.Size(75, 23);
             this.btcatview.TabIndex = 11;
@@ -159,18 +160,27 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(220, 198);
+            this.button7.Location = new System.Drawing.Point(222, 264);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(75, 23);
             this.button7.TabIndex = 12;
             this.button7.Text = "button7";
             this.button7.UseVisualStyleBackColor = true;
             // 
+            // lbUsername
+            // 
+            this.lbUsername.AutoSize = true;
+            this.lbUsername.Location = new System.Drawing.Point(13, 13);
+            this.lbUsername.Name = "lbUsername";
+            this.lbUsername.Size = new System.Drawing.Size(0, 13);
+            this.lbUsername.TabIndex = 13;
+            // 
             // NavigatieForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(380, 416);
+            this.ClientSize = new System.Drawing.Size(958, 416);
+            this.Controls.Add(this.lbUsername);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.btcatview);
             this.Controls.Add(this.button4);
@@ -187,6 +197,7 @@
             this.Name = "NavigatieForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NavigatieForm";
+            this.Load += new System.EventHandler(this.NavigatieForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -207,5 +218,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button btcatview;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Label lbUsername;
     }
 }
