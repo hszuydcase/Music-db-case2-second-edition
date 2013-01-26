@@ -86,7 +86,5 @@ namespace Music
             SQLService sqlService = new SQLService();
             sqlService.FillTable("SELECT band_id, band_naam, band_opgericht_datum, band_stop_datum, band_oorsprong FROM band", dataGridView1);
         }
-
-
     }
 }
