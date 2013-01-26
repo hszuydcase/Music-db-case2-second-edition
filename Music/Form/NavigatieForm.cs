@@ -72,5 +72,11 @@ namespace Music
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            TestFormCBview form = new TestFormCBview();
+            form.ShowDialog();
+        }
     }
 }
