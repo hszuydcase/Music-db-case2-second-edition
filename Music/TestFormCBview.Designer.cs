@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.cbfrom = new System.Windows.Forms.ComboBox();
             this.cbselect = new System.Windows.Forms.ComboBox();
@@ -36,12 +37,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btsearch = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.musicIndexDataSetDataSet = new Music.MusicIndexDataSetDataSet();
+            this.musicIndexDataSetDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.musicIndexDataSetDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.musicIndexDataSetDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.DataSource = this.musicIndexDataSetDataSetBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 140);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(622, 228);
@@ -123,6 +130,16 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Where";
             // 
+            // musicIndexDataSetDataSet
+            // 
+            this.musicIndexDataSetDataSet.DataSetName = "MusicIndexDataSetDataSet";
+            this.musicIndexDataSetDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // musicIndexDataSetDataSetBindingSource
+            // 
+            this.musicIndexDataSetDataSetBindingSource.DataSource = this.musicIndexDataSetDataSet;
+            this.musicIndexDataSetDataSetBindingSource.Position = 0;
+            // 
             // TestFormCBview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -139,6 +156,8 @@
             this.Name = "TestFormCBview";
             this.Text = "TestFormCBview";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.musicIndexDataSetDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.musicIndexDataSetDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,5 +173,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btsearch;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.BindingSource musicIndexDataSetDataSetBindingSource;
+        private MusicIndexDataSetDataSet musicIndexDataSetDataSet;
     }
 }

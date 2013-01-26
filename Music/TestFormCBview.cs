@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace Music
 {
@@ -20,8 +21,12 @@ namespace Music
         private void btsearch_Click(object sender, EventArgs e)
         {
             SQLService sqlService = new SQLService();
-            VulDGV(dataGridView1, "SELECT " + cbselect.Text + "FROM " +cbfrom.Text);
-
+            OleDbDataAdapter adapter = null;
+            string command = "SELECT album_id FROM ALBUM";
+            DataTable table = new DataTable();
+            adapter = new OleDbDataAdapter(command, @"Provider=Microsoft.SQLSERVER.CE.OLEDB.4.0;Data Source=|DataDirectory|\MusicIndexDataSet.sdf");
+            adapter.Fill(table);
+            dataGridView1.DataSource = table;
         }
 
         private void cbfrom_SelectedIndexChanged(object sender, EventArgs e)
@@ -63,5 +68,5 @@ namespace Music
                 dgv.Rows.Add(content[i]);
             }
         }
+        }
     }
-}

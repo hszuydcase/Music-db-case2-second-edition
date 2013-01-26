@@ -122,11 +122,13 @@ namespace Music
 
         }
 
+
+
         public List<string[]> Gettabel(string commando)
         {
             tabel = new DataTable();
             OleDbDataAdapter adapter = new OleDbDataAdapter(commando, databaseString);
-            tabel.Clear();
+            this.tabel.Clear();
             adapter.Fill(tabel);
 
             List<string[]> inhoud = new List<string[]>();
@@ -148,20 +150,5 @@ namespace Music
             }
             return inhoud;
         }
-
-        //public void VulDGV(DataGridView dgv, string sqlCommand)
-        //{
-        //    List<string[]> content = Gettabel(sqlCommand);
-        //    dgv.Rows.Clear();
-        //    dgv.Columns.Clear();
-        //    for (int i = 0; i < content[0].Length; i++)
-        //    {
-        //        dgv.Columns.Add(content[0][i], content[0][i]);
-        //    }
-        //    for (int i = 1; i < content.Count; i++)
-        //    {
-        //        dgv.Rows.Add(content[i]);
-        //    }
-        //}
     }
 }
