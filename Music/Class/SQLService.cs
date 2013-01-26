@@ -149,19 +149,19 @@ namespace Music
             return inhoud;
         }
 
-        public void VulDGV(DataGridView dgv, string sqlCommand)
-        {
-            List<string[]> content = Gettabel(sqlCommand);
-            dgv.Rows.Clear();
-            dgv.Columns.Clear();
-            for (int i = 0; i < content[0].Length; i++)
-            {
-                dgv.Columns.Add(content[0][i], content[0][i]);
-            }
-            for (int i = 1; i < content.Count; i++)
-            {
-                dgv.Rows.Add(content[i]);
-            }
-        }
+        //public void VulDGV(DataGridView dgv, string sqlCommand)
+        //{
+        //    List<string[]> content = Gettabel(sqlCommand);
+        //    dgv.Rows.Clear();
+        //    dgv.Columns.Clear();
+        //    for (int i = 0; i < content[0].Length; i++)
+        //    {
+        //        dgv.Columns.Add(content[0][i], content[0][i]);
+        //    }
+        //    for (int i = 1; i < content.Count; i++)
+        //    {
+        //        dgv.Rows.Add(content[i]);
+        //    }
+        //}
     }
 }

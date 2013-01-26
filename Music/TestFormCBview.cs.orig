@@ -19,15 +19,31 @@ namespace Music
 
         private void btsearch_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             SQLService sqlService = new SQLService();
-            VulDGV(dataGridView1, "SELECT " + cbselect.Text + "FROM " +cbfrom.Text);
+            sqlService.VulDGV(dataGridView1, "SELECT " + cbselect.Text + "FROM" + cbfrom.Text);
+
+        }
+        private void cbfrom_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TestFormViewClass test = new TestFormViewClass();
+            
+            string from = cbfrom.Text;
+             
+=======
+
+            string select = cbselect.SelectedText;
+            string where = cbwhere.SelectedText;
+
+            string query = "SELECT" + select + "FROM" + From + "WHERE" + where;
 
         }
 
-        private void cbfrom_SelectedIndexChanged(object sender, EventArgs e)
+        private void cbFrom_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string from = cbfrom.Text;
+            string from = cbFrom.SelectedText;
             TestClassView test = new TestClassView();
+>>>>>>> 6cda27bf41e542e6226d951593aaf5eada59bf1d
             switch (from)
             {
                 case "Artiest":
@@ -47,21 +63,6 @@ namespace Music
                     break;
             }
         }
-
-        private void VulDGV(DataGridView dgv, string sqlCommand)
-        {
-            SQLService sqlService = new SQLService();
-            List<string[]> content = sqlService.Gettabel(sqlCommand);
-            dgv.Rows.Clear();
-            dgv.Columns.Clear();
-            for (int i = 0; i < content[0].Length; i++)
-            {
-                dgv.Columns.Add(content[0][i], content[0][i]);
-            }
-            for (int i = 1; i < content.Count; i++)
-            {
-                dgv.Rows.Add(content[i]);
-            }
         }
     }
-}
+
