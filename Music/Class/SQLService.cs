@@ -121,34 +121,27 @@ namespace Music
             return count != 0;
 
         }
-
-
-
-        public List<string[]> Gettabel(string commando)
+        /// <summary>
+        /// methode om de datagridview te vullen met de aangegeven database gegevens.
+        /// </summary>
+        /// <param name="command">SQL query waarmee je de opdracht geeft</param>
+        /// <param name="dataGridView">het object datagridview die gevult wordt met de data</param>
+        public void FillTable(string command, DataGridView dataGridView)
         {
-            tabel = new DataTable();
-            OleDbDataAdapter adapter = new OleDbDataAdapter(commando, databaseString);
-            this.tabel.Clear();
-            adapter.Fill(tabel);
+            try
+            {
+                OleDbDataAdapter adapter;
+                DataTable table = new DataTable();
+                adapter = new OleDbDataAdapter(command,
+                                               databaseString);
+                adapter.Fill(table);
+                dataGridView.DataSource = table;
+            }
+            catch (Exception obj)
+            {
 
-            List<string[]> inhoud = new List<string[]>();
-            string[] veldnaam = new string[tabel.Columns.Count];
-            for (int i = 0; i < tabel.Columns.Count; i++)
-            {
-                veldnaam[i] = tabel.Columns[i].ColumnName;
+                MessageBox.Show(obj.Message);
             }
-            inhoud.Add(veldnaam);
-            string[] rij;
-            for (int i = 0; i < tabel.Rows.Count; i++)
-            {
-                rij = new string[tabel.Columns.Count];
-                for (int j = 0; j < tabel.Columns.Count; j++)
-                {
-                    rij[j] = tabel.Rows[i][j].ToString();
-                }
-                inhoud.Add(rij);
-            }
-            return inhoud;
         }
     }
 }

@@ -21,12 +21,7 @@ namespace Music
         private void btsearch_Click(object sender, EventArgs e)
         {
             SQLService sqlService = new SQLService();
-            OleDbDataAdapter adapter = null;
-            string command = "SELECT album_id FROM ALBUM";
-            DataTable table = new DataTable();
-            adapter = new OleDbDataAdapter(command, @"Provider=Microsoft.SQLSERVER.CE.OLEDB.4.0;Data Source=|DataDirectory|\MusicIndexDataSet.sdf");
-            adapter.Fill(table);
-            dataGridView1.DataSource = table;
+            sqlService.FillTable("SELECT Album_ID FROM Album", dataGridView1);
         }
 
         private void cbfrom_SelectedIndexChanged(object sender, EventArgs e)
@@ -52,21 +47,5 @@ namespace Music
                     break;
             }
         }
-
-        private void VulDGV(DataGridView dgv, string sqlCommand)
-        {
-            SQLService sqlService = new SQLService();
-            List<string[]> content = sqlService.Gettabel(sqlCommand);
-            dgv.Rows.Clear();
-            dgv.Columns.Clear();
-            for (int i = 0; i < content[0].Length; i++)
-            {
-                dgv.Columns.Add(content[0][i], content[0][i]);
-            }
-            for (int i = 1; i < content.Count; i++)
-            {
-                dgv.Rows.Add(content[i]);
-            }
-        }
-        }
     }
+}

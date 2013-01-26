@@ -29,7 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.musicIndexDataSetDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.musicIndexDataSetDataSet = new Music.MusicIndexDataSetDataSet();
             this.cbfrom = new System.Windows.Forms.ComboBox();
             this.cbselect = new System.Windows.Forms.ComboBox();
             this.cbwhere = new System.Windows.Forms.ComboBox();
@@ -37,22 +38,21 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btsearch = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.musicIndexDataSetDataSet = new Music.MusicIndexDataSetDataSet();
-            this.musicIndexDataSetDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.musicIndexDataSetDataSet)).BeginInit();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.musicIndexDataSetDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.musicIndexDataSetDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // musicIndexDataSetDataSetBindingSource
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.DataSource = this.musicIndexDataSetDataSetBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 140);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(622, 228);
-            this.dataGridView1.TabIndex = 0;
+            this.musicIndexDataSetDataSetBindingSource.DataSource = this.musicIndexDataSetDataSet;
+            this.musicIndexDataSetDataSetBindingSource.Position = 0;
+            // 
+            // musicIndexDataSetDataSet
+            // 
+            this.musicIndexDataSetDataSet.DataSetName = "MusicIndexDataSetDataSet";
+            this.musicIndexDataSetDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cbfrom
             // 
@@ -130,21 +130,20 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Where";
             // 
-            // musicIndexDataSetDataSet
+            // dataGridView1
             // 
-            this.musicIndexDataSetDataSet.DataSetName = "MusicIndexDataSetDataSet";
-            this.musicIndexDataSetDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // musicIndexDataSetDataSetBindingSource
-            // 
-            this.musicIndexDataSetDataSetBindingSource.DataSource = this.musicIndexDataSetDataSet;
-            this.musicIndexDataSetDataSetBindingSource.Position = 0;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 130);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(622, 238);
+            this.dataGridView1.TabIndex = 9;
             // 
             // TestFormCBview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(646, 380);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btsearch);
             this.Controls.Add(this.label2);
@@ -152,12 +151,11 @@
             this.Controls.Add(this.cbwhere);
             this.Controls.Add(this.cbselect);
             this.Controls.Add(this.cbfrom);
-            this.Controls.Add(this.dataGridView1);
             this.Name = "TestFormCBview";
             this.Text = "TestFormCBview";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.musicIndexDataSetDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.musicIndexDataSetDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.musicIndexDataSetDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,7 +163,6 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ComboBox cbfrom;
         private System.Windows.Forms.ComboBox cbselect;
         private System.Windows.Forms.ComboBox cbwhere;
@@ -175,5 +172,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.BindingSource musicIndexDataSetDataSetBindingSource;
         private MusicIndexDataSetDataSet musicIndexDataSetDataSet;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

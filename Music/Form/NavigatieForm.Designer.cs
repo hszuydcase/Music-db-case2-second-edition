@@ -32,21 +32,23 @@
             this.bttra = new System.Windows.Forms.Button();
             this.btband = new System.Windows.Forms.Button();
             this.btart = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.Label = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btAlbum = new System.Windows.Forms.Button();
+            this.btartiest = new System.Windows.Forms.Button();
+            this.btbandview = new System.Windows.Forms.Button();
             this.btcatview = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.bttrack = new System.Windows.Forms.Button();
             this.lbUsername = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btcat
             // 
-            this.btcat.Location = new System.Drawing.Point(92, 235);
+            this.btcat.Location = new System.Drawing.Point(759, 117);
             this.btcat.Name = "btcat";
             this.btcat.Size = new System.Drawing.Size(75, 23);
             this.btcat.TabIndex = 0;
@@ -56,7 +58,7 @@
             // 
             // bttra
             // 
-            this.bttra.Location = new System.Drawing.Point(92, 264);
+            this.bttra.Location = new System.Drawing.Point(759, 146);
             this.bttra.Name = "bttra";
             this.bttra.Size = new System.Drawing.Size(75, 23);
             this.bttra.TabIndex = 1;
@@ -66,7 +68,7 @@
             // 
             // btband
             // 
-            this.btband.Location = new System.Drawing.Point(92, 206);
+            this.btband.Location = new System.Drawing.Point(759, 88);
             this.btband.Name = "btband";
             this.btband.Size = new System.Drawing.Size(75, 23);
             this.btband.TabIndex = 2;
@@ -76,7 +78,7 @@
             // 
             // btart
             // 
-            this.btart.Location = new System.Drawing.Point(92, 177);
+            this.btart.Location = new System.Drawing.Point(759, 59);
             this.btart.Name = "btart";
             this.btart.Size = new System.Drawing.Size(75, 23);
             this.btart.TabIndex = 3;
@@ -84,20 +86,10 @@
             this.btart.UseVisualStyleBackColor = true;
             this.btart.Click += new System.EventHandler(this.btart_Click);
             // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(293, 381);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Logout";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(110, 127);
+            this.label1.Location = new System.Drawing.Point(777, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 13);
             this.label1.TabIndex = 5;
@@ -105,7 +97,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(92, 148);
+            this.button1.Location = new System.Drawing.Point(759, 30);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 6;
@@ -116,42 +108,45 @@
             // Label
             // 
             this.Label.AutoSize = true;
-            this.Label.Location = new System.Drawing.Point(245, 127);
+            this.Label.Location = new System.Drawing.Point(35, 9);
             this.Label.Name = "Label";
             this.Label.Size = new System.Drawing.Size(30, 13);
             this.Label.TabIndex = 7;
             this.Label.Text = "View";
             // 
-            // button2
+            // btAlbum
             // 
-            this.button2.Location = new System.Drawing.Point(222, 148);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 8;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btAlbum.Location = new System.Drawing.Point(12, 30);
+            this.btAlbum.Name = "btAlbum";
+            this.btAlbum.Size = new System.Drawing.Size(75, 23);
+            this.btAlbum.TabIndex = 8;
+            this.btAlbum.Text = "Album";
+            this.btAlbum.UseVisualStyleBackColor = true;
+            this.btAlbum.Click += new System.EventHandler(this.btAlbum_Click);
             // 
-            // button3
+            // btartiest
             // 
-            this.button3.Location = new System.Drawing.Point(222, 177);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btartiest.Location = new System.Drawing.Point(12, 59);
+            this.btartiest.Name = "btartiest";
+            this.btartiest.Size = new System.Drawing.Size(75, 23);
+            this.btartiest.TabIndex = 9;
+            this.btartiest.Text = "Artiest";
+            this.btartiest.UseVisualStyleBackColor = true;
+            this.btartiest.Click += new System.EventHandler(this.btartiest_Click);
             // 
-            // button4
+            // btbandview
             // 
-            this.button4.Location = new System.Drawing.Point(222, 206);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 10;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btbandview.Location = new System.Drawing.Point(12, 88);
+            this.btbandview.Name = "btbandview";
+            this.btbandview.Size = new System.Drawing.Size(75, 23);
+            this.btbandview.TabIndex = 10;
+            this.btbandview.Text = "Band";
+            this.btbandview.UseVisualStyleBackColor = true;
+            this.btbandview.Click += new System.EventHandler(this.btbandview_Click);
             // 
             // btcatview
             // 
-            this.btcatview.Location = new System.Drawing.Point(223, 235);
+            this.btcatview.Location = new System.Drawing.Point(13, 117);
             this.btcatview.Name = "btcatview";
             this.btcatview.Size = new System.Drawing.Size(75, 23);
             this.btcatview.TabIndex = 11;
@@ -159,14 +154,15 @@
             this.btcatview.UseVisualStyleBackColor = true;
             this.btcatview.Click += new System.EventHandler(this.btcatview_Click);
             // 
-            // button7
+            // bttrack
             // 
-            this.button7.Location = new System.Drawing.Point(222, 264);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 12;
-            this.button7.Text = "button7";
-            this.button7.UseVisualStyleBackColor = true;
+            this.bttrack.Location = new System.Drawing.Point(12, 146);
+            this.bttrack.Name = "bttrack";
+            this.bttrack.Size = new System.Drawing.Size(75, 23);
+            this.bttrack.TabIndex = 12;
+            this.bttrack.Text = "Track";
+            this.bttrack.UseVisualStyleBackColor = true;
+            this.bttrack.Click += new System.EventHandler(this.bttrack_Click);
             // 
             // lbUsername
             // 
@@ -176,21 +172,40 @@
             this.lbUsername.Size = new System.Drawing.Size(0, 13);
             this.lbUsername.TabIndex = 13;
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(246, 78);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "Logout";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 185);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(822, 219);
+            this.dataGridView1.TabIndex = 14;
+            // 
             // NavigatieForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(958, 416);
+            this.ClientSize = new System.Drawing.Size(846, 416);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.lbUsername);
-            this.Controls.Add(this.button7);
+            this.Controls.Add(this.bttrack);
             this.Controls.Add(this.btcatview);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btbandview);
+            this.Controls.Add(this.btartiest);
+            this.Controls.Add(this.btAlbum);
             this.Controls.Add(this.Label);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button5);
             this.Controls.Add(this.btart);
             this.Controls.Add(this.btband);
             this.Controls.Add(this.bttra);
@@ -198,7 +213,7 @@
             this.Name = "NavigatieForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NavigatieForm";
-            this.Load += new System.EventHandler(this.NavigatieForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -210,15 +225,16 @@
         private System.Windows.Forms.Button bttra;
         private System.Windows.Forms.Button btband;
         private System.Windows.Forms.Button btart;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label Label;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btAlbum;
+        private System.Windows.Forms.Button btartiest;
+        private System.Windows.Forms.Button btbandview;
         private System.Windows.Forms.Button btcatview;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button bttrack;
         private System.Windows.Forms.Label lbUsername;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

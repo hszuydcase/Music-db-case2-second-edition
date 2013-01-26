@@ -200,6 +200,9 @@
     <EmbeddedResource Include="ViewForm\CategorieViewForm.resx">
       <DependentUpon>CategorieViewForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ViewForm\TrackViewForm.resx">
+      <DependentUpon>TrackViewForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="MusicIndexDataSetDataSet.xsc">
       <DependentUpon>MusicIndexDataSetDataSet.xsd</DependentUpon>
     </None>
