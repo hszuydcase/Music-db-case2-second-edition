@@ -97,7 +97,7 @@ namespace Music
             }
         }
 
-        public static string GetUsername()
+        public string GetUsername()
         {
             return this._username;
         }

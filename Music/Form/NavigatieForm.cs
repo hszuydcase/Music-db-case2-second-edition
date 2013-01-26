@@ -16,7 +16,7 @@ namespace Music
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
-            lbUsername.Text = User.GetUsername();
+            
 
 
         }
