@@ -64,7 +64,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\Categorie.cs" />
     <Compile Include="Class\User.cs" />
+    <Compile Include="Class\Album.cs" />
+    <Compile Include="Class\Artiest.cs" />
+    <Compile Include="Class\Band.cs" />
+    <Compile Include="Class\Track.cs" />
     <Compile Include="TestClassView.cs" />
     <Compile Include="TestFormCBview.cs">
       <SubType>Form</SubType>

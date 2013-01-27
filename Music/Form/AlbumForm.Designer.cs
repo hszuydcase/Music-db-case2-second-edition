@@ -34,8 +34,8 @@
             this.tbalbumdat = new System.Windows.Forms.MaskedTextBox();
             this.tbalbumimage = new System.Windows.Forms.TextBox();
             this.tbalbumnaam = new System.Windows.Forms.TextBox();
-            this.btannuleren = new System.Windows.Forms.Button();
-            this.btadd = new System.Windows.Forms.Button();
+            this.btAnnuleren = new System.Windows.Forms.Button();
+            this.btAdd = new System.Windows.Forms.Button();
             this.btbrowse = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.label4 = new System.Windows.Forms.Label();
@@ -74,7 +74,7 @@
             this.tbalbumdat.Location = new System.Drawing.Point(118, 86);
             this.tbalbumdat.Mask = "00/00/0000";
             this.tbalbumdat.Name = "tbalbumdat";
-            this.tbalbumdat.Size = new System.Drawing.Size(146, 20);
+            this.tbalbumdat.Size = new System.Drawing.Size(68, 20);
             this.tbalbumdat.TabIndex = 4;
             this.tbalbumdat.ValidatingType = typeof(System.DateTime);
             // 
@@ -92,25 +92,25 @@
             this.tbalbumnaam.Size = new System.Drawing.Size(146, 20);
             this.tbalbumnaam.TabIndex = 6;
             // 
-            // btannuleren
+            // btAnnuleren
             // 
-            this.btannuleren.Location = new System.Drawing.Point(146, 237);
-            this.btannuleren.Name = "btannuleren";
-            this.btannuleren.Size = new System.Drawing.Size(75, 23);
-            this.btannuleren.TabIndex = 7;
-            this.btannuleren.Text = "Annuleren";
-            this.btannuleren.UseVisualStyleBackColor = true;
-            this.btannuleren.Click += new System.EventHandler(this.button1_Click);
+            this.btAnnuleren.Location = new System.Drawing.Point(336, 237);
+            this.btAnnuleren.Name = "btAnnuleren";
+            this.btAnnuleren.Size = new System.Drawing.Size(75, 23);
+            this.btAnnuleren.TabIndex = 7;
+            this.btAnnuleren.Text = "Annuleren";
+            this.btAnnuleren.UseVisualStyleBackColor = true;
+            this.btAnnuleren.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btadd
+            // btAdd
             // 
-            this.btadd.Location = new System.Drawing.Point(255, 237);
-            this.btadd.Name = "btadd";
-            this.btadd.Size = new System.Drawing.Size(75, 23);
-            this.btadd.TabIndex = 8;
-            this.btadd.Text = "Add";
-            this.btadd.UseVisualStyleBackColor = true;
-            this.btadd.Click += new System.EventHandler(this.button2_Click);
+            this.btAdd.Location = new System.Drawing.Point(255, 237);
+            this.btAdd.Name = "btAdd";
+            this.btAdd.Size = new System.Drawing.Size(75, 23);
+            this.btAdd.TabIndex = 8;
+            this.btAdd.Text = "Add";
+            this.btAdd.UseVisualStyleBackColor = true;
+            this.btAdd.Click += new System.EventHandler(this.button2_Click);
             // 
             // btbrowse
             // 
@@ -156,8 +156,8 @@
             this.Controls.Add(this.cbmedium);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btbrowse);
-            this.Controls.Add(this.btadd);
-            this.Controls.Add(this.btannuleren);
+            this.Controls.Add(this.btAdd);
+            this.Controls.Add(this.btAnnuleren);
             this.Controls.Add(this.tbalbumnaam);
             this.Controls.Add(this.tbalbumimage);
             this.Controls.Add(this.tbalbumdat);
@@ -179,8 +179,8 @@
         private System.Windows.Forms.MaskedTextBox tbalbumdat;
         private System.Windows.Forms.TextBox tbalbumimage;
         private System.Windows.Forms.TextBox tbalbumnaam;
-        private System.Windows.Forms.Button btannuleren;
-        private System.Windows.Forms.Button btadd;
+        private System.Windows.Forms.Button btAnnuleren;
+        private System.Windows.Forms.Button btAdd;
         private System.Windows.Forms.Button btbrowse;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label label4;
