@@ -24,30 +24,9 @@ namespace Music
 
         private void button2_Click(object sender, EventArgs e)
         {
-              try
-            {
-                DateTime albumdat = DateTime.ParseExact(tbalbumdat.Text, "dd/MM/yyyy", null);
-                SQLService sqlService = new SQLService();
-                if (
-                    sqlService.Bestaat("SELECT album_naam FROM album WHERE album_naam = '" + tbalbumnaam.Text +"' ") == true)
-                {
-                    throw new ExistsException("album");
-                }
-                sqlService.Insert("INSERT INTO album (album_naam,album_datum,album_medium) VALUES ('" + tbalbumnaam.Text + "','" + albumdat + "','" + cbmedium.SelectedValue + "')");
-            }
-            catch (ExistsException obj)
-            {
-                MessageBox.Show(obj.Message + " is al reeds in gebruik", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
-            }
-            catch (FormatException obj)
-            {
-                MessageBox.Show(obj.Message);
-            }
-            catch (Exception obj)
-            {
-                MessageBox.Show(obj.Message);
-            }
-         }
+            Album album = new Album();
+            album.CreateAlbum(inputDatum.Text,inputNaam.Text, inputMedium.Text);
+        }
 
         private void btbrowse_Click(object sender, EventArgs e)
         {

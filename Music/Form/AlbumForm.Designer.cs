@@ -31,15 +31,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.tbalbumdat = new System.Windows.Forms.MaskedTextBox();
+            this.inputDatum = new System.Windows.Forms.MaskedTextBox();
             this.tbalbumimage = new System.Windows.Forms.TextBox();
-            this.tbalbumnaam = new System.Windows.Forms.TextBox();
+            this.inputNaam = new System.Windows.Forms.TextBox();
             this.btAnnuleren = new System.Windows.Forms.Button();
             this.btAdd = new System.Windows.Forms.Button();
             this.btbrowse = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.label4 = new System.Windows.Forms.Label();
-            this.cbmedium = new System.Windows.Forms.ComboBox();
+            this.inputMedium = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -69,14 +69,14 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Datum release";
             // 
-            // tbalbumdat
+            // inputDatum
             // 
-            this.tbalbumdat.Location = new System.Drawing.Point(118, 86);
-            this.tbalbumdat.Mask = "00/00/0000";
-            this.tbalbumdat.Name = "tbalbumdat";
-            this.tbalbumdat.Size = new System.Drawing.Size(68, 20);
-            this.tbalbumdat.TabIndex = 4;
-            this.tbalbumdat.ValidatingType = typeof(System.DateTime);
+            this.inputDatum.Location = new System.Drawing.Point(118, 86);
+            this.inputDatum.Mask = "00/00/0000";
+            this.inputDatum.Name = "inputDatum";
+            this.inputDatum.Size = new System.Drawing.Size(68, 20);
+            this.inputDatum.TabIndex = 4;
+            this.inputDatum.ValidatingType = typeof(System.DateTime);
             // 
             // tbalbumimage
             // 
@@ -85,12 +85,12 @@
             this.tbalbumimage.Size = new System.Drawing.Size(261, 20);
             this.tbalbumimage.TabIndex = 5;
             // 
-            // tbalbumnaam
+            // inputNaam
             // 
-            this.tbalbumnaam.Location = new System.Drawing.Point(118, 50);
-            this.tbalbumnaam.Name = "tbalbumnaam";
-            this.tbalbumnaam.Size = new System.Drawing.Size(146, 20);
-            this.tbalbumnaam.TabIndex = 6;
+            this.inputNaam.Location = new System.Drawing.Point(118, 50);
+            this.inputNaam.Name = "inputNaam";
+            this.inputNaam.Size = new System.Drawing.Size(146, 20);
+            this.inputNaam.TabIndex = 6;
             // 
             // btAnnuleren
             // 
@@ -135,32 +135,32 @@
             this.label4.TabIndex = 13;
             this.label4.Text = "Medium";
             // 
-            // cbmedium
+            // inputMedium
             // 
-            this.cbmedium.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbmedium.FormattingEnabled = true;
-            this.cbmedium.Items.AddRange(new object[] {
+            this.inputMedium.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.inputMedium.FormattingEnabled = true;
+            this.inputMedium.Items.AddRange(new object[] {
             "Vynil",
             "Casette",
             "CD"});
-            this.cbmedium.Location = new System.Drawing.Point(118, 160);
-            this.cbmedium.Name = "cbmedium";
-            this.cbmedium.Size = new System.Drawing.Size(121, 21);
-            this.cbmedium.TabIndex = 14;
+            this.inputMedium.Location = new System.Drawing.Point(118, 160);
+            this.inputMedium.Name = "inputMedium";
+            this.inputMedium.Size = new System.Drawing.Size(121, 21);
+            this.inputMedium.TabIndex = 14;
             // 
             // AlbumForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(420, 273);
-            this.Controls.Add(this.cbmedium);
+            this.Controls.Add(this.inputMedium);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btbrowse);
             this.Controls.Add(this.btAdd);
             this.Controls.Add(this.btAnnuleren);
-            this.Controls.Add(this.tbalbumnaam);
+            this.Controls.Add(this.inputNaam);
             this.Controls.Add(this.tbalbumimage);
-            this.Controls.Add(this.tbalbumdat);
+            this.Controls.Add(this.inputDatum);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -176,14 +176,14 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.MaskedTextBox tbalbumdat;
+        private System.Windows.Forms.MaskedTextBox inputDatum;
         private System.Windows.Forms.TextBox tbalbumimage;
-        private System.Windows.Forms.TextBox tbalbumnaam;
+        private System.Windows.Forms.TextBox inputNaam;
         private System.Windows.Forms.Button btAnnuleren;
         private System.Windows.Forms.Button btAdd;
         private System.Windows.Forms.Button btbrowse;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cbmedium;
+        private System.Windows.Forms.ComboBox inputMedium;
     }
 }
