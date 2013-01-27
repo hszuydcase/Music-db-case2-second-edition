@@ -42,6 +42,7 @@ namespace Music
         {
             string test;
             test = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[1].Value);
+
             label1.Text = Convert.ToString(test);
         }
     }
