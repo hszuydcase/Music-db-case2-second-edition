@@ -1,0 +1,256 @@
+﻿namespace Music
+{
+    partial class NavigatieForm
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.btcat = new System.Windows.Forms.Button();
+            this.bttra = new System.Windows.Forms.Button();
+            this.btband = new System.Windows.Forms.Button();
+            this.btart = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.Label = new System.Windows.Forms.Label();
+            this.btAlbum = new System.Windows.Forms.Button();
+            this.btartiest = new System.Windows.Forms.Button();
+            this.btbandview = new System.Windows.Forms.Button();
+            this.btcatview = new System.Windows.Forms.Button();
+<<<<<<< HEAD
+            this.bttrack = new System.Windows.Forms.Button();
+            this.lbUsername = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+=======
+            this.button7 = new System.Windows.Forms.Button();
+>>>>>>> aaa
+            this.SuspendLayout();
+            // 
+            // btcat
+            // 
+            this.btcat.Location = new System.Drawing.Point(759, 117);
+            this.btcat.Name = "btcat";
+            this.btcat.Size = new System.Drawing.Size(75, 23);
+            this.btcat.TabIndex = 0;
+            this.btcat.Text = "Categorie";
+            this.btcat.UseVisualStyleBackColor = true;
+            this.btcat.Click += new System.EventHandler(this.btcat_Click);
+            // 
+            // bttra
+            // 
+            this.bttra.Location = new System.Drawing.Point(759, 146);
+            this.bttra.Name = "bttra";
+            this.bttra.Size = new System.Drawing.Size(75, 23);
+            this.bttra.TabIndex = 1;
+            this.bttra.Text = "Track";
+            this.bttra.UseVisualStyleBackColor = true;
+            this.bttra.Click += new System.EventHandler(this.bttra_Click);
+            // 
+            // btband
+            // 
+            this.btband.Location = new System.Drawing.Point(759, 88);
+            this.btband.Name = "btband";
+            this.btband.Size = new System.Drawing.Size(75, 23);
+            this.btband.TabIndex = 2;
+            this.btband.Text = "Band";
+            this.btband.UseVisualStyleBackColor = true;
+            this.btband.Click += new System.EventHandler(this.btband_Click);
+            // 
+            // btart
+            // 
+            this.btart.Location = new System.Drawing.Point(759, 59);
+            this.btart.Name = "btart";
+            this.btart.Size = new System.Drawing.Size(75, 23);
+            this.btart.TabIndex = 3;
+            this.btart.Text = "Artiest";
+            this.btart.UseVisualStyleBackColor = true;
+            this.btart.Click += new System.EventHandler(this.btart_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(777, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Inserts";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(759, 30);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Album";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Label
+            // 
+            this.Label.AutoSize = true;
+            this.Label.Location = new System.Drawing.Point(35, 9);
+            this.Label.Name = "Label";
+            this.Label.Size = new System.Drawing.Size(30, 13);
+            this.Label.TabIndex = 7;
+            this.Label.Text = "View";
+            // 
+            // btAlbum
+            // 
+            this.btAlbum.Location = new System.Drawing.Point(12, 30);
+            this.btAlbum.Name = "btAlbum";
+            this.btAlbum.Size = new System.Drawing.Size(75, 23);
+            this.btAlbum.TabIndex = 8;
+            this.btAlbum.Text = "Album";
+            this.btAlbum.UseVisualStyleBackColor = true;
+            this.btAlbum.Click += new System.EventHandler(this.btAlbum_Click);
+            // 
+            // btartiest
+            // 
+            this.btartiest.Location = new System.Drawing.Point(12, 59);
+            this.btartiest.Name = "btartiest";
+            this.btartiest.Size = new System.Drawing.Size(75, 23);
+            this.btartiest.TabIndex = 9;
+            this.btartiest.Text = "Artiest";
+            this.btartiest.UseVisualStyleBackColor = true;
+            this.btartiest.Click += new System.EventHandler(this.btartiest_Click);
+            // 
+            // btbandview
+            // 
+            this.btbandview.Location = new System.Drawing.Point(12, 88);
+            this.btbandview.Name = "btbandview";
+            this.btbandview.Size = new System.Drawing.Size(75, 23);
+            this.btbandview.TabIndex = 10;
+            this.btbandview.Text = "Band";
+            this.btbandview.UseVisualStyleBackColor = true;
+            this.btbandview.Click += new System.EventHandler(this.btbandview_Click);
+            // 
+            // btcatview
+            // 
+            this.btcatview.Location = new System.Drawing.Point(13, 117);
+            this.btcatview.Name = "btcatview";
+            this.btcatview.Size = new System.Drawing.Size(75, 23);
+            this.btcatview.TabIndex = 11;
+            this.btcatview.Text = "Categorie";
+            this.btcatview.UseVisualStyleBackColor = true;
+            this.btcatview.Click += new System.EventHandler(this.btcatview_Click);
+            // 
+            // bttrack
+            // 
+            this.bttrack.Location = new System.Drawing.Point(12, 146);
+            this.bttrack.Name = "bttrack";
+            this.bttrack.Size = new System.Drawing.Size(75, 23);
+            this.bttrack.TabIndex = 12;
+            this.bttrack.Text = "Track";
+            this.bttrack.UseVisualStyleBackColor = true;
+            this.bttrack.Click += new System.EventHandler(this.bttrack_Click);
+            // 
+<<<<<<< HEAD
+            // lbUsername
+            // 
+            this.lbUsername.AutoSize = true;
+            this.lbUsername.Location = new System.Drawing.Point(13, 13);
+            this.lbUsername.Name = "lbUsername";
+            this.lbUsername.Size = new System.Drawing.Size(0, 13);
+            this.lbUsername.TabIndex = 13;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(246, 78);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "Logout";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 185);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(822, 219);
+            this.dataGridView1.TabIndex = 14;
+            // 
+=======
+>>>>>>> aaa
+            // NavigatieForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
+            this.ClientSize = new System.Drawing.Size(846, 416);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.lbUsername);
+            this.Controls.Add(this.bttrack);
+=======
+            this.ClientSize = new System.Drawing.Size(958, 416);
+            this.Controls.Add(this.button7);
+>>>>>>> aaa
+            this.Controls.Add(this.btcatview);
+            this.Controls.Add(this.btbandview);
+            this.Controls.Add(this.btartiest);
+            this.Controls.Add(this.btAlbum);
+            this.Controls.Add(this.Label);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btart);
+            this.Controls.Add(this.btband);
+            this.Controls.Add(this.bttra);
+            this.Controls.Add(this.btcat);
+            this.Name = "NavigatieForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "NavigatieForm";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Button btcat;
+        private System.Windows.Forms.Button bttra;
+        private System.Windows.Forms.Button btband;
+        private System.Windows.Forms.Button btart;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label Label;
+        private System.Windows.Forms.Button btAlbum;
+        private System.Windows.Forms.Button btartiest;
+        private System.Windows.Forms.Button btbandview;
+        private System.Windows.Forms.Button btcatview;
+<<<<<<< HEAD
+        private System.Windows.Forms.Button bttrack;
+        private System.Windows.Forms.Label lbUsername;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.DataGridView dataGridView1;
+=======
+        private System.Windows.Forms.Button button7;
+>>>>>>> aaa
+    }
+}
