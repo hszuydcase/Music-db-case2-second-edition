@@ -20,7 +20,7 @@ namespace Music
         private void btRegistreer_Click(object sender, EventArgs e)
         {
 
-            User user = new User();
+            User user = User.Instance;
             user.CreateUser(inputUsername.Text, inputPassword.Text, inputVoornaam.Text, inputAchternaam.Text, inputEmail.Text);
             this.Close();
         }

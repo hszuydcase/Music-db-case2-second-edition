@@ -41,14 +41,19 @@
             this.btcatview = new System.Windows.Forms.Button();
             this.bttrack = new System.Windows.Forms.Button();
             this.lbUsername = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.profileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btcat
             // 
-            this.btcat.Location = new System.Drawing.Point(759, 117);
+            this.btcat.Location = new System.Drawing.Point(760, 174);
             this.btcat.Name = "btcat";
             this.btcat.Size = new System.Drawing.Size(75, 23);
             this.btcat.TabIndex = 0;
@@ -58,7 +63,7 @@
             // 
             // bttra
             // 
-            this.bttra.Location = new System.Drawing.Point(759, 146);
+            this.bttra.Location = new System.Drawing.Point(760, 203);
             this.bttra.Name = "bttra";
             this.bttra.Size = new System.Drawing.Size(75, 23);
             this.bttra.TabIndex = 1;
@@ -68,7 +73,7 @@
             // 
             // btband
             // 
-            this.btband.Location = new System.Drawing.Point(759, 88);
+            this.btband.Location = new System.Drawing.Point(760, 145);
             this.btband.Name = "btband";
             this.btband.Size = new System.Drawing.Size(75, 23);
             this.btband.TabIndex = 2;
@@ -78,7 +83,7 @@
             // 
             // btart
             // 
-            this.btart.Location = new System.Drawing.Point(759, 59);
+            this.btart.Location = new System.Drawing.Point(760, 116);
             this.btart.Name = "btart";
             this.btart.Size = new System.Drawing.Size(75, 23);
             this.btart.TabIndex = 3;
@@ -89,7 +94,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(777, 9);
+            this.label1.Location = new System.Drawing.Point(778, 66);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 13);
             this.label1.TabIndex = 5;
@@ -97,7 +102,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(759, 30);
+            this.button1.Location = new System.Drawing.Point(760, 87);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 6;
@@ -108,7 +113,7 @@
             // Label
             // 
             this.Label.AutoSize = true;
-            this.Label.Location = new System.Drawing.Point(35, 9);
+            this.Label.Location = new System.Drawing.Point(32, 59);
             this.Label.Name = "Label";
             this.Label.Size = new System.Drawing.Size(30, 13);
             this.Label.TabIndex = 7;
@@ -116,7 +121,7 @@
             // 
             // btAlbum
             // 
-            this.btAlbum.Location = new System.Drawing.Point(12, 30);
+            this.btAlbum.Location = new System.Drawing.Point(12, 87);
             this.btAlbum.Name = "btAlbum";
             this.btAlbum.Size = new System.Drawing.Size(75, 23);
             this.btAlbum.TabIndex = 8;
@@ -126,7 +131,7 @@
             // 
             // btartiest
             // 
-            this.btartiest.Location = new System.Drawing.Point(12, 59);
+            this.btartiest.Location = new System.Drawing.Point(12, 116);
             this.btartiest.Name = "btartiest";
             this.btartiest.Size = new System.Drawing.Size(75, 23);
             this.btartiest.TabIndex = 9;
@@ -136,7 +141,7 @@
             // 
             // btbandview
             // 
-            this.btbandview.Location = new System.Drawing.Point(12, 88);
+            this.btbandview.Location = new System.Drawing.Point(12, 145);
             this.btbandview.Name = "btbandview";
             this.btbandview.Size = new System.Drawing.Size(75, 23);
             this.btbandview.TabIndex = 10;
@@ -146,7 +151,7 @@
             // 
             // btcatview
             // 
-            this.btcatview.Location = new System.Drawing.Point(13, 117);
+            this.btcatview.Location = new System.Drawing.Point(13, 174);
             this.btcatview.Name = "btcatview";
             this.btcatview.Size = new System.Drawing.Size(75, 23);
             this.btcatview.TabIndex = 11;
@@ -156,7 +161,7 @@
             // 
             // bttrack
             // 
-            this.bttrack.Location = new System.Drawing.Point(12, 146);
+            this.bttrack.Location = new System.Drawing.Point(12, 203);
             this.bttrack.Name = "bttrack";
             this.bttrack.Size = new System.Drawing.Size(75, 23);
             this.bttrack.TabIndex = 12;
@@ -167,36 +172,65 @@
             // lbUsername
             // 
             this.lbUsername.AutoSize = true;
-            this.lbUsername.Location = new System.Drawing.Point(13, 13);
+            this.lbUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbUsername.Location = new System.Drawing.Point(300, 98);
             this.lbUsername.Name = "lbUsername";
-            this.lbUsername.Size = new System.Drawing.Size(0, 13);
+            this.lbUsername.Size = new System.Drawing.Size(0, 31);
             this.lbUsername.TabIndex = 13;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(246, 78);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Logout";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 185);
+            this.dataGridView1.Location = new System.Drawing.Point(13, 247);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(822, 219);
             this.dataGridView1.TabIndex = 14;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.helpToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(846, 24);
+            this.menuStrip1.TabIndex = 15;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.profileToolStripMenuItem,
+            this.logoutToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Text = "File";
+            // 
+            // logoutToolStripMenuItem
+            // 
+            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.logoutToolStripMenuItem.Text = "Logout";
+            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Text = "Help";
+            // 
+            // profileToolStripMenuItem
+            // 
+            this.profileToolStripMenuItem.Name = "profileToolStripMenuItem";
+            this.profileToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.profileToolStripMenuItem.Text = "Profile";
             // 
             // NavigatieForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(846, 416);
+            this.ClientSize = new System.Drawing.Size(846, 478);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button5);
             this.Controls.Add(this.lbUsername);
             this.Controls.Add(this.bttrack);
             this.Controls.Add(this.btcatview);
@@ -210,10 +244,17 @@
             this.Controls.Add(this.btband);
             this.Controls.Add(this.bttra);
             this.Controls.Add(this.btcat);
+            this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "NavigatieForm";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NavigatieForm";
+            this.Load += new System.EventHandler(this.NavigatieForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -234,7 +275,11 @@
         private System.Windows.Forms.Button btcatview;
         private System.Windows.Forms.Button bttrack;
         private System.Windows.Forms.Label lbUsername;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem profileToolStripMenuItem;
     }
 }

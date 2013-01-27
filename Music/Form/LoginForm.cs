@@ -22,8 +22,8 @@ namespace Music
 
      private void btLogin_Click_1(object sender, EventArgs e)
      {
-         User gebruiker = new User();
-         bool ingelogd = gebruiker.Login(inputUsername.Text, inputPassword.Text);
+         User user = User.Instance;
+         bool ingelogd = user.Login(inputUsername.Text, inputPassword.Text);
          
          if (ingelogd == true)
          {

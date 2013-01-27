@@ -12,10 +12,12 @@ namespace Music
 {
     public partial class NavigatieForm : Form
     {
+        private User user = User.Instance;
         public NavigatieForm()
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
+            lbUsername.Text = user.GetUsername();
         }
 
         private void btart_Click(object sender, EventArgs e)
@@ -44,7 +46,6 @@ namespace Music
 
         private void button5_Click(object sender, EventArgs e)
         {
-            User user = new User();
             user.Logout();
             LoginForm form = new LoginForm();
             this.Hide();
@@ -85,6 +86,25 @@ namespace Music
         {
             SQLService sqlService = new SQLService();
             sqlService.FillTable("SELECT band_id, band_naam, band_opgericht_datum, band_stop_datum, band_oorsprong FROM band", dataGridView1);
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NavigatieForm_Load(object sender, EventArgs e)
+        {
+
+            
+        }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            user.Logout();
+            LoginForm form = new LoginForm();
+            this.Hide();
+            form.ShowDialog();
         }
     }
 }

@@ -7,15 +7,26 @@ using System.Windows.Forms;
 
 namespace Music
 {
-    public class User
+    // hier wordt gebruik gemaakt van het zogehete SingeleTon Model/Patroon.
+    public sealed class User
     {
-        public string _username;
-        private int _admin_level, _id;
+        private static readonly User instance = new User();
+        private string _username;
 
-        // Constructor
-        public User()
+
+        // Explicit static constructor to tell C# compiler 
+        // not to mark type as beforefieldinit
+        static User()
         {
+        }
 
+        private User()
+        {
+        }
+
+        public static User Instance
+        {
+            get { return instance; }
         }
         /// <summary>
         /// Methode om een gebruiker aan te maken
@@ -66,10 +77,15 @@ namespace Music
                 MessageBox.Show(obj.Message);
             }
         }
-
+       /// <summary>
+       /// Module om in te loggen en de gegevens van de gebruiker op te slaan.
+       /// </summary>
+       /// <param name="username">username</param>
+       /// <param name="password">Password </param>
+       /// <returns>Returned een bool</returns>
         public bool Login(string username, string password)
         {
-            
+
             try
             {
                 SQLService sqlService = new SQLService();
@@ -78,7 +94,7 @@ namespace Music
                 if (bestaat == false)
                 {
                     MessageBox.Show("Gegevens zijn niet bekend.");
-                    
+
                 }
                 else
                 {
@@ -107,5 +123,6 @@ namespace Music
             this._username = "";
 
         }
+
     }
 }
