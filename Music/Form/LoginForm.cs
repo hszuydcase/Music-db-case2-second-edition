@@ -41,7 +41,7 @@ namespace Music
 
       private void btCancel_Click(object sender, EventArgs e)
       {
-          this.Close();
+         Application.Exit();
       }
 
     }

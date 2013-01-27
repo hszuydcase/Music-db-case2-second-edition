@@ -106,5 +106,16 @@ namespace Music
             this.Hide();
             form.ShowDialog();
         }
+
+        private void btDatagvTest_Click(object sender, EventArgs e)
+        {
+            DatagridviewTest form = new DatagridviewTest();
+            form.ShowDialog();
+        }
+
+        private void NavigatieForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

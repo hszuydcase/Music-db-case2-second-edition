@@ -176,6 +176,9 @@
     <Compile Include="ViewForm\TrackViewForm.Designer.cs">
       <DependentUpon>TrackViewForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DatagridviewTest.resx">
+      <DependentUpon>DatagridviewTest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\AlbumForm.resx">
       <DependentUpon>AlbumForm.cs</DependentUpon>
     </EmbeddedResource>
