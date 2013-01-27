@@ -70,6 +70,12 @@
     <Compile Include="Class\Artiest.cs" />
     <Compile Include="Class\Band.cs" />
     <Compile Include="Class\Track.cs" />
+    <Compile Include="DatagridviewTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatagridviewTest.Designer.cs">
+      <DependentUpon>DatagridviewTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="TestClassView.cs" />
     <Compile Include="TestFormCBview.cs">
       <SubType>Form</SubType>

@@ -132,8 +132,7 @@ namespace Music
             {
                 OleDbDataAdapter adapter;
                 DataTable table = new DataTable();
-                adapter = new OleDbDataAdapter(command,
-                                               databaseString);
+                adapter = new OleDbDataAdapter(command,databaseString);
                 adapter.Fill(table);
                 dataGridView.DataSource = table;
             }
