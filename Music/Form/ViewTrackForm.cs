@@ -12,7 +12,7 @@ namespace Music
 {
     public partial class ViewTrackForm : Form
     {
-        private User user = new User();
+        private User user = User.Instance;
         public ViewTrackForm()
         {
             InitializeComponent();
