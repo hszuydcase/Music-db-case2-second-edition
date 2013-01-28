@@ -141,12 +141,13 @@ namespace Music
                 MessageBox.Show(obj.Message);
             }
         }
-                public void GetAllElements(string sqlcommand)
+
+        public void GetAllElements(string sqlcommand)
         {
             try
             {
 
-                
+
                 OleDbCommand Olecommand = new OleDbCommand();
                 connectie.Open();
 
@@ -182,7 +183,8 @@ namespace Music
             }
             finally
             {
-            connectie.Close();
+                connectie.Close();
             }
+        }
     }
 }
