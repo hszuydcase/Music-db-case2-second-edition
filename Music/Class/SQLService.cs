@@ -141,5 +141,48 @@ namespace Music
                 MessageBox.Show(obj.Message);
             }
         }
+                public void GetAllElements(string sqlcommand)
+        {
+            try
+            {
+
+                
+                OleDbCommand Olecommand = new OleDbCommand();
+                connectie.Open();
+
+                Olecommand.Connection = connectie;
+                Olecommand.CommandText = sqlcommand;
+                OleDbDataReader reader = Olecommand.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    MessageBox.Show(reader.GetValue(0) + " - " + reader.GetValue(1) + " - " + reader.GetValue(2));
+                }
+                reader.Close();
+                Olecommand.Dispose();
+
+                /*
+                    oledbCnn.Open();
+                oledbCmd = new OleDbCommand(sql, oledbCnn);
+                OleDbDataReader oledbReader = oledbCmd.ExecuteReader();
+                while (oledbReader.Read ())
+                {
+                    MessageBox.Show(oledbReader.GetValue(0) + " - " + oledbReader.GetValue(1) + " - " + oledbReader.GetValue(2));
+                }
+                oledbReader.Close();
+                oledbCmd.Dispose();
+                oledbCnn.Close();
+                 */
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+            connectie.Close();
+            }
     }
 }

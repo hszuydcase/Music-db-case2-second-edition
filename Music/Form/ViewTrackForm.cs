@@ -12,9 +12,19 @@ namespace Music
 {
     public partial class ViewTrackForm : Form
     {
+        private User user = new User();
         public ViewTrackForm()
         {
             InitializeComponent();
+            SQLService sql = new SQLService();
+
+            string gebruikersnaam = user.GetUsername();
+            string id = null;
+            string command =
+                "SELECT user_id, password, user_voornaam, user_achternaam, email FROM gebruiker where username = '" +
+                gebruikersnaam + "' ";
+
+            sql.GetAllElements(command);
         }
     }
 }
