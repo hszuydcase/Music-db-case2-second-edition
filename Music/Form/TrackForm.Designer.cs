@@ -231,7 +231,7 @@
             // tblengte
             // 
             this.tblengte.Location = new System.Drawing.Point(117, 76);
-            this.tblengte.Mask = "00:00";
+            this.tblengte.Mask = "00:00:00";
             this.tblengte.Name = "tblengte";
             this.tblengte.Size = new System.Drawing.Size(128, 20);
             this.tblengte.TabIndex = 23;

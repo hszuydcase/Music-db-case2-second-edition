@@ -64,12 +64,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class\Categorie.cs" />
-    <Compile Include="Class\User.cs" />
-    <Compile Include="Class\Album.cs" />
-    <Compile Include="Class\Artiest.cs" />
-    <Compile Include="Class\Band.cs" />
-    <Compile Include="Class\Track.cs" />
+    <Compile Include="Form\Class\Categorie.cs" />
+    <Compile Include="Form\Class\User.cs" />
+    <Compile Include="Form\Class\Album.cs" />
+    <Compile Include="Form\Class\Artiest.cs" />
+    <Compile Include="Form\Class\Band.cs" />
+    <Compile Include="Form\Class\Track.cs" />
     <Compile Include="DatagridviewTest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,8 +132,8 @@
     <Compile Include="Form\CategorieForm.Designer.cs">
       <DependentUpon>CategorieForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class\ExistsException.cs" />
-    <Compile Include="Class\ForgottenInfoException.cs" />
+    <Compile Include="Form\Class\ExistsException.cs" />
+    <Compile Include="Form\Class\ForgottenInfoException.cs" />
     <Compile Include="Form\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,7 +155,7 @@
     <Compile Include="Form\NavigatieForm.Designer.cs">
       <DependentUpon>NavigatieForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class\Program.cs" />
+    <Compile Include="Form\Class\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Form\RegistreerForm.cs">
       <SubType>Form</SubType>
@@ -163,7 +163,7 @@
     <Compile Include="Form\RegistreerForm.Designer.cs">
       <DependentUpon>RegistreerForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class\SQLService.cs" />
+    <Compile Include="Form\Class\SQLService.cs" />
     <Compile Include="Form\TrackForm.cs">
       <SubType>Form</SubType>
     </Compile>
