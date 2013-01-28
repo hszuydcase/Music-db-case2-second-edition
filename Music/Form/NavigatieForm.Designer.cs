@@ -186,6 +186,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(822, 219);
             this.dataGridView1.TabIndex = 14;
+            this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
             // 
             // menuStrip1
             // 
@@ -263,6 +264,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NavigatieForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.NavigatieForm_FormClosed_1);
             this.Load += new System.EventHandler(this.NavigatieForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
