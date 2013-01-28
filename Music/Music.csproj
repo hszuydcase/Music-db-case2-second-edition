@@ -176,6 +176,12 @@
     <Compile Include="ViewForm\TrackViewForm.Designer.cs">
       <DependentUpon>TrackViewForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\ViewTrackForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ViewTrackForm.Designer.cs">
+      <DependentUpon>ViewTrackForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="DatagridviewTest.resx">
       <DependentUpon>DatagridviewTest.cs</DependentUpon>
     </EmbeddedResource>
@@ -199,6 +205,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\RegistreerForm.resx">
       <DependentUpon>RegistreerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ViewTrackForm.resx">
+      <DependentUpon>ViewTrackForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
