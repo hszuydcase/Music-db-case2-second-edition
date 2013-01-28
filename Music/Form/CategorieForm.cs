@@ -19,16 +19,8 @@ namespace Music
 
         private void bt_Add_Click(object sender, EventArgs e)
         {
-            try
-            {
-                SQLService sqlService = new SQLService();
-                sqlService.Insert("INSERT INTO categorie (cat_naam) VALUES ('" + tbcategorie.Text + "')");
-            }
-            catch (Exception obj)
-            {
-
-                MessageBox.Show(obj.Message);
-            }
+            Categorie categorie = new Categorie();
+            categorie.CreateCategorie(tbcategorie.Text);
         }
 
         private void button1_Click(object sender, EventArgs e)

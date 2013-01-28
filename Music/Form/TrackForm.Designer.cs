@@ -37,19 +37,19 @@
             this.label7 = new System.Windows.Forms.Label();
             this.cbalbum = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbtitel = new System.Windows.Forms.TextBox();
             this.tbtrackimage = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.tbproducer = new System.Windows.Forms.TextBox();
+            this.tbtaal = new System.Windows.Forms.TextBox();
+            this.tbyoutube = new System.Windows.Forms.TextBox();
             this.btAdd = new System.Windows.Forms.Button();
             this.btannuleren = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbcategorie = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.tbdatrelease = new System.Windows.Forms.MaskedTextBox();
+            this.tblengte = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -133,19 +133,12 @@
             this.label8.TabIndex = 8;
             this.label8.Text = "Album";
             // 
-            // textBox1
+            // tbtitel
             // 
-            this.textBox1.Location = new System.Drawing.Point(117, 34);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(128, 20);
-            this.textBox1.TabIndex = 9;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(117, 80);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(128, 20);
-            this.textBox2.TabIndex = 10;
+            this.tbtitel.Location = new System.Drawing.Point(117, 34);
+            this.tbtitel.Name = "tbtitel";
+            this.tbtitel.Size = new System.Drawing.Size(128, 20);
+            this.tbtitel.TabIndex = 9;
             // 
             // tbtrackimage
             // 
@@ -154,33 +147,26 @@
             this.tbtrackimage.Size = new System.Drawing.Size(128, 20);
             this.tbtrackimage.TabIndex = 11;
             // 
-            // textBox4
+            // tbproducer
             // 
-            this.textBox4.Location = new System.Drawing.Point(117, 164);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(131, 20);
-            this.textBox4.TabIndex = 12;
+            this.tbproducer.Location = new System.Drawing.Point(391, 37);
+            this.tbproducer.Name = "tbproducer";
+            this.tbproducer.Size = new System.Drawing.Size(156, 20);
+            this.tbproducer.TabIndex = 13;
             // 
-            // textBox5
+            // tbtaal
             // 
-            this.textBox5.Location = new System.Drawing.Point(391, 37);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(156, 20);
-            this.textBox5.TabIndex = 13;
+            this.tbtaal.Location = new System.Drawing.Point(391, 83);
+            this.tbtaal.Name = "tbtaal";
+            this.tbtaal.Size = new System.Drawing.Size(156, 20);
+            this.tbtaal.TabIndex = 14;
             // 
-            // textBox6
+            // tbyoutube
             // 
-            this.textBox6.Location = new System.Drawing.Point(391, 83);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(156, 20);
-            this.textBox6.TabIndex = 14;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(391, 120);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(156, 20);
-            this.textBox7.TabIndex = 15;
+            this.tbyoutube.Location = new System.Drawing.Point(391, 120);
+            this.tbyoutube.Name = "tbyoutube";
+            this.tbyoutube.Size = new System.Drawing.Size(156, 20);
+            this.tbyoutube.TabIndex = 15;
             // 
             // btAdd
             // 
@@ -190,6 +176,7 @@
             this.btAdd.TabIndex = 16;
             this.btAdd.Text = "Add";
             this.btAdd.UseVisualStyleBackColor = true;
+            this.btAdd.Click += new System.EventHandler(this.btAdd_Click);
             // 
             // btannuleren
             // 
@@ -214,14 +201,14 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // comboBox1
+            // cbcategorie
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(117, 203);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(131, 21);
-            this.comboBox1.TabIndex = 19;
+            this.cbcategorie.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbcategorie.FormattingEnabled = true;
+            this.cbcategorie.Location = new System.Drawing.Point(117, 203);
+            this.cbcategorie.Name = "cbcategorie";
+            this.cbcategorie.Size = new System.Drawing.Size(131, 21);
+            this.cbcategorie.TabIndex = 19;
             // 
             // label9
             // 
@@ -232,23 +219,40 @@
             this.label9.TabIndex = 20;
             this.label9.Text = "Categorie";
             // 
+            // tbdatrelease
+            // 
+            this.tbdatrelease.Location = new System.Drawing.Point(117, 161);
+            this.tbdatrelease.Mask = "00/00/0000";
+            this.tbdatrelease.Name = "tbdatrelease";
+            this.tbdatrelease.Size = new System.Drawing.Size(128, 20);
+            this.tbdatrelease.TabIndex = 22;
+            this.tbdatrelease.ValidatingType = typeof(System.DateTime);
+            // 
+            // tblengte
+            // 
+            this.tblengte.Location = new System.Drawing.Point(117, 76);
+            this.tblengte.Mask = "00:00";
+            this.tblengte.Name = "tblengte";
+            this.tblengte.Size = new System.Drawing.Size(128, 20);
+            this.tblengte.TabIndex = 23;
+            // 
             // TrackForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(559, 285);
+            this.Controls.Add(this.tblengte);
+            this.Controls.Add(this.tbdatrelease);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbcategorie);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btannuleren);
             this.Controls.Add(this.btAdd);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.tbyoutube);
+            this.Controls.Add(this.tbtaal);
+            this.Controls.Add(this.tbproducer);
             this.Controls.Add(this.tbtrackimage);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbtitel);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.cbalbum);
             this.Controls.Add(this.label7);
@@ -276,18 +280,18 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cbalbum;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbtitel;
         private System.Windows.Forms.TextBox tbtrackimage;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox tbproducer;
+        private System.Windows.Forms.TextBox tbtaal;
+        private System.Windows.Forms.TextBox tbyoutube;
         private System.Windows.Forms.Button btAdd;
         private System.Windows.Forms.Button btannuleren;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbcategorie;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.MaskedTextBox tbdatrelease;
+        private System.Windows.Forms.MaskedTextBox tblengte;
     }
 }

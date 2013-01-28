@@ -27,5 +27,11 @@ namespace Music
                 tbtrackimage.Text = openFileDialog1.FileName;
             }
         }
+
+        private void btAdd_Click(object sender, EventArgs e)
+        {
+            Track track = new Track();
+            track.CreateTrack(tbtitel.Text,tblengte.Text,tbdatrelease.Text,tbyoutube.Text);
+        }
     }
 }
