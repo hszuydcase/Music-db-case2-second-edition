@@ -33,7 +33,6 @@
             this.tbartiestennaam = new System.Windows.Forms.TextBox();
             this.tbvoornaam = new System.Windows.Forms.TextBox();
             this.tbachternaam = new System.Windows.Forms.TextBox();
-            this.tbgebdat = new System.Windows.Forms.TextBox();
             this.tbgebplaats = new System.Windows.Forms.TextBox();
             this.tbgebland = new System.Windows.Forms.TextBox();
             this.tbbiografie = new System.Windows.Forms.RichTextBox();
@@ -44,6 +43,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.tbgebdat = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // bt_add
@@ -86,14 +86,6 @@
             this.tbachternaam.Name = "tbachternaam";
             this.tbachternaam.Size = new System.Drawing.Size(147, 20);
             this.tbachternaam.TabIndex = 4;
-            // 
-            // tbgebdat
-            // 
-            this.tbgebdat.Location = new System.Drawing.Point(112, 164);
-            this.tbgebdat.Name = "tbgebdat";
-            this.tbgebdat.Size = new System.Drawing.Size(147, 20);
-            this.tbgebdat.TabIndex = 5;
-            this.tbgebdat.Text = "YYYY/MM/DD";
             // 
             // tbgebplaats
             // 
@@ -180,11 +172,21 @@
             this.label7.TabIndex = 15;
             this.label7.Text = "Geboorteland";
             // 
+            // tbgebdat
+            // 
+            this.tbgebdat.Location = new System.Drawing.Point(112, 164);
+            this.tbgebdat.Mask = "00/00/0000";
+            this.tbgebdat.Name = "tbgebdat";
+            this.tbgebdat.Size = new System.Drawing.Size(147, 20);
+            this.tbgebdat.TabIndex = 16;
+            this.tbgebdat.ValidatingType = typeof(System.DateTime);
+            // 
             // ArtiestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(549, 375);
+            this.Controls.Add(this.tbgebdat);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -195,7 +197,6 @@
             this.Controls.Add(this.tbbiografie);
             this.Controls.Add(this.tbgebland);
             this.Controls.Add(this.tbgebplaats);
-            this.Controls.Add(this.tbgebdat);
             this.Controls.Add(this.tbachternaam);
             this.Controls.Add(this.tbvoornaam);
             this.Controls.Add(this.tbartiestennaam);
@@ -215,7 +216,6 @@
         private System.Windows.Forms.TextBox tbartiestennaam;
         private System.Windows.Forms.TextBox tbvoornaam;
         private System.Windows.Forms.TextBox tbachternaam;
-        private System.Windows.Forms.TextBox tbgebdat;
         private System.Windows.Forms.TextBox tbgebplaats;
         private System.Windows.Forms.TextBox tbgebland;
         private System.Windows.Forms.RichTextBox tbbiografie;
@@ -226,5 +226,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.MaskedTextBox tbgebdat;
     }
 }

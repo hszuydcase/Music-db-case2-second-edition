@@ -203,7 +203,6 @@
             this.Controls.Add(this.bt_add);
             this.Name = "BandForm";
             this.Text = "Band";
-            this.Load += new System.EventHandler(this.BandForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
