@@ -133,8 +133,6 @@ namespace Music
                     break;
                 case "track":
                     MessageBox.Show("track");
-                    ViewTrackForm form = new ViewTrackForm();
-                    form.ShowDialog();
                     break;
                 case "artiest":
                     MessageBox.Show("artiest");

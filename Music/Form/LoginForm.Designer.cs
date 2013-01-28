@@ -94,7 +94,6 @@
             // 
             // btCancel
             // 
-            this.btCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btCancel.Location = new System.Drawing.Point(198, 216);
             this.btCancel.Name = "btCancel";
             this.btCancel.Size = new System.Drawing.Size(75, 23);
@@ -105,14 +104,12 @@
             // 
             // LoginForm
             // 
-            this.AcceptButton = this.btLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.CancelButton = this.btCancel;
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.btCancel);
             this.Controls.Add(this.label2);
