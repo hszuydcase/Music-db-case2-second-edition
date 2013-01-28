@@ -13,8 +13,7 @@ namespace Music
     public class SQLService
     {
         // gegevens vooraf declareren
-        private string databaseString =
-            @"Provider=Microsoft.SQLSERVER.CE.OLEDB.4.0;Data Source=|DataDirectory|\MusicIndexDataSet.sdf";
+        private string databaseString = @"Provider=Microsoft.SQLSERVER.CE.OLEDB.4.0;Data Source=|DataDirectory|\MusicIndexDataSet.sdf";
 
         private OleDbConnection connectie;
         private DataTable tabel;
@@ -89,7 +88,7 @@ namespace Music
 
                 // do the update
                 adapter.UpdateCommand.ExecuteNonQuery();
-                connectie.Close();
+                
 
 
 
