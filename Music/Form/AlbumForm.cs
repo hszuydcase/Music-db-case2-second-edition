@@ -37,6 +37,6 @@ namespace Music
                 tbalbumimage.Text = openFileDialog1.FileName;
             }
         }
-
+        
         }
     }

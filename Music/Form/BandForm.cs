@@ -37,7 +37,7 @@ namespace Music
             Band band = new Band();
             band.CreateBand(tbbandnaam.Text,tbbandopgericht.Text,tbbandgestopt.Text,tbbandoorsprong.Text);
             Image image = new Image();
-            image.Saveimage();
+            image.Saveimage(openFileDialog1);
         }
     }
 }

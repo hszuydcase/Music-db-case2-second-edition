@@ -183,8 +183,8 @@ namespace Music
               // Close de reader en database en return de list.
                 reader.Close();
                 Olecommand.Dispose();
-                return list;
                 connectie.Close();
+                return list;
             }
             catch (Exception obj)
             {
@@ -194,5 +194,17 @@ namespace Music
 
             return new string[] {};
         }
+        
+        public void Fillcombo(string query,ComboBox comboBox,string kolomnaam)
+
+        {
+            OleDbDataAdapter adapter = new OleDbDataAdapter(query, connectie);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            comboBox.DataSource = dt;
+            comboBox.DisplayMember = kolomnaam;
+            //comboBox1.DataBindings.ToString();
+        }
+
     }
 }

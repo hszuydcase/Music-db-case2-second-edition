@@ -12,20 +12,19 @@ namespace Music
 {
     public class Image
     {
-        public void Saveimage()
+        public void Saveimage(OpenFileDialog openFileDialog)
 
         {
             try
             {
-                OpenFileDialog openFileDialog = new OpenFileDialog();
                 string sourceFile = openFileDialog.FileName;
-                string destinationFile = @"Source=|DataDirectory|\images";
+                string destinationFile = @"C:\images";
                 File.Copy(sourceFile, destinationFile);
             }
             catch (Exception exc)
             {
-                            
-                throw;
+
+                MessageBox.Show(exc.Message);
             }
 
 
