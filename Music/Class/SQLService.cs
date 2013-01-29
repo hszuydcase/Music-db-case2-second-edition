@@ -116,6 +116,7 @@ namespace Music
 
             OleDbDataAdapter adapter = new OleDbDataAdapter(command, databaseString);
             tabel.Clear();
+            
             int count = adapter.Fill(tabel);
 
             return count != 0;
@@ -154,18 +155,24 @@ namespace Music
                 Olecommand.CommandText = sqlcommand;
                 OleDbDataReader reader = Olecommand.ExecuteReader();
 
-                string[] list = null;
+                int RowCount = reader.VisibleFieldCount;
+                string[] list = new string[RowCount];
                 int i = 0;
                 string value;
 
                 while (reader.Read())
                 {
-                    value = Convert.ToString(reader.GetValue(i));
-                    list[i] = value;
-                    i++;
-
-                    MessageBox.Show(reader.GetValue(0) + " - " + reader.GetValue(1) + " - " + reader.GetValue(2));
+                    for (int j = 0; j < RowCount; j++)
+                    {
+                        value = Convert.ToString(reader.GetValue(i));
+                        list[i] = value;
+                        i++;
+                    } 
                 }
+                
+                    
+
+              
                 reader.Close();
                 Olecommand.Dispose();
 
