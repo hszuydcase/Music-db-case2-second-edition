@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.OleDb;
 using System.Data;
 using System.Windows.Forms;
+using System.Collections;
 
 
 namespace Music
@@ -146,8 +147,6 @@ namespace Music
         {
             try
             {
-
-
                 OleDbCommand Olecommand = new OleDbCommand();
                 connectie.Open();
 
@@ -155,25 +154,20 @@ namespace Music
                 Olecommand.CommandText = sqlcommand;
                 OleDbDataReader reader = Olecommand.ExecuteReader();
 
+                string[] list = null;
+                int i = 0;
+                string value;
+
                 while (reader.Read())
                 {
+                    value = Convert.ToString(reader.GetValue(i));
+                    list[i] = value;
+                    i++;
+
                     MessageBox.Show(reader.GetValue(0) + " - " + reader.GetValue(1) + " - " + reader.GetValue(2));
                 }
                 reader.Close();
                 Olecommand.Dispose();
-
-                /*
-                    oledbCnn.Open();
-                oledbCmd = new OleDbCommand(sql, oledbCnn);
-                OleDbDataReader oledbReader = oledbCmd.ExecuteReader();
-                while (oledbReader.Read ())
-                {
-                    MessageBox.Show(oledbReader.GetValue(0) + " - " + oledbReader.GetValue(1) + " - " + oledbReader.GetValue(2));
-                }
-                oledbReader.Close();
-                oledbCmd.Dispose();
-                oledbCnn.Close();
-                 */
 
             }
             catch (Exception)
