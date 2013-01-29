@@ -26,11 +26,6 @@ namespace Music
                 {
                     throw new FormatException("Dit is geen geldige datum: dd/mm/yyyy");
                 }
-                if (!DateTime.TryParseExact(lengte, lengteformat, CultureInfo.InvariantCulture,
-                                            DateTimeStyles.None, out lengtetrack))
-                {
-                    throw new FormatException("Dit is geen geldige tijd: HH:MM:SS met een maximaal bereik van 23:59:59");
-                }
 
                 if (titel == "" || lengte == "" || datumuitgebracht == "" || youtubelink == "")
                 {

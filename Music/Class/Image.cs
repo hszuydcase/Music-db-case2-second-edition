@@ -15,12 +15,22 @@ namespace Music
         public void Saveimage()
 
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            string sourceFile = openFileDialog.FileName;
-            string destinationFile = @"Source=|DataDirectory|\images";
+            try
+            {
+                OpenFileDialog openFileDialog = new OpenFileDialog();
+                string sourceFile = openFileDialog.FileName;
+                string destinationFile = @"Source=|DataDirectory|\images";
+                File.Copy(sourceFile, destinationFile);
+            }
+            catch (Exception exc)
+            {
+                            
+                throw;
+            }
+
 
             // To move a file or folder to a new location:
-            File.Copy(sourceFile, destinationFile);
+            
 
             // To move an entire directory. To programmatically modify or combine 
             // path strings, use the System.IO.Path class.
