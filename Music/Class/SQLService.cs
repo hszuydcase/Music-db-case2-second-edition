@@ -198,11 +198,25 @@ namespace Music
         public void Fillcombo(string query,ComboBox comboBox,string kolomnaam)
 
         {
-            OleDbDataAdapter adapter = new OleDbDataAdapter(query, connectie);
+
+            // Open connectie
+            OleDbCommand Command = new OleDbCommand();
+            OleDbDataAdapter adapter = new OleDbDataAdapter();
+            connectie.Open();
+
+            // put the command in the adapter
+            Command.Connection = connectie;
+            Command.CommandText = query;
+            adapter.SelectCommand = Command;
+
+            
             DataTable dt = new DataTable();
             adapter.Fill(dt);
             comboBox.DataSource = dt;
             comboBox.DisplayMember = kolomnaam;
+
+            Command.Dispose();
+            connectie.Close();
             //comboBox1.DataBindings.ToString();
         }
 
