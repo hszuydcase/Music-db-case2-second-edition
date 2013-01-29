@@ -12,12 +12,17 @@ namespace Music
 {
     public partial class ViewTrackForm : Form
     {
+        // Class instance aanroepen.
         private User user = User.Instance;
+        private Track track = Track.Instance;
+
+
         public ViewTrackForm()
         {
             InitializeComponent();
             SQLService sql = new SQLService();
 
+            int track_id = track.GetTrackId();
             string gebruikersnaam = user.GetUsername();
             string id = null;
             string command =
@@ -25,7 +30,10 @@ namespace Music
 
             string [] list = sql.GetAllElements(command);
 
-            
+            lbTitel.Text = list[1];
+            lbLengte.Text = list[2];
+            lbDatum.Text = list[3];
+            lbProducer.Text = list[4];
         }
     }
 }

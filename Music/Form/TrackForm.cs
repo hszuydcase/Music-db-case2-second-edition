@@ -34,8 +34,9 @@ namespace Music
         }
         private void btAdd_Click(object sender, EventArgs e)
         {
-            Track track = new Track();
-            track.CreateTrack(tbtitel.Text,tblengte.Text,tbdatrelease.Text,tbyoutube.Text);
+            private Track track = Track.Instance;
+            track.CreateTrack(tbtitel.Text, tblengte.Text, tbdatrelease.Text, tbproducer.Text, tbtaal.Text,
+                              tbyoutube.Text);
         }
 
         private void btannuleren_Click(object sender, EventArgs e)

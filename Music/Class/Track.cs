@@ -8,9 +8,36 @@ using System.Globalization;
 
 namespace Music
 {
-    public class Track
+    public sealed class Track
     {
-        public void CreateTrack(string titel, string lengte,string datumuitgebracht,string youtubelink)
+        private static readonly Track instance = new Track();
+        private int _current_track_id;
+
+        // Explicit static constructor to tell C# compiler 
+        // not to mark type as beforefieldinit
+        static Track()
+        {
+        }
+
+        private Track()
+        {
+        }
+
+        public static Track Instance
+        {
+            get { return instance; }
+        }
+
+        /// <summary>
+        /// Methode om een nieuwe track aan te maken
+        /// </summary>
+        /// <param name="titel"></param>
+        /// <param name="lengte"></param>
+        /// <param name="datumuitgebracht"></param>
+        /// <param name="producer"></param>
+        /// <param name="taal"></param>
+        /// <param name="youtubelink"></param>
+        public void CreateTrack(string titel, string lengte, string datumuitgebracht, string producer, string taal, string youtubelink)
         {
             try
             {
@@ -27,13 +54,13 @@ namespace Music
                     throw new FormatException("Dit is geen geldige datum: dd/mm/yyyy");
                 }
 
-                if (titel == "" || lengte == "" || datumuitgebracht == "" || youtubelink == "")
+                if (titel == "" || lengte == "" || datumuitgebracht == "" || producer == "" || taal == "" || youtubelink == "")
                 {
                     throw new NullReferenceException("Alle velden moeten worden ingevult.");
                 }
                 sqlService.Insert(
-                    "INSERT INTO band (band_naam,band_opgericht_datum,band_stop_datum,band_oorsprong) VALUES ('" +
-                    titel + "','" + lengte + "','" + datumuitgebracht + "','" + youtubelink + "')");
+                    "INSERT INTO track (titel, datum_uitgebracht, producer, taal, youtube_link) VALUES ('" +
+                    titel + "','" + datrelease + "','" + producer + "','" + taal + "','" + youtubelink + "')");
                  
             }
 
@@ -51,5 +78,22 @@ namespace Music
                 MessageBox.Show(obj.Message);
             }
         }
+        /// <summary>
+        /// Methode om de track id te krijgen.
+        /// </summary>
+        /// <returns></returns>
+        public int GetTrackId()
+        {
+            return this._current_track_id;
+        }
+        /// <summary>
+        /// Methode om de track id te setten.
+        /// </summary>
+        /// <param name="id">ID van de track.</param>
+        public void SetTrackId(int id)
+        {
+            this._current_track_id = id;
+        }
+
     }
 }
