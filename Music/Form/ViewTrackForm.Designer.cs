@@ -48,6 +48,8 @@
             this.lbband = new System.Windows.Forms.Label();
             this.lbRating = new System.Windows.Forms.Label();
             this.lbFavoriet = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.lbYoutube = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -230,11 +232,31 @@
             this.lbFavoriet.TabIndex = 19;
             this.lbFavoriet.Text = "label20";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(18, 314);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(66, 13);
+            this.label11.TabIndex = 20;
+            this.label11.Text = "Youtube link";
+            // 
+            // lbYoutube
+            // 
+            this.lbYoutube.AutoSize = true;
+            this.lbYoutube.Location = new System.Drawing.Point(187, 313);
+            this.lbYoutube.Name = "lbYoutube";
+            this.lbYoutube.Size = new System.Drawing.Size(41, 13);
+            this.lbYoutube.TabIndex = 21;
+            this.lbYoutube.Text = "label12";
+            // 
             // ViewTrackForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(536, 386);
+            this.Controls.Add(this.lbYoutube);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.lbFavoriet);
             this.Controls.Add(this.lbRating);
             this.Controls.Add(this.lbband);
@@ -284,5 +306,7 @@
         private System.Windows.Forms.Label lbband;
         private System.Windows.Forms.Label lbRating;
         private System.Windows.Forms.Label lbFavoriet;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lbYoutube;
     }
 }

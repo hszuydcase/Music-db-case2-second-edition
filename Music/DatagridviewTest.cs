@@ -38,12 +38,22 @@ namespace Music
 
         }
 
-        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            string test;
-            test = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[1].Value);
 
-            label1.Text = Convert.ToString(test);
+            try
+            {
+                string test;
+                test = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[1].Value);
+
+                label1.Text = Convert.ToString(test);
+            }
+            catch (Exception)
+            {
+                
+               
+            }
+
         }
     }
 }

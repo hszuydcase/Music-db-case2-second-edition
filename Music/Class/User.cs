@@ -98,8 +98,6 @@ namespace Music
                 }
                 else
                 {
-
-                    MessageBox.Show("Welkom " + username + "");
                     this._username = username;
                     ingelogd = true;
                 }

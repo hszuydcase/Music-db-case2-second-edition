@@ -14,6 +14,7 @@ namespace Music
     {
         private string GridviewClick;
         private User user = User.Instance;
+        private Track track = Track.Instance;
         public NavigatieForm()
         {
             InitializeComponent();
@@ -126,6 +127,27 @@ namespace Music
 
         private void dataGridView1_DoubleClick(object sender, EventArgs e)
         {
+
+        }
+
+        private void NavigatieForm_FormClosed_1(object sender, FormClosedEventArgs e)
+        {
+            user.Logout();
+            LoginForm form = new LoginForm();
+            this.Hide();
+            form.ShowDialog();
+        }
+
+        private void dataGridView1_ColumnHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            MessageBox.Show("Row Header Double click");
+        }
+
+        private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int id_row_clicked;
+            id_row_clicked = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
+            
             switch (GridviewClick)
             {
                 case "band":
@@ -133,9 +155,10 @@ namespace Music
                     break;
                 case "track":
                     MessageBox.Show("track");
+                    track.SetTrackId(id_row_clicked);
                     ViewTrackForm form = new ViewTrackForm();
                     form.ShowDialog();
-                   
+                    
                     break;
                 case "artiest":
                     MessageBox.Show("artiest");
@@ -147,14 +170,6 @@ namespace Music
                     MessageBox.Show("Categorie");
                     break;
             }
-        }
-
-        private void NavigatieForm_FormClosed_1(object sender, FormClosedEventArgs e)
-        {
-            user.Logout();
-            LoginForm form = new LoginForm();
-            this.Hide();
-            form.ShowDialog();
         }
     }
 }
