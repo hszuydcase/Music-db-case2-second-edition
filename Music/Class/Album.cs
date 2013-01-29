@@ -28,7 +28,7 @@ namespace Music
          
                 if (naam == "" || medium == "")
                 {
-                    throw new NullReferenceException("Er moeten wel overal waardes worden ingevuld.");
+                    throw new NullReferenceException("Alle velden moeten worden ingevult.");
                 }
              
                 

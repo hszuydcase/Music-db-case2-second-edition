@@ -17,7 +17,8 @@ namespace Music
                 SQLService sqlService = new SQLService();
 
                 DateTime datrelease = new DateTime();
-
+                DateTime lengtetrack = new DateTime();
+                string lengteformat = "HH:MM:SS";
                 string format = "dd/MM/yyyy";
 
                 if (!DateTime.TryParseExact(datumuitgebracht, format, CultureInfo.InvariantCulture,
@@ -25,10 +26,15 @@ namespace Music
                 {
                     throw new FormatException("Dit is geen geldige datum: dd/mm/yyyy");
                 }
+                if (!DateTime.TryParseExact(lengte, lengteformat, CultureInfo.InvariantCulture,
+                                            DateTimeStyles.None, out lengtetrack))
+                {
+                    throw new FormatException("Dit is geen geldige tijd: HH:MM:SS met een maximaal bereik van 23:59:59");
+                }
 
                 if (titel == "" || lengte == "" || datumuitgebracht == "" || youtubelink == "")
                 {
-                    throw new NullReferenceException("Er moeten wel overal waardes worden ingevuld.");
+                    throw new NullReferenceException("Alle velden moeten worden ingevult.");
                 }
                 sqlService.Insert(
                     "INSERT INTO band (band_naam,band_opgericht_datum,band_stop_datum,band_oorsprong) VALUES ('" +

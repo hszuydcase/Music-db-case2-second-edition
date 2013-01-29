@@ -17,7 +17,7 @@ namespace Music
       
                 if (categorienaam == "" )
                 {
-                    throw new NullReferenceException("Er moeten wel overal waardes worden ingevuld.");
+                    throw new NullReferenceException("Alle velden moeten worden ingevult.");
                 }
                     sqlService.Insert("INSERT INTO artiest (artiest_naam,voornaam,achternaam,geb_datum,geb_plaats) VALUES ('" + categorienaam +"')");
             }

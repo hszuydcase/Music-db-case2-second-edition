@@ -19,19 +19,30 @@ namespace Music
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string startdir = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
-            openFileDialog1.InitialDirectory = startdir;
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            //string startdir = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
+            //openFileDialog1.InitialDirectory = startdir;
+            //if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            //{
+            //    MessageBox.Show(openFileDialog1.FileName);
+            //    tbtrackimage.Text = openFileDialog1.FileName;
+            //}
+            DialogResult dlgres = openFileDialog1.ShowDialog();
+            if (dlgres != DialogResult.Cancel)
             {
-                MessageBox.Show(openFileDialog1.FileName);
                 tbtrackimage.Text = openFileDialog1.FileName;
             }
         }
-
         private void btAdd_Click(object sender, EventArgs e)
         {
+            Image image = new Image();
             Track track = new Track();
             track.CreateTrack(tbtitel.Text,tblengte.Text,tbdatrelease.Text,tbyoutube.Text);
+            image.Save("track", "track_image", tbtrackimage);
+        }
+
+        private void btannuleren_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

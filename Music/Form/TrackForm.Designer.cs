@@ -91,7 +91,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(319, 37);
+            this.label5.Location = new System.Drawing.Point(319, 31);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(50, 13);
             this.label5.TabIndex = 4;
@@ -100,7 +100,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(319, 82);
+            this.label6.Location = new System.Drawing.Point(319, 75);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(28, 13);
             this.label6.TabIndex = 5;
@@ -109,7 +109,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(319, 123);
+            this.label7.Location = new System.Drawing.Point(319, 120);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(66, 13);
             this.label7.TabIndex = 6;
@@ -119,7 +119,7 @@
             // 
             this.cbalbum.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbalbum.FormattingEnabled = true;
-            this.cbalbum.Location = new System.Drawing.Point(391, 164);
+            this.cbalbum.Location = new System.Drawing.Point(391, 161);
             this.cbalbum.Name = "cbalbum";
             this.cbalbum.Size = new System.Drawing.Size(156, 21);
             this.cbalbum.TabIndex = 7;
@@ -127,7 +127,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(322, 166);
+            this.label8.Location = new System.Drawing.Point(322, 163);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(36, 13);
             this.label8.TabIndex = 8;
@@ -149,21 +149,21 @@
             // 
             // tbproducer
             // 
-            this.tbproducer.Location = new System.Drawing.Point(391, 37);
+            this.tbproducer.Location = new System.Drawing.Point(391, 31);
             this.tbproducer.Name = "tbproducer";
             this.tbproducer.Size = new System.Drawing.Size(156, 20);
             this.tbproducer.TabIndex = 13;
             // 
             // tbtaal
             // 
-            this.tbtaal.Location = new System.Drawing.Point(391, 83);
+            this.tbtaal.Location = new System.Drawing.Point(391, 76);
             this.tbtaal.Name = "tbtaal";
             this.tbtaal.Size = new System.Drawing.Size(156, 20);
             this.tbtaal.TabIndex = 14;
             // 
             // tbyoutube
             // 
-            this.tbyoutube.Location = new System.Drawing.Point(391, 120);
+            this.tbyoutube.Location = new System.Drawing.Point(391, 117);
             this.tbyoutube.Name = "tbyoutube";
             this.tbyoutube.Size = new System.Drawing.Size(156, 20);
             this.tbyoutube.TabIndex = 15;
@@ -186,6 +186,7 @@
             this.btannuleren.TabIndex = 17;
             this.btannuleren.Text = "Annuleren";
             this.btannuleren.UseVisualStyleBackColor = true;
+            this.btannuleren.Click += new System.EventHandler(this.btannuleren_Click);
             // 
             // openFileDialog1
             // 

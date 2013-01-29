@@ -33,7 +33,7 @@ namespace Music
 
                 if (bandnaam == "" || oorsprong == "")
                 {
-                    throw new NullReferenceException("Er moeten wel overal waardes worden ingevuld.");
+                    throw new NullReferenceException("Alle velden moeten worden ingevult.");
                 }
                 sqlService.Insert(
                     "INSERT INTO band (band_naam,band_opgericht_datum,band_stop_datum,band_oorsprong) VALUES ('" +
