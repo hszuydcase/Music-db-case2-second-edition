@@ -34,10 +34,8 @@ namespace Music
         }
         private void btAdd_Click(object sender, EventArgs e)
         {
-            Image image = new Image();
             Track track = new Track();
             track.CreateTrack(tbtitel.Text,tblengte.Text,tbdatrelease.Text,tbyoutube.Text);
-            image.Save("track", "track_image", tbtrackimage);
         }
 
         private void btannuleren_Click(object sender, EventArgs e)
