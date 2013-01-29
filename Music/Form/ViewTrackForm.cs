@@ -21,10 +21,11 @@ namespace Music
             string gebruikersnaam = user.GetUsername();
             string id = null;
             string command =
-                "SELECT user_id, password, user_voornaam, user_achternaam, email FROM gebruiker where username = '" +
-                gebruikersnaam + "' ";
+                "SELECT track_id, titel, lengte, datum_uitgebracht, producer, taal, youtube_link FROM track WHERE track_id = 1;";
 
-            sql.GetAllElements(command);
+            string [] list = sql.GetAllElements(command);
+
+            
         }
     }
 }

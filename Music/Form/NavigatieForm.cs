@@ -135,6 +135,7 @@ namespace Music
                     MessageBox.Show("track");
                     ViewTrackForm form = new ViewTrackForm();
                     form.ShowDialog();
+                   
                     break;
                 case "artiest":
                     MessageBox.Show("artiest");

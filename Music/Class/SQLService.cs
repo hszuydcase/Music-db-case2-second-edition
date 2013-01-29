@@ -144,10 +144,16 @@ namespace Music
             }
         }
 
-        public void GetAllElements(string sqlcommand)
+        /// <summary>
+        /// Pak alle informatie van een SELECT command.
+        /// </summary>
+        /// <param name="sqlcommand">Vul hier het SQL commando in.</param>
+        /// <returns>Retuned een string array.</returns>
+        public string [] GetAllElements(string sqlcommand)
         {
             try
             {
+                // Open de database connectie.
                 OleDbCommand Olecommand = new OleDbCommand();
                 connectie.Open();
 
@@ -155,11 +161,13 @@ namespace Music
                 Olecommand.CommandText = sqlcommand;
                 OleDbDataReader reader = Olecommand.ExecuteReader();
 
+                // Initialiseer de variabelen.
                 int RowCount = reader.VisibleFieldCount;
                 string[] list = new string[RowCount];
                 int i = 0;
                 string value;
 
+                //Lees de gegevens uit en zet het in een array zodat we deze kunnen gebruiken. 
                 while (reader.Read())
                 {
                     for (int j = 0; j < RowCount; j++)
@@ -172,20 +180,19 @@ namespace Music
                 
                     
 
-              
+              // Close de reader en database en return de list.
                 reader.Close();
                 Olecommand.Dispose();
-
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-            finally
-            {
+                return list;
                 connectie.Close();
             }
+            catch (Exception obj)
+            {
+                MessageBox.Show(obj.Message);
+               
+            }
+
+            return new string[] {};
         }
     }
 }
