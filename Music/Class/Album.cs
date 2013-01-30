@@ -11,7 +11,7 @@ namespace Music
     class Album
     {
         
-        public void CreateAlbum(string datum, string naam, string medium)
+        public void CreateAlbum(string datum, string naam, string medium, string image)
         {
             try
             {
@@ -33,8 +33,8 @@ namespace Music
              
                 
 
-                    sqlService.Insert("INSERT INTO album (album_naam,album_datum,album_medium) VALUES ('" + naam + "','" +
-                                      albumdat + "','" + medium + "')");
+                    sqlService.Insert("INSERT INTO album (album_naam,album_datum,album_medium, album_image) VALUES ('" + naam + "','" +
+                                      albumdat + "','" + medium + "', '"+ image +"')");
             }
 
             catch (NullReferenceException obj)

@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -27,7 +28,11 @@ namespace Music
         private void button2_Click(object sender, EventArgs e)
         {
             Album album = new Album();
-            album.CreateAlbum(inputDatum.Text,inputNaam.Text, inputMedium.Text);
+            Image plaatje = new Image();
+            plaatje.Saveimage(openFileDialog1);
+            string name = plaatje.GetPath();
+            album.CreateAlbum(inputDatum.Text, inputNaam.Text, inputMedium.Text,name);
+            
         }
 
         private void btbrowse_Click(object sender, EventArgs e)

@@ -12,28 +12,42 @@ namespace Music
 {
     public class Image
     {
-        public void Saveimage(OpenFileDialog openFileDialog)
+        private string path;
 
+        public void Saveimage(OpenFileDialog openFileDialog)
         {
             try
             {
+                // Bron bestand en eind directory
                 string sourceFile = openFileDialog.FileName;
-                string destinationFile = @"C:\images";
-                File.Copy(sourceFile, destinationFile);
+                string destinationPath = Path.GetDirectoryName(Application.ExecutablePath) + @"\images";
+                
+                // Hier verkrijgen we de path en file name
+                FileInfo fInfo = new FileInfo(sourceFile);
+                string strFileName = fInfo.Name;
+                string strFilePath = fInfo.DirectoryName;
+
+                // Als de directory images niet bestaat, aanmaken.
+                if (!Directory.Exists(destinationPath)) 
+                {
+                Directory.CreateDirectory(destinationPath);
+                }
+
+                //Kopieren kan beginnen.
+                File.Copy(sourceFile, Path.Combine(destinationPath, strFileName), true);
+                this.path = strFileName;
             }
             catch (Exception exc)
             {
 
                 MessageBox.Show(exc.Message);
             }
-
-
-            // To move a file or folder to a new location:
-            
-
-            // To move an entire directory. To programmatically modify or combine 
-            // path strings, use the System.IO.Path class.
-            //Directory.Move(@"C:\Users\Public\public\test\", @"C:\Users\Public\private");
         }
+
+        public string GetPath()
+        {
+            return this.path;
+        }
+
     }
 }
