@@ -38,7 +38,7 @@ namespace Music
         /// <param name="producer"></param>
         /// <param name="taal"></param>
         /// <param name="youtubelink"></param>
-        public void CreateTrack(string titel, string lengte, string datumuitgebracht, string producer, string taal, string youtubelink, string categorie, string album)
+        public void CreateTrack(string titel, string lengte, string datumuitgebracht, string producer, string taal, string youtubelink, string categorie, string album, ComboBox combocat, ComboBox comboalbum)
         {
             try
             {
@@ -48,7 +48,8 @@ namespace Music
                 DateTime lengtetrack = new DateTime();
                 string lengteformat = "HH:MM:SS";
                 string format = "dd/MM/yyyy";
-
+                string lul = Convert.ToString(combocat.SelectedValue);
+                string lul2 = Convert.ToString(comboalbum.SelectedValue);
                 if (!DateTime.TryParseExact(datumuitgebracht, format, CultureInfo.InvariantCulture,
                                             DateTimeStyles.None, out datrelease))
                 {
@@ -60,8 +61,10 @@ namespace Music
                     throw new NullReferenceException("Alle velden moeten worden ingevult.");
                 }
                 sqlService.Insert(
-                    "INSERT INTO track (titel, datum_uitgebracht, producer, taal, youtube_link) VALUES ('" +
+                    "INSERT INTO track (lengte, titel, datum_uitgebracht, producer, taal, youtube_link) VALUES ('" + lengte + "','" +
                     titel + "','" + datrelease + "','" + producer + "','" + taal + "','" + youtubelink + "')");
+                sqlService.Insert("INSERT INTO cat_tra (cat_id, track_id) VALUES ('" + lul +  "','" + "1" + "')");
+                sqlService.Insert("INSERT INTO alb_tra (album_id,track_id) VALUES ('" + lul2 + "','" + "1" + "')");
                  
             }
 

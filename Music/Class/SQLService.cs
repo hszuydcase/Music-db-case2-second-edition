@@ -255,7 +255,7 @@ namespace Music
             return new string[] {};
         }
         
-        public void Fillcombo(string query,ComboBox comboBox ,string kolomnaam)
+        public void Fillcombo(string query,ComboBox comboBox ,string kolomnaamshow, string kolomnaamid)
 
         {
 
@@ -273,7 +273,8 @@ namespace Music
             DataTable dt = new DataTable();
             adapter.Fill(dt);
             comboBox.DataSource = dt;
-            comboBox.DisplayMember = kolomnaam;
+            comboBox.DisplayMember = kolomnaamshow;
+            comboBox.ValueMember = kolomnaamid;
 
             Command.Dispose();
             connectie.Close();
@@ -303,6 +304,7 @@ namespace Music
             adapter.Fill(dt);
             listbox.DataSource = dt;
             listbox.DisplayMember = kolomnaam;
+      
 
             Command.Dispose();
             connectie.Close();

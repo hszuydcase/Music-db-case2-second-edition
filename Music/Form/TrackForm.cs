@@ -16,8 +16,8 @@ namespace Music
         {
             InitializeComponent();
             SQLService sqlService = new SQLService();
-            sqlService.Fillcombo("SELECT cat_naam FROM categorie", cbcategorie, "cat_naam");
-            sqlService.Fillcombo("SELECT album_naam FROM album", cbalbum, "album_naam");
+            sqlService.Fillcombo("SELECT cat_naam cat_id FROM categorie", cbcategorie, "cat_naam","cat_id");
+            sqlService.Fillcombo("SELECT album_naam album_id FROM album", cbalbum, "album_naam","album_id");
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -39,7 +39,7 @@ namespace Music
         {
             Track track = Track.Instance;
             track.CreateTrack(tbtitel.Text, tblengte.Text, tbdatrelease.Text, tbproducer.Text, tbtaal.Text,
-                              tbyoutube.Text, cbcategorie.Text, cbalbum.Text);
+                tbyoutube.Text, cbcategorie.Text, cbalbum.Text,cbcategorie,cbalbum);
         }
 
         private void btannuleren_Click(object sender, EventArgs e)
