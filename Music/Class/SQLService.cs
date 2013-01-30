@@ -254,7 +254,13 @@ namespace Music
 
             return new string[] {};
         }
-        
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="query">query</param>
+        /// <param name="comboBox">de betreffende combobox</param>
+        /// <param name="kolomnaamshow">de naam van de kollom die de combobox als visuele waardes moet geven</param>
+        /// <param name="kolomnaamid">de naam van de kollow waarin de id's staan gekopelt aan de visuele waardes</param>
         public void Fillcombo(string query,ComboBox comboBox ,string kolomnaamshow, string kolomnaamid)
 
         {

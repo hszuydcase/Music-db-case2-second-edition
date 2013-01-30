@@ -15,8 +15,6 @@ namespace Music
         public AlbumForm()
         {
             InitializeComponent();
-            SQLService sqlService = new SQLService();
-            sqlService.Fillcombo("SELECT album_medium FROM album", inputMedium, "album_medium","");
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -27,7 +25,7 @@ namespace Music
         private void button2_Click(object sender, EventArgs e)
         {
             Album album = new Album();
-            album.CreateAlbum(inputDatum.Text,inputNaam.Text, inputMedium.Text);
+            album.CreateAlbum(inputDatum.Text,inputNaam.Text, inputMedium.SelectedText);
         }
 
         private void btbrowse_Click(object sender, EventArgs e)

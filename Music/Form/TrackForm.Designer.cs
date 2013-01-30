@@ -50,6 +50,11 @@
             this.label9 = new System.Windows.Forms.Label();
             this.tbdatrelease = new System.Windows.Forms.MaskedTextBox();
             this.tblengte = new System.Windows.Forms.MaskedTextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.cbartiest = new System.Windows.Forms.ComboBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -127,7 +132,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(322, 163);
+            this.label8.Location = new System.Drawing.Point(319, 164);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(36, 13);
             this.label8.TabIndex = 8;
@@ -237,11 +242,64 @@
             this.tblengte.Size = new System.Drawing.Size(128, 20);
             this.tblengte.TabIndex = 23;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(319, 206);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(36, 13);
+            this.label10.TabIndex = 24;
+            this.label10.Text = "Artiest";
+            // 
+            // cbartiest
+            // 
+            this.cbartiest.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbartiest.FormattingEnabled = true;
+            this.cbartiest.Location = new System.Drawing.Point(391, 203);
+            this.cbartiest.Name = "cbartiest";
+            this.cbartiest.Size = new System.Drawing.Size(156, 21);
+            this.cbartiest.TabIndex = 25;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(254, 203);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(42, 21);
+            this.button2.TabIndex = 26;
+            this.button2.Text = "new";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(553, 160);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(42, 21);
+            this.button3.TabIndex = 27;
+            this.button3.Text = "new";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(553, 203);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(42, 21);
+            this.button4.TabIndex = 28;
+            this.button4.Text = "new";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // TrackForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(559, 285);
+            this.ClientSize = new System.Drawing.Size(615, 285);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.cbartiest);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.tblengte);
             this.Controls.Add(this.tbdatrelease);
             this.Controls.Add(this.label9);
@@ -294,5 +352,10 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.MaskedTextBox tbdatrelease;
         private System.Windows.Forms.MaskedTextBox tblengte;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox cbartiest;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }

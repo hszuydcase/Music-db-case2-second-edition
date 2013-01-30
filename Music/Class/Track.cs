@@ -48,8 +48,10 @@ namespace Music
                 DateTime lengtetrack = new DateTime();
                 string lengteformat = "HH:MM:SS";
                 string format = "dd/MM/yyyy";
-                string lul = Convert.ToString(combocat.SelectedValue);
-                string lul2 = Convert.ToString(comboalbum.SelectedValue);
+                Object lul = new object();
+                lul = combocat.SelectedValue;
+                Object lul2 = new object();
+                lul2 = comboalbum.SelectedValue;
                 if (!DateTime.TryParseExact(datumuitgebracht, format, CultureInfo.InvariantCulture,
                                             DateTimeStyles.None, out datrelease))
                 {
