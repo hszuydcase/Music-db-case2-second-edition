@@ -25,7 +25,7 @@ namespace Music
             int track_id = track.GetTrackId();
             string gebruikersnaam = user.GetUsername();
             string command =
-                "SELECT t.track_id, t.titel, t.lengte, t.datum_uitgebracht, t.producer, t.taal, t.youtube_link FROM track t, rating r  WHERE track_id = "+ track_id +";";
+                "SELECT track_id, titel, lengte, datum_uitgebracht, producer, taal, youtube_link FROM track  WHERE track_id = "+ track_id +";";
 
             string [] list = sql.GetAllElements(command);
 

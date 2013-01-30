@@ -15,11 +15,13 @@ namespace Music
         private string GridviewClick;
         private User user = User.Instance;
         private Track track = Track.Instance;
+
         public NavigatieForm()
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
             lbUsername.Text = user.GetUsername();
+            dataGridView1.Width = this.Width;
         }
 
         private void btart_Click(object sender, EventArgs e)
@@ -63,35 +65,35 @@ namespace Music
         private void btcatview_Click(object sender, EventArgs e)
         {
             SQLService sqlService = new SQLService();
-            sqlService.FillTable("SELECT cat_id, cat_naam FROM categorie", dataGridView1);
+            sqlService.FillTable("SELECT cat_id ID, cat_naam Naam FROM categorie", dataGridView1);
             GridviewClick = "categorie";
         }
 
         private void btAlbum_Click(object sender, EventArgs e)
         {
             SQLService sqlService = new SQLService();
-            sqlService.FillTable("SELECT album_id, album_naam, album_datum, album_medium FROM album", dataGridView1);
+            sqlService.FillTable("SELECT album_id ID, album_naam Naam, album_datum Uitgebracht, album_medium Medium FROM album", dataGridView1);
             GridviewClick = "album";
         }
 
         private void btartiest_Click(object sender, EventArgs e)
         {
             SQLService sqlService = new SQLService();
-            sqlService.FillTable("SELECT artiest_id, artiest_naam, voornaam, achternaam, geb_datum, geb_plaats, geb_land FROM artiest" , dataGridView1);
+            sqlService.FillTable("SELECT artiest_id ID, artiest_naam Artiestennaam, voornaam Voornaam, achternaam Achternaam, geb_datum Geboortedatum, geb_plaats Geboorteplaats, geb_land Geboorteland FROM artiest" , dataGridView1);
             GridviewClick = "artiest";
         }
 
         private void bttrack_Click(object sender, EventArgs e)
         {
             SQLService sqlService = new SQLService();
-            sqlService.FillTable("SELECT track_id, titel, lengte, datum_uitgebracht, producer, taal, youtube_link FROM track", dataGridView1);
+            sqlService.FillTable("SELECT track_id ID, titel Titel, lengte Lengte, datum_uitgebracht Uitgebracht, producer Producer, taal Taal, youtube_link Link FROM track", dataGridView1);
             GridviewClick = "track";
         }
 
         private void btbandview_Click(object sender, EventArgs e)
         {
             SQLService sqlService = new SQLService();
-            sqlService.FillTable("SELECT band_id, band_naam, band_opgericht_datum, band_stop_datum, band_oorsprong FROM band", dataGridView1);
+            sqlService.FillTable("SELECT band_id ID, band_naam Naam, band_opgericht_datum Opgericht, band_stop_datum Gestopt, band_oorsprong Oorsprong FROM band", dataGridView1);
             GridviewClick = "band";
         }
 
