@@ -20,7 +20,7 @@ namespace Music
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
-            lbUsername.Text = user.GetUsername();
+            lbUsername.Text = "Username:" + user.GetUsername() + "\r\nId:" + Convert.ToString(user.GetId());
             dataGridView1.Width = this.Width;
         }
 
@@ -156,11 +156,9 @@ namespace Music
                     MessageBox.Show("band");
                     break;
                 case "track":
-                    MessageBox.Show("track");
                     track.SetTrackId(id_row_clicked);
                     ViewTrackForm form = new ViewTrackForm();
                     form.ShowDialog();
-                    
                     break;
                 case "artiest":
                     MessageBox.Show("artiest");

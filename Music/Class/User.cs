@@ -12,6 +12,7 @@ namespace Music
     {
         private static readonly User instance = new User();
         private string _username;
+        private int _id;
 
 
         // Explicit static constructor to tell C# compiler 
@@ -99,6 +100,7 @@ namespace Music
                 else
                 {
                     this._username = username;
+                    this._id = Convert.ToInt32(sqlService.ReturnFirstValue("Select user_id FROM gebruiker WHERE username = '" + username + "'"));
                     ingelogd = true;
                 }
                 return ingelogd;
@@ -116,9 +118,15 @@ namespace Music
             return this._username;
         }
 
+        public int GetId()
+        {
+            return this._id;
+        }
+
         public void Logout()
         {
             this._username = "";
+            this._id = 0;
 
         }
 

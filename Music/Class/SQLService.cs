@@ -105,6 +105,39 @@ namespace Music
 
         }
 
+        public void Delete(string command)
+        {
+            try
+            {
+                OleDbCommand deleteCommand = new OleDbCommand();
+                OleDbDataAdapter adapter = new OleDbDataAdapter();
+                connectie.Open();
+
+                // put the command in the adapter
+                deleteCommand.Connection = connectie;
+                deleteCommand.CommandText = command;
+                adapter.DeleteCommand = deleteCommand;
+
+                // do the update
+                adapter.DeleteCommand.ExecuteNonQuery();
+
+
+
+
+            }
+            catch (Exception obj)
+            {
+                MessageBox.Show(obj.Message);
+            }
+            finally
+            {
+                connectie.Close();
+            }
+
+        }
+
+
+
         /// <summary>
         /// Methode om te controleren of EEN variable bestaat of niet, returend een bool
         /// </summary>
@@ -121,6 +154,33 @@ namespace Music
 
             return count != 0;
 
+        }
+        /// <summary>
+        /// Methode om de eerste variable te reutrn
+        /// </summary>
+        /// <param name="command">Het SQL Commando</param>
+        /// <returns></returns>
+        public string ReturnFirstValue(string command)
+        {
+
+            
+            OleDbCommand Olecommand = new OleDbCommand();
+            connectie.Open();
+
+            Olecommand.Connection = connectie;
+            Olecommand.CommandText = command;
+            OleDbDataReader reader = Olecommand.ExecuteReader();
+
+            string result ="";
+
+            while (reader.Read())
+            {
+                result = Convert.ToString(reader.GetValue(0));
+            }
+
+
+
+            return result;
         }
         /// <summary>
         /// methode om de datagridview te vullen met de aangegeven database gegevens.
@@ -195,7 +255,7 @@ namespace Music
             return new string[] {};
         }
         
-        public void Fillcombo(string query,ComboBox comboBox,string kolomnaam)
+        public void Fillcombo(string query,ComboBox comboBox ,string kolomnaam)
 
         {
 
@@ -217,7 +277,35 @@ namespace Music
 
             Command.Dispose();
             connectie.Close();
-            //comboBox1.DataBindings.ToString();
+        }
+
+        /// <summary>
+        /// Vul een listbox
+        /// </summary>
+        /// <param name="query">SELECT Query</param>
+        /// <param name="listbox">Welke listbox gevuld moet worden</param>
+        /// <param name="kolomnaam">Welke kolomnaam je wilt gebruiken om de list mee te vullen.</param>
+        public void FillListBox(string query, ListBox listbox, string kolomnaam)
+        {
+
+            // Open connectie
+            OleDbCommand Command = new OleDbCommand();
+            OleDbDataAdapter adapter = new OleDbDataAdapter();
+            connectie.Open();
+
+            // put the command in the adapter
+            Command.Connection = connectie;
+            Command.CommandText = query;
+            adapter.SelectCommand = Command;
+
+
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            listbox.DataSource = dt;
+            listbox.DisplayMember = kolomnaam;
+
+            Command.Dispose();
+            connectie.Close();
         }
 
     }

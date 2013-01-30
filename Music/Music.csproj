@@ -77,6 +77,7 @@
       <DependentUpon>DatagridviewTest.cs</DependentUpon>
     </Compile>
     <Compile Include="Class\Image.cs" />
+    <Compile Include="Class\Favoriet.cs" />
     <Compile Include="TestClassView.cs" />
     <Compile Include="TestFormCBview.cs">
       <SubType>Form</SubType>

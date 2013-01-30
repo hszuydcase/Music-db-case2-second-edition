@@ -44,12 +44,16 @@
             this.lbProducer = new System.Windows.Forms.Label();
             this.lbTaal = new System.Windows.Forms.Label();
             this.lbAlbum = new System.Windows.Forms.Label();
-            this.lbArtiest = new System.Windows.Forms.Label();
             this.lbband = new System.Windows.Forms.Label();
             this.lbRating = new System.Windows.Forms.Label();
             this.lbFavoriet = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.lbYoutube = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.lbCategorie = new System.Windows.Forms.Label();
+            this.lbArtiest = new System.Windows.Forms.ListBox();
+            this.btFavoriet = new System.Windows.Forms.Button();
+            this.btEdit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -100,7 +104,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(15, 165);
+            this.label6.Location = new System.Drawing.Point(15, 202);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(36, 13);
             this.label6.TabIndex = 5;
@@ -109,7 +113,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(17, 195);
+            this.label7.Location = new System.Drawing.Point(15, 236);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(36, 13);
             this.label7.TabIndex = 6;
@@ -118,7 +122,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(17, 226);
+            this.label8.Location = new System.Drawing.Point(15, 303);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(32, 13);
             this.label8.TabIndex = 7;
@@ -127,7 +131,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(17, 255);
+            this.label9.Location = new System.Drawing.Point(15, 332);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(63, 13);
             this.label9.TabIndex = 8;
@@ -136,7 +140,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(17, 283);
+            this.label10.Location = new System.Drawing.Point(15, 360);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(87, 13);
             this.label10.TabIndex = 9;
@@ -190,25 +194,16 @@
             // lbAlbum
             // 
             this.lbAlbum.AutoSize = true;
-            this.lbAlbum.Location = new System.Drawing.Point(184, 165);
+            this.lbAlbum.Location = new System.Drawing.Point(184, 202);
             this.lbAlbum.Name = "lbAlbum";
             this.lbAlbum.Size = new System.Drawing.Size(41, 13);
             this.lbAlbum.TabIndex = 15;
             this.lbAlbum.Text = "label16";
             // 
-            // lbArtiest
-            // 
-            this.lbArtiest.AutoSize = true;
-            this.lbArtiest.Location = new System.Drawing.Point(184, 195);
-            this.lbArtiest.Name = "lbArtiest";
-            this.lbArtiest.Size = new System.Drawing.Size(41, 13);
-            this.lbArtiest.TabIndex = 16;
-            this.lbArtiest.Text = "label17";
-            // 
             // lbband
             // 
             this.lbband.AutoSize = true;
-            this.lbband.Location = new System.Drawing.Point(186, 226);
+            this.lbband.Location = new System.Drawing.Point(182, 303);
             this.lbband.Name = "lbband";
             this.lbband.Size = new System.Drawing.Size(41, 13);
             this.lbband.TabIndex = 17;
@@ -217,7 +212,7 @@
             // lbRating
             // 
             this.lbRating.AutoSize = true;
-            this.lbRating.Location = new System.Drawing.Point(186, 255);
+            this.lbRating.Location = new System.Drawing.Point(182, 332);
             this.lbRating.Name = "lbRating";
             this.lbRating.Size = new System.Drawing.Size(41, 13);
             this.lbRating.TabIndex = 18;
@@ -226,7 +221,7 @@
             // lbFavoriet
             // 
             this.lbFavoriet.AutoSize = true;
-            this.lbFavoriet.Location = new System.Drawing.Point(184, 283);
+            this.lbFavoriet.Location = new System.Drawing.Point(182, 360);
             this.lbFavoriet.Name = "lbFavoriet";
             this.lbFavoriet.Size = new System.Drawing.Size(41, 13);
             this.lbFavoriet.TabIndex = 19;
@@ -235,7 +230,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(18, 314);
+            this.label11.Location = new System.Drawing.Point(15, 391);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(66, 13);
             this.label11.TabIndex = 20;
@@ -244,23 +239,72 @@
             // lbYoutube
             // 
             this.lbYoutube.AutoSize = true;
-            this.lbYoutube.Location = new System.Drawing.Point(187, 313);
+            this.lbYoutube.Location = new System.Drawing.Point(182, 391);
             this.lbYoutube.Name = "lbYoutube";
             this.lbYoutube.Size = new System.Drawing.Size(41, 13);
             this.lbYoutube.TabIndex = 21;
             this.lbYoutube.Text = "label12";
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(15, 165);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(52, 13);
+            this.label12.TabIndex = 22;
+            this.label12.Text = "Categorie";
+            // 
+            // lbCategorie
+            // 
+            this.lbCategorie.AutoSize = true;
+            this.lbCategorie.Location = new System.Drawing.Point(184, 165);
+            this.lbCategorie.Name = "lbCategorie";
+            this.lbCategorie.Size = new System.Drawing.Size(41, 13);
+            this.lbCategorie.TabIndex = 23;
+            this.lbCategorie.Text = "label13";
+            // 
+            // lbArtiest
+            // 
+            this.lbArtiest.FormattingEnabled = true;
+            this.lbArtiest.Location = new System.Drawing.Point(185, 236);
+            this.lbArtiest.Name = "lbArtiest";
+            this.lbArtiest.Size = new System.Drawing.Size(120, 43);
+            this.lbArtiest.TabIndex = 25;
+            // 
+            // btFavoriet
+            // 
+            this.btFavoriet.Location = new System.Drawing.Point(356, 405);
+            this.btFavoriet.Name = "btFavoriet";
+            this.btFavoriet.Size = new System.Drawing.Size(75, 23);
+            this.btFavoriet.TabIndex = 26;
+            this.btFavoriet.Text = "Favoriet";
+            this.btFavoriet.UseVisualStyleBackColor = true;
+            this.btFavoriet.Click += new System.EventHandler(this.btFavoriet_Click);
+            // 
+            // btEdit
+            // 
+            this.btEdit.Location = new System.Drawing.Point(449, 405);
+            this.btEdit.Name = "btEdit";
+            this.btEdit.Size = new System.Drawing.Size(75, 23);
+            this.btEdit.TabIndex = 27;
+            this.btEdit.Text = "Bewerk";
+            this.btEdit.UseVisualStyleBackColor = true;
+            // 
             // ViewTrackForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(536, 386);
+            this.ClientSize = new System.Drawing.Size(536, 440);
+            this.Controls.Add(this.btEdit);
+            this.Controls.Add(this.btFavoriet);
+            this.Controls.Add(this.lbArtiest);
+            this.Controls.Add(this.lbCategorie);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.lbYoutube);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.lbFavoriet);
             this.Controls.Add(this.lbRating);
             this.Controls.Add(this.lbband);
-            this.Controls.Add(this.lbArtiest);
             this.Controls.Add(this.lbAlbum);
             this.Controls.Add(this.lbTaal);
             this.Controls.Add(this.lbProducer);
@@ -302,11 +346,15 @@
         private System.Windows.Forms.Label lbProducer;
         private System.Windows.Forms.Label lbTaal;
         private System.Windows.Forms.Label lbAlbum;
-        private System.Windows.Forms.Label lbArtiest;
         private System.Windows.Forms.Label lbband;
         private System.Windows.Forms.Label lbRating;
         private System.Windows.Forms.Label lbFavoriet;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label lbYoutube;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lbCategorie;
+        private System.Windows.Forms.ListBox lbArtiest;
+        private System.Windows.Forms.Button btFavoriet;
+        private System.Windows.Forms.Button btEdit;
     }
 }

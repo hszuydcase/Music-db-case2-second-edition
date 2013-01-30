@@ -48,7 +48,6 @@
             this.profileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btDatagvTest = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -237,22 +236,11 @@
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
             // 
-            // btDatagvTest
-            // 
-            this.btDatagvTest.Location = new System.Drawing.Point(94, 202);
-            this.btDatagvTest.Name = "btDatagvTest";
-            this.btDatagvTest.Size = new System.Drawing.Size(75, 23);
-            this.btDatagvTest.TabIndex = 16;
-            this.btDatagvTest.Text = "TEST";
-            this.btDatagvTest.UseVisualStyleBackColor = true;
-            this.btDatagvTest.Click += new System.EventHandler(this.btDatagvTest_Click);
-            // 
             // NavigatieForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(846, 478);
-            this.Controls.Add(this.btDatagvTest);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lbUsername);
             this.Controls.Add(this.bttrack);
@@ -305,6 +293,5 @@
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem profileToolStripMenuItem;
-        private System.Windows.Forms.Button btDatagvTest;
     }
 }

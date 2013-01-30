@@ -12,6 +12,7 @@ namespace Music
     {
         private static readonly Track instance = new Track();
         private int _current_track_id;
+        private string _track_name;
 
         // Explicit static constructor to tell C# compiler 
         // not to mark type as beforefieldinit
@@ -37,7 +38,7 @@ namespace Music
         /// <param name="producer"></param>
         /// <param name="taal"></param>
         /// <param name="youtubelink"></param>
-        public void CreateTrack(string titel, string lengte, string datumuitgebracht, string producer, string taal, string youtubelink)
+        public void CreateTrack(string titel, string lengte, string datumuitgebracht, string producer, string taal, string youtubelink, string categorie, string album)
         {
             try
             {
@@ -54,7 +55,7 @@ namespace Music
                     throw new FormatException("Dit is geen geldige datum: dd/mm/yyyy");
                 }
 
-                if (titel == "" || lengte == "" || datumuitgebracht == "" || producer == "" || taal == "" || youtubelink == "")
+                if (titel == "" || lengte == "" || datumuitgebracht == "" || producer == "" || taal == "" || youtubelink == "" || categorie == "" || album == "")
                 {
                     throw new NullReferenceException("Alle velden moeten worden ingevult.");
                 }
@@ -86,6 +87,14 @@ namespace Music
         {
             return this._current_track_id;
         }
+
+        public string GetTrackName()
+        {
+            SQLService sqlService = new SQLService();
+            this._track_name =
+                sqlService.ReturnFirstValue("Select titel FROM track WHERE track_id = '" + this.GetTrackId() + "'");
+            return this._track_name;
+        }
         /// <summary>
         /// Methode om de track id te setten.
         /// </summary>
@@ -94,6 +103,8 @@ namespace Music
         {
             this._current_track_id = id;
         }
+
+   
 
     }
 }
