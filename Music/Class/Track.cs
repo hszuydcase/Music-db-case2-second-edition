@@ -48,10 +48,6 @@ namespace Music
                 DateTime lengtetrack = new DateTime();
                 string lengteformat = "HH:MM:SS";
                 string format = "dd/MM/yyyy";
-                Object lul = new object();
-                lul = combocat.SelectedValue;
-                Object lul2 = new object();
-                lul2 = comboalbum.SelectedValue;
                 if (!DateTime.TryParseExact(datumuitgebracht, format, CultureInfo.InvariantCulture,
                                             DateTimeStyles.None, out datrelease))
                 {
@@ -65,8 +61,8 @@ namespace Music
                 sqlService.Insert(
                     "INSERT INTO track (lengte, titel, datum_uitgebracht, producer, taal, youtube_link) VALUES ('" + lengte + "','" +
                     titel + "','" + datrelease + "','" + producer + "','" + taal + "','" + youtubelink + "')");
-                sqlService.Insert("INSERT INTO cat_tra (cat_id, track_id) VALUES ('" + lul +  "','" + "1" + "')");
-                sqlService.Insert("INSERT INTO alb_tra (album_id,track_id) VALUES ('" + lul2 + "','" + "1" + "')");
+                sqlService.Insert("INSERT INTO cat_tra (cat_id, track_id) SELECT cat_id FROM Categorie WHERE cat_naam = "+combocat.SelectedValue+" VALUES('cat_id','track_id')");
+               // sqlService.Insert("INSERT INTO alb_tra (album_id,track_id) VALUES ('" + lul2 + "','" + "track_id" + "')");
                  
             }
 
