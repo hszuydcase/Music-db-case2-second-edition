@@ -39,7 +39,7 @@ namespace Music
         /// <param name="producer"></param>
         /// <param name="taal"></param>
         /// <param name="youtubelink"></param>
-        public void CreateTrack(string titel, string lengte, string datumuitgebracht, string producer, string taal, string youtubelink, string categorie, string album, ComboBox combocat, ComboBox comboalbum, string image)
+        public void CreateTrack(string titel, string lengte, string datumuitgebracht, string producer, string taal, string youtubelink, string categorie, string album, string image)
         {
             try
             {
@@ -61,9 +61,9 @@ namespace Music
                 sqlService.Insert(
                     "INSERT INTO track (lengte, titel, datum_uitgebracht, producer, taal, youtube_link, track_image) VALUES ('" + lengte + "','" +
                     titel + "','" + datrelease + "','" + producer + "','" + taal + "','" + youtubelink + "', '"+ image +"' )");
-                sqlService.Insert("INSERT INTO cat_tra (cat_id, track_id) VALUES ('" + cat.Getcatid(combocat) + "','" +
+                sqlService.Insert("INSERT INTO cat_tra (cat_id, track_id) VALUES ('" + cat.Getcatid(categorie) + "','" +
                                   SelectHighestTrackId() + "')");
-                sqlService.Insert("INSERT INTO alb_tra (album_id, track_id) VALUES ('" + alb.GetAlbumId(comboalbum) + "','" +SelectHighestTrackId() +"' )");
+                sqlService.Insert("INSERT INTO alb_tra (album_id, track_id) VALUES ('" + alb.GetAlbumId(album) + "','" +SelectHighestTrackId() +"' )");
                 
 
             }

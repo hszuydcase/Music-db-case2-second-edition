@@ -42,10 +42,19 @@ namespace Music
 
             // Comboboxen
 
+
+            sql.Fillcombo("SELECT cat_naam  FROM categorie", cbCategorie, "cat_naam", "cat_id", false);
+            sql.Fillcombo("SELECT album_naam FROM album", cbAlbum, "album_naam" + " ", "album_id", true);
+            sql.Fillcombo("SELECT band_naam FROM band", cbBand, "band_naam", "band_id", true);
+
+            string catnaam = sql.ReturnFirstValue("SELECT categorie.cat_naam FROM Track INNER JOIN cat_tra ON Track.track_id = cat_tra.track_id INNER JOIN categorie ON cat_tra.cat_id = categorie.cat_id WHERE Track.track_id = " + track_id + "");
+            cbCategorie.SelectedItem = catnaam;
+
+            string albumnaam = sql.ReturnFirstValue("SELECT Album.album_naam FROM Track INNER JOIN alb_tra ON Track.track_id = alb_tra.track_id INNER JOIN Album ON alb_tra.album_id = Album.album_id WHERE Track.track_id = " + track_id + "");
+            cbAlbum.SelectedItem = albumnaam;
+
             
-            sql.Fillcombo("SELECT categorie.cat_naam FROM Track INNER JOIN cat_tra ON Track.track_id = cat_tra.track_id INNER JOIN categorie ON cat_tra.cat_id = categorie.cat_id WHERE Track.track_id = "+ track_id + "", cbCategorie, "cat_naam");
-            sql.Fillcombo("SELECT album_naam album_id FROM album", cbalbum, "album_naam", "album_id");
-            sql.Fillcombo("SELECT artiest_naam artiest_id FROM artiest", cbartiest, "artiest_naam", "artiest_id");
+
         }
 
         private void btCancel_Click(object sender, EventArgs e)
@@ -55,7 +64,7 @@ namespace Music
 
         private void btEdit_Click(object sender, EventArgs e)
         {
-
+           // sql.
         }
 
         private void btDelete_Click(object sender, EventArgs e)

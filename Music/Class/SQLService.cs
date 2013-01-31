@@ -173,14 +173,23 @@ namespace Music
 
             string result ="";
 
-            while (reader.Read())
+            if (reader.FieldCount == 0)
             {
-                result = Convert.ToString(reader.GetValue(0));
+                
+            }
+            else
+            {
+                while (reader.Read())
+                {
+                    result = Convert.ToString(reader.GetValue(0));
+                }
             }
 
 
 
+            connectie.Close();
             return result;
+
         }
         /// <summary>
         /// methode om de datagridview te vullen met de aangegeven database gegevens.
@@ -261,29 +270,39 @@ namespace Music
         /// <param name="comboBox">de betreffende combobox</param>
         /// <param name="kolomnaamshow">de naam van de kollom die de combobox als visuele waardes moet geven</param>
         /// <param name="kolomnaamid">de naam van de kollow waarin de id's staan gekopelt aan de visuele waardes</param>
-        public void Fillcombo(string query,ComboBox comboBox ,string kolomnaamshow, string kolomnaamid)
-
+        public void Fillcombo(string query,ComboBox comboBox ,string kolomnaamshow, string kolomnaamid, bool leeg)
         {
 
-            // Open connectie
-            OleDbCommand Command = new OleDbCommand();
-            OleDbDataAdapter adapter = new OleDbDataAdapter();
+            // Open de database connectie.
+            OleDbCommand Olecommand = new OleDbCommand();
             connectie.Open();
 
-            // put the command in the adapter
-            Command.Connection = connectie;
-            Command.CommandText = query;
-            adapter.SelectCommand = Command;
+            Olecommand.Connection = connectie;
+            Olecommand.CommandText = query;
+            OleDbDataReader reader = Olecommand.ExecuteReader();
 
+            // Initialiseer de variabelen.
+            string value;
+
+            //Lees de gegevens uit en zet het in een array zodat we deze kunnen gebruiken. 
+            while (reader.Read())
+            {
+                
+                    value = Convert.ToString(reader.GetValue(0));
+                    comboBox.Items.Add(value);
+                   
+                    
+            }
+            if (leeg)
+            {
+                comboBox.Items.Add(" ");
+            }
             
-            DataTable dt = new DataTable();
-            adapter.Fill(dt);
-            dt.Rows.Add(dt);
-            comboBox.DataSource = dt;
-            comboBox.DisplayMember = kolomnaamshow;
-            comboBox.ValueMember = kolomnaamid;
 
-            Command.Dispose();
+
+            // Close de reader en database en return de list.
+            reader.Close();
+            Olecommand.Dispose();
             connectie.Close();
         }
 

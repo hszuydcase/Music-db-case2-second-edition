@@ -17,9 +17,9 @@ namespace Music
         {
             InitializeComponent();
             SQLService sqlService = new SQLService();
-            sqlService.Fillcombo("SELECT cat_naam cat_id FROM categorie", cbcategorie, "cat_naam");
-            sqlService.Fillcombo("SELECT album_naam album_id FROM album", cbalbum, "album_naam");
-            sqlService.Fillcombo("SELECT artiest_naam artiest_id FROM artiest", cbartiest, "artiest_naam");
+            sqlService.Fillcombo("SELECT cat_naam FROM categorie", cbcategorie, "cat_naam","cat_id", false);
+            sqlService.Fillcombo("SELECT album_naam  FROM album", cbalbum, "album_naam","album_id", true);
+            sqlService.Fillcombo("SELECT artiest_naam FROM artiest", cbartiest, "artiest_naam", "artiest_id", false);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -42,9 +42,10 @@ namespace Music
             Image plaatje = new Image();
 
             string name = plaatje.GetImage();
+            string aidsgedoe = cbalbum.Text;
             plaatje.Saveimage(openFileDialog1);
             track.CreateTrack(tbtitel.Text, tblengte.Text, tbdatrelease.Text, tbproducer.Text, tbtaal.Text,
-                tbyoutube.Text, cbcategorie.Text, cbalbum.Text,cbcategorie,cbalbum, name );
+                tbyoutube.Text, cbcategorie.Text, cbalbum.Text, name );
         }
 
         private void btannuleren_Click(object sender, EventArgs e)
@@ -72,8 +73,7 @@ namespace Music
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Categorie cat = new Categorie();
-            cat.Getcatid(cbcategorie);
+           
         }
     }
 }
