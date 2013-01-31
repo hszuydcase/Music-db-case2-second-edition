@@ -56,7 +56,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -292,22 +291,11 @@
             this.label11.TabIndex = 29;
             this.label11.Text = "http://www.youtube.com/watch?v=";
             // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(463, 250);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(52, 33);
-            this.button5.TabIndex = 30;
-            this.button5.Text = "test";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
             // TrackForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(708, 315);
-            this.Controls.Add(this.button5);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -372,6 +360,5 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button button5;
     }
 }

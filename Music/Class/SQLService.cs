@@ -261,7 +261,7 @@ namespace Music
         /// <param name="comboBox">de betreffende combobox</param>
         /// <param name="kolomnaamshow">de naam van de kollom die de combobox als visuele waardes moet geven</param>
         /// <param name="kolomnaamid">de naam van de kollow waarin de id's staan gekopelt aan de visuele waardes</param>
-        public void Fillcombo(string query,ComboBox comboBox ,string kolomnaamshow, string kolomnaamid)
+        public void Fillcombo(string query,ComboBox comboBox ,string kolomnaamshow)
 
         {
 
@@ -278,10 +278,8 @@ namespace Music
             
             DataTable dt = new DataTable();
             adapter.Fill(dt);
-            dt.Rows.Add(dt);
             comboBox.DataSource = dt;
             comboBox.DisplayMember = kolomnaamshow;
-            comboBox.ValueMember = kolomnaamid;
 
             Command.Dispose();
             connectie.Close();

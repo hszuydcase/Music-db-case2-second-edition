@@ -25,7 +25,7 @@ namespace Music
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //Album album = new Album();
+            Album album = new Album();
             Image plaatje = new Image();
 
             string name = plaatje.GetImage();
