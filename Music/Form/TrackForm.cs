@@ -17,9 +17,9 @@ namespace Music
         {
             InitializeComponent();
             SQLService sqlService = new SQLService();
-            sqlService.Fillcombo("SELECT cat_naam cat_id FROM categorie", cbcategorie, "cat_naam","cat_id");
-            sqlService.Fillcombo("SELECT album_naam album_id FROM album", cbalbum, "album_naam","album_id");
-            sqlService.Fillcombo("SELECT artiest_naam artiest_id FROM artiest", cbartiest, "artiest_naam", "artiest_id");
+            sqlService.Fillcombo("SELECT cat_naam cat_id FROM categorie", cbcategorie, "cat_naam");
+            sqlService.Fillcombo("SELECT album_naam album_id FROM album", cbalbum, "album_naam");
+            sqlService.Fillcombo("SELECT artiest_naam artiest_id FROM artiest", cbartiest, "artiest_naam");
         }
 
         private void button1_Click(object sender, EventArgs e)

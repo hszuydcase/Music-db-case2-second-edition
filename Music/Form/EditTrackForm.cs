@@ -39,6 +39,13 @@ namespace Music
             tbProducer.Text = list[4];
             tbTaal.Text = list[5];
             tbYoutube.Text = list[6];
+
+            // Comboboxen
+
+            
+            sql.Fillcombo("SELECT categorie.cat_naam FROM Track INNER JOIN cat_tra ON Track.track_id = cat_tra.track_id INNER JOIN categorie ON cat_tra.cat_id = categorie.cat_id WHERE Track.track_id = "+ track_id + "", cbCategorie, "cat_naam");
+            sql.Fillcombo("SELECT album_naam album_id FROM album", cbalbum, "album_naam", "album_id");
+            sql.Fillcombo("SELECT artiest_naam artiest_id FROM artiest", cbartiest, "artiest_naam", "artiest_id");
         }
 
         private void btCancel_Click(object sender, EventArgs e)
