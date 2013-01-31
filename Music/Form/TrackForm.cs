@@ -39,8 +39,12 @@ namespace Music
         private void btAdd_Click(object sender, EventArgs e)
         {
             Track track = Track.Instance;
+            Image plaatje = new Image();
+
+            string name = plaatje.GetImage();
+            plaatje.Saveimage(openFileDialog1);
             track.CreateTrack(tbtitel.Text, tblengte.Text, tbdatrelease.Text, tbproducer.Text, tbtaal.Text,
-                tbyoutube.Text, cbcategorie.Text, cbalbum.Text,cbcategorie,cbalbum);
+                tbyoutube.Text, cbcategorie.Text, cbalbum.Text,cbcategorie,cbalbum, name );
         }
 
         private void btannuleren_Click(object sender, EventArgs e)

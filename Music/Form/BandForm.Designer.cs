@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BandForm));
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -105,7 +106,7 @@
             this.tbbandbiografie.Location = new System.Drawing.Point(305, 39);
             this.tbbandbiografie.Name = "tbbandbiografie";
             this.tbbandbiografie.Size = new System.Drawing.Size(250, 204);
-            this.tbbandbiografie.TabIndex = 24;
+            this.tbbandbiografie.TabIndex = 5;
             this.tbbandbiografie.Text = "";
             // 
             // tbbandoorsprong
@@ -113,38 +114,41 @@
             this.tbbandoorsprong.Location = new System.Drawing.Point(103, 219);
             this.tbbandoorsprong.Name = "tbbandoorsprong";
             this.tbbandoorsprong.Size = new System.Drawing.Size(147, 20);
-            this.tbbandoorsprong.TabIndex = 22;
+            this.tbbandoorsprong.TabIndex = 4;
             // 
             // tbbandimage
             // 
             this.tbbandimage.Location = new System.Drawing.Point(103, 173);
             this.tbbandimage.Name = "tbbandimage";
             this.tbbandimage.Size = new System.Drawing.Size(147, 20);
-            this.tbbandimage.TabIndex = 21;
+            this.tbbandimage.TabIndex = 3;
             // 
             // tbbandnaam
             // 
             this.tbbandnaam.Location = new System.Drawing.Point(103, 39);
             this.tbbandnaam.Name = "tbbandnaam";
             this.tbbandnaam.Size = new System.Drawing.Size(147, 20);
-            this.tbbandnaam.TabIndex = 18;
+            this.tbbandnaam.TabIndex = 0;
             // 
             // bt_annuleren
             // 
-            this.bt_annuleren.Location = new System.Drawing.Point(148, 278);
+            this.bt_annuleren.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.bt_annuleren.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.bt_annuleren.Location = new System.Drawing.Point(480, 278);
             this.bt_annuleren.Name = "bt_annuleren";
             this.bt_annuleren.Size = new System.Drawing.Size(75, 23);
-            this.bt_annuleren.TabIndex = 17;
+            this.bt_annuleren.TabIndex = 6;
             this.bt_annuleren.Text = "Annuleren";
             this.bt_annuleren.UseVisualStyleBackColor = true;
             this.bt_annuleren.Click += new System.EventHandler(this.bt_annuleren_Click);
             // 
             // bt_add
             // 
-            this.bt_add.Location = new System.Drawing.Point(297, 278);
+            this.bt_add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.bt_add.Location = new System.Drawing.Point(399, 278);
             this.bt_add.Name = "bt_add";
             this.bt_add.Size = new System.Drawing.Size(75, 23);
-            this.bt_add.TabIndex = 16;
+            this.bt_add.TabIndex = 7;
             this.bt_add.Text = "Add";
             this.bt_add.UseVisualStyleBackColor = true;
             this.bt_add.Click += new System.EventHandler(this.bt_add_Click);
@@ -169,7 +173,7 @@
             this.tbbandopgericht.Mask = "00/00/0000";
             this.tbbandopgericht.Name = "tbbandopgericht";
             this.tbbandopgericht.Size = new System.Drawing.Size(147, 20);
-            this.tbbandopgericht.TabIndex = 32;
+            this.tbbandopgericht.TabIndex = 1;
             this.tbbandopgericht.ValidatingType = typeof(System.DateTime);
             // 
             // tbbandgestopt
@@ -178,13 +182,15 @@
             this.tbbandgestopt.Mask = "00/00/0000";
             this.tbbandgestopt.Name = "tbbandgestopt";
             this.tbbandgestopt.Size = new System.Drawing.Size(147, 20);
-            this.tbbandgestopt.TabIndex = 33;
+            this.tbbandgestopt.TabIndex = 2;
             this.tbbandgestopt.ValidatingType = typeof(System.DateTime);
             // 
             // BandForm
             // 
+            this.AcceptButton = this.bt_add;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.bt_annuleren;
             this.ClientSize = new System.Drawing.Size(567, 317);
             this.Controls.Add(this.tbbandgestopt);
             this.Controls.Add(this.tbbandopgericht);
@@ -201,7 +207,9 @@
             this.Controls.Add(this.tbbandnaam);
             this.Controls.Add(this.bt_annuleren);
             this.Controls.Add(this.bt_add);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "BandForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Band";
             this.ResumeLayout(false);
             this.PerformLayout();

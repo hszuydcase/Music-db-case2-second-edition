@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewTrackForm));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,13 +48,14 @@
             this.lbband = new System.Windows.Forms.Label();
             this.lbRating = new System.Windows.Forms.Label();
             this.lbFavoriet = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.lbYoutube = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.lbCategorie = new System.Windows.Forms.Label();
             this.lbArtiest = new System.Windows.Forms.ListBox();
             this.btFavoriet = new System.Windows.Forms.Button();
             this.btEdit = new System.Windows.Forms.Button();
+            this.wbYoutube = new System.Windows.Forms.WebBrowser();
+            this.trackImage = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.trackImage)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -227,24 +229,6 @@
             this.lbFavoriet.TabIndex = 19;
             this.lbFavoriet.Text = "label20";
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(15, 391);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(66, 13);
-            this.label11.TabIndex = 20;
-            this.label11.Text = "Youtube link";
-            // 
-            // lbYoutube
-            // 
-            this.lbYoutube.AutoSize = true;
-            this.lbYoutube.Location = new System.Drawing.Point(182, 391);
-            this.lbYoutube.Name = "lbYoutube";
-            this.lbYoutube.Size = new System.Drawing.Size(41, 13);
-            this.lbYoutube.TabIndex = 21;
-            this.lbYoutube.Text = "label12";
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -273,7 +257,8 @@
             // 
             // btFavoriet
             // 
-            this.btFavoriet.Location = new System.Drawing.Point(356, 405);
+            this.btFavoriet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btFavoriet.Location = new System.Drawing.Point(422, 717);
             this.btFavoriet.Name = "btFavoriet";
             this.btFavoriet.Size = new System.Drawing.Size(75, 23);
             this.btFavoriet.TabIndex = 26;
@@ -283,25 +268,45 @@
             // 
             // btEdit
             // 
-            this.btEdit.Location = new System.Drawing.Point(449, 405);
+            this.btEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btEdit.Location = new System.Drawing.Point(503, 717);
             this.btEdit.Name = "btEdit";
             this.btEdit.Size = new System.Drawing.Size(75, 23);
             this.btEdit.TabIndex = 27;
             this.btEdit.Text = "Bewerk";
             this.btEdit.UseVisualStyleBackColor = true;
             // 
+            // wbYoutube
+            // 
+            this.wbYoutube.Location = new System.Drawing.Point(18, 387);
+            this.wbYoutube.MinimumSize = new System.Drawing.Size(20, 20);
+            this.wbYoutube.Name = "wbYoutube";
+            this.wbYoutube.Size = new System.Drawing.Size(560, 315);
+            this.wbYoutube.TabIndex = 28;
+            // 
+            // trackImage
+            // 
+            this.trackImage.BackColor = System.Drawing.Color.White;
+            this.trackImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.trackImage.Location = new System.Drawing.Point(333, 18);
+            this.trackImage.Name = "trackImage";
+            this.trackImage.Padding = new System.Windows.Forms.Padding(5);
+            this.trackImage.Size = new System.Drawing.Size(250, 231);
+            this.trackImage.TabIndex = 29;
+            this.trackImage.TabStop = false;
+            // 
             // ViewTrackForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(536, 440);
+            this.ClientSize = new System.Drawing.Size(595, 758);
+            this.Controls.Add(this.trackImage);
+            this.Controls.Add(this.wbYoutube);
             this.Controls.Add(this.btEdit);
             this.Controls.Add(this.btFavoriet);
             this.Controls.Add(this.lbArtiest);
             this.Controls.Add(this.lbCategorie);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.lbYoutube);
-            this.Controls.Add(this.label11);
             this.Controls.Add(this.lbFavoriet);
             this.Controls.Add(this.lbRating);
             this.Controls.Add(this.lbband);
@@ -321,8 +326,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ViewTrackForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewTrackForm";
+            ((System.ComponentModel.ISupportInitialize)(this.trackImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -349,12 +357,12 @@
         private System.Windows.Forms.Label lbband;
         private System.Windows.Forms.Label lbRating;
         private System.Windows.Forms.Label lbFavoriet;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label lbYoutube;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label lbCategorie;
         private System.Windows.Forms.ListBox lbArtiest;
         private System.Windows.Forms.Button btFavoriet;
         private System.Windows.Forms.Button btEdit;
+        private System.Windows.Forms.WebBrowser wbYoutube;
+        private System.Windows.Forms.PictureBox trackImage;
     }
 }

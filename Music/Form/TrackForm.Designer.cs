@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TrackForm));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.cbalbum = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.tbtitel = new System.Windows.Forms.TextBox();
@@ -55,6 +55,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -111,15 +112,6 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "Taal";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(319, 120);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(66, 13);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Youtube link";
-            // 
             // cbalbum
             // 
             this.cbalbum.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -168,7 +160,7 @@
             // 
             // tbyoutube
             // 
-            this.tbyoutube.Location = new System.Drawing.Point(391, 117);
+            this.tbyoutube.Location = new System.Drawing.Point(497, 120);
             this.tbyoutube.Name = "tbyoutube";
             this.tbyoutube.Size = new System.Drawing.Size(156, 20);
             this.tbyoutube.TabIndex = 15;
@@ -290,11 +282,21 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(319, 123);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(178, 13);
+            this.label11.TabIndex = 29;
+            this.label11.Text = "http://www.youtube.com/watch?v=";
+            // 
             // TrackForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(615, 285);
+            this.ClientSize = new System.Drawing.Size(708, 315);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -314,14 +316,15 @@
             this.Controls.Add(this.tbtitel);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.cbalbum);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TrackForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Track";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -336,7 +339,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cbalbum;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox tbtitel;
@@ -357,5 +359,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label11;
     }
 }

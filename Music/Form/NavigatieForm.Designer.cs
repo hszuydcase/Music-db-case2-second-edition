@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NavigatieForm));
             this.btcat = new System.Windows.Forms.Button();
             this.bttra = new System.Windows.Forms.Button();
             this.btband = new System.Windows.Forms.Button();
@@ -57,7 +58,7 @@
             this.btcat.Location = new System.Drawing.Point(760, 174);
             this.btcat.Name = "btcat";
             this.btcat.Size = new System.Drawing.Size(75, 23);
-            this.btcat.TabIndex = 0;
+            this.btcat.TabIndex = 8;
             this.btcat.Text = "Categorie";
             this.btcat.UseVisualStyleBackColor = true;
             this.btcat.Click += new System.EventHandler(this.btcat_Click);
@@ -67,7 +68,7 @@
             this.bttra.Location = new System.Drawing.Point(760, 203);
             this.bttra.Name = "bttra";
             this.bttra.Size = new System.Drawing.Size(75, 23);
-            this.bttra.TabIndex = 1;
+            this.bttra.TabIndex = 9;
             this.bttra.Text = "Track";
             this.bttra.UseVisualStyleBackColor = true;
             this.bttra.Click += new System.EventHandler(this.bttra_Click);
@@ -77,7 +78,7 @@
             this.btband.Location = new System.Drawing.Point(760, 145);
             this.btband.Name = "btband";
             this.btband.Size = new System.Drawing.Size(75, 23);
-            this.btband.TabIndex = 2;
+            this.btband.TabIndex = 7;
             this.btband.Text = "Band";
             this.btband.UseVisualStyleBackColor = true;
             this.btband.Click += new System.EventHandler(this.btband_Click);
@@ -87,7 +88,7 @@
             this.btart.Location = new System.Drawing.Point(760, 116);
             this.btart.Name = "btart";
             this.btart.Size = new System.Drawing.Size(75, 23);
-            this.btart.TabIndex = 3;
+            this.btart.TabIndex = 6;
             this.btart.Text = "Artiest";
             this.btart.UseVisualStyleBackColor = true;
             this.btart.Click += new System.EventHandler(this.btart_Click);
@@ -106,7 +107,7 @@
             this.button1.Location = new System.Drawing.Point(760, 87);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
+            this.button1.TabIndex = 5;
             this.button1.Text = "Album";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -125,7 +126,7 @@
             this.btAlbum.Location = new System.Drawing.Point(12, 87);
             this.btAlbum.Name = "btAlbum";
             this.btAlbum.Size = new System.Drawing.Size(75, 23);
-            this.btAlbum.TabIndex = 8;
+            this.btAlbum.TabIndex = 0;
             this.btAlbum.Text = "Album";
             this.btAlbum.UseVisualStyleBackColor = true;
             this.btAlbum.Click += new System.EventHandler(this.btAlbum_Click);
@@ -135,7 +136,7 @@
             this.btartiest.Location = new System.Drawing.Point(12, 116);
             this.btartiest.Name = "btartiest";
             this.btartiest.Size = new System.Drawing.Size(75, 23);
-            this.btartiest.TabIndex = 9;
+            this.btartiest.TabIndex = 1;
             this.btartiest.Text = "Artiest";
             this.btartiest.UseVisualStyleBackColor = true;
             this.btartiest.Click += new System.EventHandler(this.btartiest_Click);
@@ -145,7 +146,7 @@
             this.btbandview.Location = new System.Drawing.Point(12, 145);
             this.btbandview.Name = "btbandview";
             this.btbandview.Size = new System.Drawing.Size(75, 23);
-            this.btbandview.TabIndex = 10;
+            this.btbandview.TabIndex = 2;
             this.btbandview.Text = "Band";
             this.btbandview.UseVisualStyleBackColor = true;
             this.btbandview.Click += new System.EventHandler(this.btbandview_Click);
@@ -155,7 +156,7 @@
             this.btcatview.Location = new System.Drawing.Point(13, 174);
             this.btcatview.Name = "btcatview";
             this.btcatview.Size = new System.Drawing.Size(75, 23);
-            this.btcatview.TabIndex = 11;
+            this.btcatview.TabIndex = 3;
             this.btcatview.Text = "Categorie";
             this.btcatview.UseVisualStyleBackColor = true;
             this.btcatview.Click += new System.EventHandler(this.btcatview_Click);
@@ -165,7 +166,7 @@
             this.bttrack.Location = new System.Drawing.Point(12, 203);
             this.bttrack.Name = "bttrack";
             this.bttrack.Size = new System.Drawing.Size(75, 23);
-            this.bttrack.TabIndex = 12;
+            this.bttrack.TabIndex = 4;
             this.bttrack.Text = "Track";
             this.bttrack.UseVisualStyleBackColor = true;
             this.bttrack.Click += new System.EventHandler(this.bttrack_Click);
@@ -185,7 +186,9 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.Silver;
             this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(13, 247);
             this.dataGridView1.MultiSelect = false;
@@ -257,9 +260,9 @@
             this.Controls.Add(this.btcat);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "NavigatieForm";
-            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NavigatieForm";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.NavigatieForm_FormClosed_1);
