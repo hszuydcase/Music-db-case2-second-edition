@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewTrackForm));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -53,6 +54,8 @@
             this.btFavoriet = new System.Windows.Forms.Button();
             this.btEdit = new System.Windows.Forms.Button();
             this.wbYoutube = new System.Windows.Forms.WebBrowser();
+            this.trackImage = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.trackImage)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -281,11 +284,23 @@
             this.wbYoutube.Size = new System.Drawing.Size(560, 315);
             this.wbYoutube.TabIndex = 28;
             // 
+            // trackImage
+            // 
+            this.trackImage.BackColor = System.Drawing.Color.White;
+            this.trackImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.trackImage.Location = new System.Drawing.Point(333, 18);
+            this.trackImage.Name = "trackImage";
+            this.trackImage.Padding = new System.Windows.Forms.Padding(5);
+            this.trackImage.Size = new System.Drawing.Size(250, 231);
+            this.trackImage.TabIndex = 29;
+            this.trackImage.TabStop = false;
+            // 
             // ViewTrackForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(595, 758);
+            this.Controls.Add(this.trackImage);
             this.Controls.Add(this.wbYoutube);
             this.Controls.Add(this.btEdit);
             this.Controls.Add(this.btFavoriet);
@@ -311,9 +326,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ViewTrackForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewTrackForm";
+            ((System.ComponentModel.ISupportInitialize)(this.trackImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -346,5 +363,6 @@
         private System.Windows.Forms.Button btFavoriet;
         private System.Windows.Forms.Button btEdit;
         private System.Windows.Forms.WebBrowser wbYoutube;
+        private System.Windows.Forms.PictureBox trackImage;
     }
 }

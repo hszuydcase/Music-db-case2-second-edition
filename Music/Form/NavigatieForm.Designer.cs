@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NavigatieForm));
             this.btcat = new System.Windows.Forms.Button();
             this.bttra = new System.Windows.Forms.Button();
             this.btband = new System.Windows.Forms.Button();
@@ -259,9 +260,9 @@
             this.Controls.Add(this.btcat);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "NavigatieForm";
-            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NavigatieForm";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.NavigatieForm_FormClosed_1);

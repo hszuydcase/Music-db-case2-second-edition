@@ -28,7 +28,7 @@ namespace Music
             Album album = new Album();
             Image plaatje = new Image();
 
-            string name = plaatje.GetPath();
+            string name = plaatje.GetImage();
 
             album.CreateAlbum(inputDatum.Text,inputNaam.Text, inputMedium.SelectedText, name);
             plaatje.Saveimage(openFileDialog1);

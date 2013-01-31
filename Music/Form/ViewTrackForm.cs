@@ -20,28 +20,41 @@ namespace Music
         public ViewTrackForm()
         {
             InitializeComponent();
-
-
             
-
             SQLService sql = new SQLService();
 
             int track_id = track.GetTrackId();
             string gebruikersnaam = user.GetUsername();
 
             // Track en Categorie
-            string command ="SELECT Track.track_id, Track.titel, Track.lengte, Track.datum_uitgebracht, Track.producer, Track.taal, Track.youtube_link, categorie.cat_naam " +
+            string command ="SELECT Track.track_id, Track.titel, Track.lengte, Track.datum_uitgebracht, Track.producer, Track.taal, Track.youtube_link, categorie.cat_naam, Track.track_image " +
                             "FROM Track INNER JOIN cat_tra ON Track.track_id = cat_tra.track_id INNER JOIN categorie ON cat_tra.cat_id = categorie.cat_id " +
                             "WHERE (Track.track_id = "+ track_id +")";
    
             string [] list = sql.GetAllElements(command);
 
             lbTitel.Text = list[1];
+            this.Text = list[1];
             lbLengte.Text = list[2];
             lbDatum.Text = list[3];
             lbProducer.Text = list[4];
             lbTaal.Text = list[5];
             lbCategorie.Text = list[7];
+            
+         
+            //Image
+
+            if (list[8] != "")
+            {
+                Image plaatje = new Image();
+                string path = plaatje.GetPath() + "\\"+ list[8];
+                trackImage.SizeMode = PictureBoxSizeMode.StretchImage;
+                trackImage.Image = new Bitmap(path);
+            }
+            else
+            {
+                trackImage.Hide();
+            }
 
             //Youtube
             if (list[6] != "")

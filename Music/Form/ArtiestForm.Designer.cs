@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ArtiestForm));
             this.bt_add = new System.Windows.Forms.Button();
             this.bt_annuleren = new System.Windows.Forms.Button();
             this.tbartiestennaam = new System.Windows.Forms.TextBox();
@@ -207,6 +208,7 @@
             this.Controls.Add(this.tbartiestennaam);
             this.Controls.Add(this.bt_annuleren);
             this.Controls.Add(this.bt_add);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ArtiestForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Artiest";

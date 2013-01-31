@@ -12,7 +12,7 @@ namespace Music
 {
     public class Image
     {
-        private string path;
+        private string image, path = Path.GetDirectoryName(Application.ExecutablePath) + @"\images";
 
         public void Saveimage(OpenFileDialog openFileDialog)
         {
@@ -35,7 +35,7 @@ namespace Music
 
                 //Kopieren kan beginnen.
                 File.Copy(sourceFile, Path.Combine(destinationPath, strFileName), true);
-                this.path = strFileName;
+                this.image = strFileName;
             }
             catch (Exception exc)
             {
@@ -44,6 +44,10 @@ namespace Music
             }
         }
 
+        public string GetImage()
+        {
+            return this.image;
+        }
         public string GetPath()
         {
             return this.path;
