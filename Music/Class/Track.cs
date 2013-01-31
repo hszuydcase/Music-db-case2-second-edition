@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.OleDb;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -43,15 +44,10 @@ namespace Music
             try
             {
                 SQLService sqlService = new SQLService();
-
+                Categorie cat = new Categorie();
+                Album alb = new Album();
                 DateTime datrelease = new DateTime();
-                DateTime lengtetrack = new DateTime();
-                string lengteformat = "HH:MM:SS";
-                string format = "dd/MM/yyyy";
-                Object lul = new object();
-                lul = combocat.SelectedValue;
-                Object lul2 = new object();
-                lul2 = comboalbum.SelectedValue;
+                string format = "dd/MM/yyyy";;
                 if (!DateTime.TryParseExact(datumuitgebracht, format, CultureInfo.InvariantCulture,
                                             DateTimeStyles.None, out datrelease))
                 {
@@ -63,11 +59,13 @@ namespace Music
                     throw new NullReferenceException("Alle velden moeten worden ingevult.");
                 }
                 sqlService.Insert(
-                    "INSERT INTO track (lengte, titel, datum_uitgebracht, producer, taal, youtube_link, image) VALUES ('" + lengte + "','" +
+                    "INSERT INTO track (lengte, titel, datum_uitgebracht, producer, taal, youtube_link, track_image) VALUES ('" + lengte + "','" +
                     titel + "','" + datrelease + "','" + producer + "','" + taal + "','" + youtubelink + "', '"+ image +"' )");
-                sqlService.Insert("INSERT INTO cat_tra (cat_id, track_id) VALUES ('" + lul +  "','" + "1" + "')");
-                sqlService.Insert("INSERT INTO alb_tra (album_id,track_id) VALUES ('" + lul2 + "','" + "1" + "')");
-                 
+                sqlService.Insert("INSERT INTO cat_tra (cat_id, track_id) VALUES ('" + cat.Getcatid(combocat) + "','" +
+                                  SelectHighestTrackId() + "')");
+                sqlService.Insert("INSERT INTO alb_tra (album_id, track_id) VALUES ('" + alb.GetAlbumId(comboalbum) + "','" +SelectHighestTrackId() +"' )");
+                
+
             }
 
             catch (NullReferenceException obj)
@@ -108,8 +106,11 @@ namespace Music
         {
             this._current_track_id = id;
         }
-
-   
-
+        public int SelectHighestTrackId()
+        {
+            SQLService sqlService = new SQLService();
+            int trackid = Convert.ToInt32(sqlService.ReturnFirstValue("SELECT MAX(track_id) AS maxid FROM Track"));
+            return trackid;
+        }
     }
 }

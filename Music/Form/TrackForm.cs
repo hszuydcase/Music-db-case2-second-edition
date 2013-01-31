@@ -12,6 +12,7 @@ namespace Music
 {
     public partial class TrackForm : Form
     {
+        private Track track = Track.Instance;
         public TrackForm()
         {
             InitializeComponent();
@@ -38,7 +39,6 @@ namespace Music
         }
         private void btAdd_Click(object sender, EventArgs e)
         {
-            Track track = Track.Instance;
             Image plaatje = new Image();
 
             string name = plaatje.GetImage();
@@ -68,6 +68,12 @@ namespace Music
         {
             CategorieForm form = new CategorieForm();
             form.ShowDialog();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Categorie cat = new Categorie();
+            cat.Getcatid(cbcategorie);
         }
     }
 }

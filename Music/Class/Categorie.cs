@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace Music
 {
@@ -35,5 +36,15 @@ namespace Music
                 MessageBox.Show(obj.Message);
             }
         }
+                    public int Getcatid(ComboBox combo)
+                    {
+                        SQLService sqlService = new SQLService();
+                        int catid =
+                            Convert.ToInt32(
+                                sqlService.ReturnFirstValue(
+                                    "SELECT cat_id, cat_naam FROM categorie WHERE (cat_naam = '" +
+                                    combo.SelectedValue + "')"));
+                        return catid;
+                    }
     }
 }
