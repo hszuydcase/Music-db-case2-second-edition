@@ -65,6 +65,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\Categorie.cs" />
+    <Compile Include="Form\EditTrackForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\EditTrackForm.Designer.cs">
+      <DependentUpon>EditTrackForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\SearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\SearchForm.Designer.cs">
+      <DependentUpon>SearchForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Class\User.cs" />
     <Compile Include="Class\Album.cs" />
     <Compile Include="Class\Artiest.cs" />
@@ -78,6 +90,7 @@
     </Compile>
     <Compile Include="Class\Image.cs" />
     <Compile Include="Class\Favoriet.cs" />
+    <Compile Include="Class\Search.cs" />
     <Compile Include="TestClassView.cs" />
     <Compile Include="TestFormCBview.cs">
       <SubType>Form</SubType>

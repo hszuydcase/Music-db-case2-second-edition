@@ -25,13 +25,16 @@ namespace Music
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //Album album = new Album();
+            Album album = new Album();
+<<<<<<< HEAD
+            album.CreateAlbum(inputDatum.Text,inputNaam.Text, inputMedium.SelectedText);
+=======
             Image plaatje = new Image();
-
-            string name = plaatje.GetImage();
-
-            album.CreateAlbum(inputDatum.Text,inputNaam.Text, inputMedium.SelectedText, name);
+            plaatje.Saveimage(openFileDialog1);
+            string name = plaatje.GetPath();
+            album.CreateAlbum(inputDatum.Text, inputNaam.Text, inputMedium.Text,name);
             
+>>>>>>> 80b507fa36ed4a634d072ad75856c5b5b4c55ec1
         }
 
         private void btbrowse_Click(object sender, EventArgs e)

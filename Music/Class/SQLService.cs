@@ -278,6 +278,7 @@ namespace Music
             
             DataTable dt = new DataTable();
             adapter.Fill(dt);
+            dt.Rows.Add(dt);
             comboBox.DataSource = dt;
             comboBox.DisplayMember = kolomnaamshow;
             comboBox.ValueMember = kolomnaamid;
