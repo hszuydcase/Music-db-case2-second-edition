@@ -275,6 +275,7 @@
             this.btEdit.TabIndex = 27;
             this.btEdit.Text = "Bewerk";
             this.btEdit.UseVisualStyleBackColor = true;
+            this.btEdit.Click += new System.EventHandler(this.btEdit_Click);
             // 
             // wbYoutube
             // 

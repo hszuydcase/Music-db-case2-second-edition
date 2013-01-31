@@ -212,6 +212,9 @@
     <EmbeddedResource Include="Form\CategorieForm.resx">
       <DependentUpon>CategorieForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\EditTrackForm.resx">
+      <DependentUpon>EditTrackForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>

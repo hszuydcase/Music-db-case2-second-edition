@@ -111,5 +111,11 @@ namespace Music
             Favoriet fav = new Favoriet();
             fav.BtFavoriet();
         }
+
+        private void btEdit_Click(object sender, EventArgs e)
+        {
+            EditTrackForm edit = new EditTrackForm();
+            edit.ShowDialog();
+        }
     }
 }
