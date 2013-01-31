@@ -161,6 +161,7 @@
             this.Controls.Add(this.btCancel);
             this.Controls.Add(this.btRegistreer);
             this.Name = "RegistreerForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegistreerForm";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -48,20 +48,23 @@
             // 
             // bt_add
             // 
-            this.bt_add.Location = new System.Drawing.Point(313, 328);
+            this.bt_add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.bt_add.Location = new System.Drawing.Point(363, 340);
             this.bt_add.Name = "bt_add";
             this.bt_add.Size = new System.Drawing.Size(75, 23);
-            this.bt_add.TabIndex = 0;
+            this.bt_add.TabIndex = 8;
             this.bt_add.Text = "Add";
             this.bt_add.UseVisualStyleBackColor = true;
             this.bt_add.Click += new System.EventHandler(this.bt_add_Click);
             // 
             // bt_annuleren
             // 
-            this.bt_annuleren.Location = new System.Drawing.Point(164, 328);
+            this.bt_annuleren.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.bt_annuleren.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.bt_annuleren.Location = new System.Drawing.Point(453, 340);
             this.bt_annuleren.Name = "bt_annuleren";
             this.bt_annuleren.Size = new System.Drawing.Size(75, 23);
-            this.bt_annuleren.TabIndex = 1;
+            this.bt_annuleren.TabIndex = 7;
             this.bt_annuleren.Text = "Annuleren";
             this.bt_annuleren.UseVisualStyleBackColor = true;
             this.bt_annuleren.Click += new System.EventHandler(this.bt_annuleren_Click);
@@ -71,42 +74,42 @@
             this.tbartiestennaam.Location = new System.Drawing.Point(112, 30);
             this.tbartiestennaam.Name = "tbartiestennaam";
             this.tbartiestennaam.Size = new System.Drawing.Size(147, 20);
-            this.tbartiestennaam.TabIndex = 2;
+            this.tbartiestennaam.TabIndex = 0;
             // 
             // tbvoornaam
             // 
             this.tbvoornaam.Location = new System.Drawing.Point(112, 72);
             this.tbvoornaam.Name = "tbvoornaam";
             this.tbvoornaam.Size = new System.Drawing.Size(147, 20);
-            this.tbvoornaam.TabIndex = 3;
+            this.tbvoornaam.TabIndex = 1;
             // 
             // tbachternaam
             // 
             this.tbachternaam.Location = new System.Drawing.Point(112, 118);
             this.tbachternaam.Name = "tbachternaam";
             this.tbachternaam.Size = new System.Drawing.Size(147, 20);
-            this.tbachternaam.TabIndex = 4;
+            this.tbachternaam.TabIndex = 2;
             // 
             // tbgebplaats
             // 
             this.tbgebplaats.Location = new System.Drawing.Point(112, 210);
             this.tbgebplaats.Name = "tbgebplaats";
             this.tbgebplaats.Size = new System.Drawing.Size(147, 20);
-            this.tbgebplaats.TabIndex = 6;
+            this.tbgebplaats.TabIndex = 4;
             // 
             // tbgebland
             // 
             this.tbgebland.Location = new System.Drawing.Point(112, 256);
             this.tbgebland.Name = "tbgebland";
             this.tbgebland.Size = new System.Drawing.Size(147, 20);
-            this.tbgebland.TabIndex = 7;
+            this.tbgebland.TabIndex = 5;
             // 
             // tbbiografie
             // 
             this.tbbiografie.Location = new System.Drawing.Point(287, 76);
             this.tbbiografie.Name = "tbbiografie";
             this.tbbiografie.Size = new System.Drawing.Size(250, 204);
-            this.tbbiografie.TabIndex = 8;
+            this.tbbiografie.TabIndex = 6;
             this.tbbiografie.Text = "";
             // 
             // label1
@@ -178,13 +181,15 @@
             this.tbgebdat.Mask = "00/00/0000";
             this.tbgebdat.Name = "tbgebdat";
             this.tbgebdat.Size = new System.Drawing.Size(147, 20);
-            this.tbgebdat.TabIndex = 16;
+            this.tbgebdat.TabIndex = 3;
             this.tbgebdat.ValidatingType = typeof(System.DateTime);
             // 
             // ArtiestForm
             // 
+            this.AcceptButton = this.bt_add;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.bt_annuleren;
             this.ClientSize = new System.Drawing.Size(549, 375);
             this.Controls.Add(this.tbgebdat);
             this.Controls.Add(this.label7);
@@ -203,6 +208,7 @@
             this.Controls.Add(this.bt_annuleren);
             this.Controls.Add(this.bt_add);
             this.Name = "ArtiestForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Artiest";
             this.ResumeLayout(false);
             this.PerformLayout();

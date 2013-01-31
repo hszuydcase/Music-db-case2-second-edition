@@ -19,7 +19,6 @@ namespace Music
         public NavigatieForm()
         {
             InitializeComponent();
-            this.WindowState = FormWindowState.Maximized;
             lbUsername.Text = "Username:" + user.GetUsername() + "\r\nId:" + Convert.ToString(user.GetId());
             dataGridView1.Width = this.Width;
         }

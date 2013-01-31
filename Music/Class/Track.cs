@@ -38,7 +38,7 @@ namespace Music
         /// <param name="producer"></param>
         /// <param name="taal"></param>
         /// <param name="youtubelink"></param>
-        public void CreateTrack(string titel, string lengte, string datumuitgebracht, string producer, string taal, string youtubelink, string categorie, string album, ComboBox combocat, ComboBox comboalbum)
+        public void CreateTrack(string titel, string lengte, string datumuitgebracht, string producer, string taal, string youtubelink, string categorie, string album, ComboBox combocat, ComboBox comboalbum, string image)
         {
             try
             {
@@ -63,8 +63,8 @@ namespace Music
                     throw new NullReferenceException("Alle velden moeten worden ingevult.");
                 }
                 sqlService.Insert(
-                    "INSERT INTO track (lengte, titel, datum_uitgebracht, producer, taal, youtube_link) VALUES ('" + lengte + "','" +
-                    titel + "','" + datrelease + "','" + producer + "','" + taal + "','" + youtubelink + "')");
+                    "INSERT INTO track (lengte, titel, datum_uitgebracht, producer, taal, youtube_link, image) VALUES ('" + lengte + "','" +
+                    titel + "','" + datrelease + "','" + producer + "','" + taal + "','" + youtubelink + "', '"+ image +"' )");
                 sqlService.Insert("INSERT INTO cat_tra (cat_id, track_id) VALUES ('" + lul +  "','" + "1" + "')");
                 sqlService.Insert("INSERT INTO alb_tra (album_id,track_id) VALUES ('" + lul2 + "','" + "1" + "')");
                  

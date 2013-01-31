@@ -20,6 +20,10 @@ namespace Music
         public ViewTrackForm()
         {
             InitializeComponent();
+
+
+            
+
             SQLService sql = new SQLService();
 
             int track_id = track.GetTrackId();
@@ -37,8 +41,19 @@ namespace Music
             lbDatum.Text = list[3];
             lbProducer.Text = list[4];
             lbTaal.Text = list[5];
-            lbYoutube.Text = list[6];
             lbCategorie.Text = list[7];
+
+            //Youtube
+            if (list[6] != "")
+            {
+                wbYoutube.Navigate("http://www.youtube.com/embed/"+ list[6] +"");
+            }
+            else
+            {
+                this.Height = this.Height -300;
+                wbYoutube.Hide();
+            }
+            
 
             // Album
 

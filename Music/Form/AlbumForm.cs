@@ -26,10 +26,12 @@ namespace Music
         private void button2_Click(object sender, EventArgs e)
         {
             Album album = new Album();
-            album.CreateAlbum(inputDatum.Text,inputNaam.Text, inputMedium.SelectedText);
-            plaatje.Saveimage(openFileDialog1);
+            Image plaatje = new Image();
+
             string name = plaatje.GetPath();
-            album.CreateAlbum(inputDatum.Text, inputNaam.Text, inputMedium.Text,name);
+
+            album.CreateAlbum(inputDatum.Text,inputNaam.Text, inputMedium.SelectedText, name);
+            plaatje.Saveimage(openFileDialog1);
             
         }
 
