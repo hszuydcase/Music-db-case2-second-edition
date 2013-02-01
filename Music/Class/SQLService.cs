@@ -268,9 +268,7 @@ namespace Music
         /// </summary>
         /// <param name="query">query</param>
         /// <param name="comboBox">de betreffende combobox</param>
-        /// <param name="kolomnaamshow">de naam van de kollom die de combobox als visuele waardes moet geven</param>
-        /// <param name="kolomnaamid">de naam van de kollow waarin de id's staan gekopelt aan de visuele waardes</param>
-        public void Fillcombo(string query,ComboBox comboBox ,string kolomnaamshow, string kolomnaamid, bool leeg)
+        public void Fillcombo(string query,ComboBox comboBox, bool leeg)
         {
 
             // Open de database connectie.
@@ -305,6 +303,45 @@ namespace Music
             Olecommand.Dispose();
             connectie.Close();
         }
+
+        /// <summary>
+        /// METHODE OM een Checkedlist te vullen.
+        /// </summary>
+        /// <param name="query">QUERY</param>
+        /// <param name="checkedList">Specificeer welke checklistbox gevuld moet worden.</param>
+        public void FillCheckedList(string query, CheckedListBox checkedList)
+        {
+
+            // Open de database connectie.
+            OleDbCommand Olecommand = new OleDbCommand();
+            connectie.Open();
+
+            Olecommand.Connection = connectie;
+            Olecommand.CommandText = query;
+            OleDbDataReader reader = Olecommand.ExecuteReader();
+
+            // Initialiseer de variabelen.
+            string value;
+
+            //Lees de gegevens uit en zet het in een array zodat we deze kunnen gebruiken. 
+            while (reader.Read())
+            {
+
+                value = Convert.ToString(reader.GetValue(0));
+                checkedList.Items.Add(value, false);
+
+
+            }
+
+
+
+
+            // Close de reader en database en return de list.
+            reader.Close();
+            Olecommand.Dispose();
+            connectie.Close();
+        }
+
 
         /// <summary>
         /// Vul een listbox
