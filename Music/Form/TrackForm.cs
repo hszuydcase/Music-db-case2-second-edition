@@ -51,7 +51,7 @@ namespace Music
 
             plaatje.Saveimage(openFileDialog1);
             track.CreateTrack(tbtitel.Text, tblengte.Text, tbdatrelease.Text, tbproducer.Text, tbtaal.Text,
-                tbyoutube.Text, cbcategorie.Text, cbalbum.Text, name);
+                tbyoutube.Text, cbcategorie.Text, cbalbum.Text, name, artiesten);
         }
 
         private void btannuleren_Click(object sender, EventArgs e)

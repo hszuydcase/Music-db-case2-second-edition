@@ -46,6 +46,7 @@ namespace Music
                 SQLService sqlService = new SQLService();
                 Categorie cat = new Categorie();
                 Album alb = new Album();
+                Artiest artist = new Artiest();
                 DateTime datrelease = new DateTime();
                 string format = "dd/MM/yyyy";;
                 if (!DateTime.TryParseExact(datumuitgebracht, format, CultureInfo.InvariantCulture,
@@ -54,7 +55,7 @@ namespace Music
                     throw new FormatException("Dit is geen geldige datum: dd/mm/yyyy");
                 }
 
-                if (titel == "" || lengte == "" || datumuitgebracht == "" || producer == "" || taal == "" || youtubelink == "" || categorie == "" || album == "")
+                if (titel == "" || lengte == "" || datumuitgebracht == "" || producer == "" || taal == "" || categorie == "" || artiesten[0] == "")
                 {
                     throw new NullReferenceException("Alle velden moeten worden ingevult.");
                 }
@@ -67,7 +68,8 @@ namespace Music
 
                 foreach (string artiest in artiesten)
                 {
-                    sqlService.Insert("INSERT INTO art_tra (track_id, artiest_id) VALUES ('" + SelectHighestTrackId() + "', '"+   +"') ");
+                    sqlService.Insert("INSERT INTO art_tra (track_id, artiest_id) VALUES ('" + SelectHighestTrackId() +
+                                      "', '" + artist.GetArtiestId(artiest)  +"') ");
                 }
 
             }

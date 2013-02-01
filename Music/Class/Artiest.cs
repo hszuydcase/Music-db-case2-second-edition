@@ -52,7 +52,7 @@ namespace Music
            int artiestid =
                Convert.ToInt32(
                    sqlService.ReturnFirstValue(
-                       "SELECT artiest FROM artiest WHERE (artiest_naam = '" +
+                       "SELECT artiest_id FROM artiest WHERE (artiest_naam = '" +
                        combo + "')"));
            return artiestid;
        }
