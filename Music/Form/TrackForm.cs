@@ -42,10 +42,9 @@ namespace Music
             Image plaatje = new Image();
 
             string name = plaatje.GetImage();
-            string aidsgedoe = cbalbum.Text;
             plaatje.Saveimage(openFileDialog1);
             track.CreateTrack(tbtitel.Text, tblengte.Text, tbdatrelease.Text, tbproducer.Text, tbtaal.Text,
-                tbyoutube.Text, cbcategorie.Text, cbalbum.Text, name );
+                tbyoutube.Text, cbcategorie.Text, cbalbum.Text, name);
         }
 
         private void btannuleren_Click(object sender, EventArgs e)

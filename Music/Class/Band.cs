@@ -56,6 +56,17 @@ namespace Music
             {
                 MessageBox.Show(obj.Message);
             }
+
+        }
+        public int GetbandId(string combo)
+        {
+            SQLService sqlService = new SQLService();
+            int bandid =
+                Convert.ToInt32(
+                    sqlService.ReturnFirstValue(
+                        "SELECT band_id FROM band WHERE (band_naam = '" +
+                        combo + "')"));
+            return bandid;
         }
     }
 }

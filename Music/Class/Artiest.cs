@@ -46,5 +46,15 @@ namespace Music
                 MessageBox.Show(obj.Message);
             }
         }
+       public int GetArtiestId(string combo)
+       {
+           SQLService sqlService = new SQLService();
+           int artiestid =
+               Convert.ToInt32(
+                   sqlService.ReturnFirstValue(
+                       "SELECT artiest FROM artiest WHERE (artiest_naam = '" +
+                       combo + "')"));
+           return artiestid;
+       }
     }
 }
