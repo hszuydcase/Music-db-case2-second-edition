@@ -38,12 +38,22 @@ namespace Music
         }
                     public int Getcatid(string combo)
                     {
+                        
                         SQLService sqlService = new SQLService();
-                        int catid =
-                            Convert.ToInt32(
-                                sqlService.ReturnFirstValue(
-                                    "SELECT cat_id, cat_naam FROM categorie WHERE (cat_naam = '" +
-                                    combo + "')"));
+                        int catid;
+                        if (combo == "" || combo == " ")
+                        {
+                            catid = 0;
+                        }
+                        else
+                        {
+
+                             catid =
+                                Convert.ToInt32(
+                                    sqlService.ReturnFirstValue(
+                                        "SELECT cat_id, cat_naam FROM categorie WHERE (cat_naam = '" +
+                                        combo + "')"));
+                        }
                         return catid;
                     }
     }

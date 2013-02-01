@@ -293,7 +293,7 @@ namespace Music
             }
             if (leeg)
             {
-                comboBox.Items.Add(" ");
+                comboBox.Items.Add("");
             }
             
 
@@ -303,6 +303,7 @@ namespace Music
             Olecommand.Dispose();
             connectie.Close();
         }
+
 
         /// <summary>
         /// METHODE OM een Checkedlist te vullen.

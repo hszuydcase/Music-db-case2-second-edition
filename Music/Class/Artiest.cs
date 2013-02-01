@@ -10,7 +10,7 @@ namespace Music
 {
     public class Artiest
     {
-       public void CreateArtist(string artiestennaam, string voornaam, string achternaam, string geboortedatum, string geboorteplaats)
+       public void CreateArtist(string artiestennaam, string voornaam, string achternaam, string geboortedatum, string geboorteplaats, string geboorteland)
        {
                     try
             {
@@ -29,8 +29,8 @@ namespace Music
                 {
                     throw new NullReferenceException("Alle velden moeten worden ingevult.");
                 }
-                    sqlService.Insert("INSERT INTO artiest (artiest_naam,voornaam,achternaam,geb_datum,geb_plaats) VALUES ('" + artiestennaam + "','" +
-                                      voornaam + "','" + achternaam + "','" + geboortedatum + "','" + geboorteplaats +"')");
+                    sqlService.Insert("INSERT INTO artiest (artiest_naam,voornaam,achternaam,geb_datum,geb_plaats, geb_land) VALUES ('" + artiestennaam + "','" +
+                                      voornaam + "','" + achternaam + "','" + geb_dat + "',  '" + geboorteplaats + "',  '" + geboorteland + "')");
             }
 
             catch (NullReferenceException obj)

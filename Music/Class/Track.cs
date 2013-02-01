@@ -48,7 +48,7 @@ namespace Music
                 Album alb = new Album();
                 Artiest artist = new Artiest();
                 DateTime datrelease = new DateTime();
-                string format = "dd/MM/yyyy";;
+                string format = "dd/MM/yyyy";
                 if (!DateTime.TryParseExact(datumuitgebracht, format, CultureInfo.InvariantCulture,
                                             DateTimeStyles.None, out datrelease))
                 {

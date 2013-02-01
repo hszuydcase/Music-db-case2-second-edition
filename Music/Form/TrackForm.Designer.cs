@@ -51,12 +51,18 @@
             this.tbdatrelease = new System.Windows.Forms.MaskedTextBox();
             this.tblengte = new System.Windows.Forms.MaskedTextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.cbartiest = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.chkArtiest = new System.Windows.Forms.CheckedListBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -117,7 +123,7 @@
             // 
             this.cbalbum.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbalbum.FormattingEnabled = true;
-            this.cbalbum.Location = new System.Drawing.Point(391, 161);
+            this.cbalbum.Location = new System.Drawing.Point(391, 118);
             this.cbalbum.Name = "cbalbum";
             this.cbalbum.Size = new System.Drawing.Size(156, 21);
             this.cbalbum.TabIndex = 7;
@@ -125,7 +131,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(319, 164);
+            this.label8.Location = new System.Drawing.Point(319, 121);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(36, 13);
             this.label8.TabIndex = 8;
@@ -161,14 +167,14 @@
             // 
             // tbyoutube
             // 
-            this.tbyoutube.Location = new System.Drawing.Point(497, 120);
+            this.tbyoutube.Location = new System.Drawing.Point(391, 248);
             this.tbyoutube.Name = "tbyoutube";
             this.tbyoutube.Size = new System.Drawing.Size(156, 20);
             this.tbyoutube.TabIndex = 15;
             // 
             // btAdd
             // 
-            this.btAdd.Location = new System.Drawing.Point(280, 435);
+            this.btAdd.Location = new System.Drawing.Point(540, 304);
             this.btAdd.Name = "btAdd";
             this.btAdd.Size = new System.Drawing.Size(75, 23);
             this.btAdd.TabIndex = 16;
@@ -178,7 +184,7 @@
             // 
             // btannuleren
             // 
-            this.btannuleren.Location = new System.Drawing.Point(159, 435);
+            this.btannuleren.Location = new System.Drawing.Point(621, 304);
             this.btannuleren.Name = "btannuleren";
             this.btannuleren.Size = new System.Drawing.Size(75, 23);
             this.btannuleren.TabIndex = 17;
@@ -238,24 +244,15 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(319, 206);
+            this.label10.Location = new System.Drawing.Point(319, 163);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(36, 13);
             this.label10.TabIndex = 24;
             this.label10.Text = "Artiest";
             // 
-            // cbartiest
-            // 
-            this.cbartiest.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbartiest.FormattingEnabled = true;
-            this.cbartiest.Location = new System.Drawing.Point(391, 203);
-            this.cbartiest.Name = "cbartiest";
-            this.cbartiest.Size = new System.Drawing.Size(156, 21);
-            this.cbartiest.TabIndex = 25;
-            // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(254, 203);
+            this.button2.Location = new System.Drawing.Point(271, 203);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(42, 21);
             this.button2.TabIndex = 26;
@@ -265,7 +262,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(553, 160);
+            this.button3.Location = new System.Drawing.Point(569, 117);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(42, 21);
             this.button3.TabIndex = 27;
@@ -275,7 +272,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(553, 203);
+            this.button4.Location = new System.Drawing.Point(569, 160);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(42, 21);
             this.button4.TabIndex = 28;
@@ -286,7 +283,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(319, 123);
+            this.label11.Location = new System.Drawing.Point(207, 251);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(178, 13);
             this.label11.TabIndex = 29;
@@ -295,22 +292,105 @@
             // chkArtiest
             // 
             this.chkArtiest.FormattingEnabled = true;
-            this.chkArtiest.Location = new System.Drawing.Point(391, 241);
+            this.chkArtiest.Location = new System.Drawing.Point(391, 160);
             this.chkArtiest.Name = "chkArtiest";
             this.chkArtiest.Size = new System.Drawing.Size(156, 79);
             this.chkArtiest.TabIndex = 30;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Red;
+            this.label12.Location = new System.Drawing.Point(251, 35);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(13, 17);
+            this.label12.TabIndex = 36;
+            this.label12.Text = "*";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Red;
+            this.label7.Location = new System.Drawing.Point(251, 79);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(13, 17);
+            this.label7.TabIndex = 37;
+            this.label7.Text = "*";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Red;
+            this.label13.Location = new System.Drawing.Point(251, 160);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(13, 17);
+            this.label13.TabIndex = 38;
+            this.label13.Text = "*";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Red;
+            this.label14.Location = new System.Drawing.Point(251, 202);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(13, 17);
+            this.label14.TabIndex = 39;
+            this.label14.Text = "*";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.Red;
+            this.label15.Location = new System.Drawing.Point(550, 160);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(13, 17);
+            this.label15.TabIndex = 40;
+            this.label15.Text = "*";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.Red;
+            this.label16.Location = new System.Drawing.Point(550, 79);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(13, 17);
+            this.label16.TabIndex = 41;
+            this.label16.Text = "*";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.Red;
+            this.label17.Location = new System.Drawing.Point(550, 31);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(13, 17);
+            this.label17.TabIndex = 42;
+            this.label17.Text = "*";
             // 
             // TrackForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(708, 486);
+            this.ClientSize = new System.Drawing.Size(708, 339);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.chkArtiest);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.cbartiest);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.tblengte);
             this.Controls.Add(this.tbdatrelease);
@@ -365,11 +445,17 @@
         private System.Windows.Forms.MaskedTextBox tbdatrelease;
         private System.Windows.Forms.MaskedTextBox tblengte;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox cbartiest;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.CheckedListBox chkArtiest;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
     }
 }

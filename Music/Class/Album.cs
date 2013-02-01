@@ -55,11 +55,22 @@ namespace Music
         public int GetAlbumId(string combo)
         {
             SQLService sqlService = new SQLService();
-            int albid =
-                Convert.ToInt32(
-                    sqlService.ReturnFirstValue(
-                        "SELECT album_id, album_naam FROM album WHERE (album_naam = '" +
-                        combo + "')"));
+
+            int albid;
+
+            if (combo == "" || combo == " ")
+            {
+                albid = 0;
+            }
+            else
+            {
+                albid =
+                    Convert.ToInt32(
+                        sqlService.ReturnFirstValue(
+                            "SELECT album_id, album_naam FROM album WHERE (album_naam = '" +
+                            combo + "')"));
+                
+            }
             return albid;
         }
 

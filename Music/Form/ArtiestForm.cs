@@ -21,7 +21,7 @@ namespace Music
         {
             Artiest artiest = new Artiest();
             artiest.CreateArtist(tbartiestennaam.Text, tbvoornaam.Text, tbachternaam.Text, tbgebdat.Text,
-                                 tbgebplaats.Text);
+                                 tbgebplaats.Text, tbgebland.Text);
         }
 
         private void bt_annuleren_Click(object sender, EventArgs e)
