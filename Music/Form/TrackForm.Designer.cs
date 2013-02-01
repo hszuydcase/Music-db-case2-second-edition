@@ -56,7 +56,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
+            this.chkArtiest = new System.Windows.Forms.CheckedListBox();
             this.SuspendLayout();
             // 
             // label1
@@ -168,7 +168,7 @@
             // 
             // btAdd
             // 
-            this.btAdd.Location = new System.Drawing.Point(294, 250);
+            this.btAdd.Location = new System.Drawing.Point(280, 435);
             this.btAdd.Name = "btAdd";
             this.btAdd.Size = new System.Drawing.Size(75, 23);
             this.btAdd.TabIndex = 16;
@@ -178,7 +178,7 @@
             // 
             // btannuleren
             // 
-            this.btannuleren.Location = new System.Drawing.Point(173, 250);
+            this.btannuleren.Location = new System.Drawing.Point(159, 435);
             this.btannuleren.Name = "btannuleren";
             this.btannuleren.Size = new System.Drawing.Size(75, 23);
             this.btannuleren.TabIndex = 17;
@@ -292,22 +292,20 @@
             this.label11.TabIndex = 29;
             this.label11.Text = "http://www.youtube.com/watch?v=";
             // 
-            // button5
+            // chkArtiest
             // 
-            this.button5.Location = new System.Drawing.Point(463, 250);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(52, 33);
-            this.button5.TabIndex = 30;
-            this.button5.Text = "test";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.chkArtiest.FormattingEnabled = true;
+            this.chkArtiest.Location = new System.Drawing.Point(391, 241);
+            this.chkArtiest.Name = "chkArtiest";
+            this.chkArtiest.Size = new System.Drawing.Size(156, 79);
+            this.chkArtiest.TabIndex = 30;
             // 
             // TrackForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(708, 315);
-            this.Controls.Add(this.button5);
+            this.ClientSize = new System.Drawing.Size(708, 486);
+            this.Controls.Add(this.chkArtiest);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -372,6 +370,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.CheckedListBox chkArtiest;
     }
 }

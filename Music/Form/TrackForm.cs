@@ -17,20 +17,14 @@ namespace Music
         {
             InitializeComponent();
             SQLService sqlService = new SQLService();
-            sqlService.Fillcombo("SELECT cat_naam FROM categorie", cbcategorie, "cat_naam","cat_id", false);
-            sqlService.Fillcombo("SELECT album_naam  FROM album", cbalbum, "album_naam","album_id", true);
-            sqlService.Fillcombo("SELECT artiest_naam FROM artiest", cbartiest, "artiest_naam", "artiest_id", false);
+            sqlService.Fillcombo("SELECT cat_naam FROM categorie", cbcategorie, false);
+            sqlService.Fillcombo("SELECT album_naam  FROM album", cbalbum, true);
+            sqlService.FillCheckedList("SELECT artiest_naam FROM artiest", chkArtiest);
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //string startdir = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
-            //openFileDialog1.InitialDirectory = startdir;
-            //if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            //{
-            //    MessageBox.Show(openFileDialog1.FileName);
-            //    tbtrackimage.Text = openFileDialog1.FileName;
-            //}
             DialogResult dlgres = openFileDialog1.ShowDialog();
             if (dlgres != DialogResult.Cancel)
             {
@@ -42,6 +36,19 @@ namespace Music
             Image plaatje = new Image();
 
             string name = plaatje.GetImage();
+            
+            int count = chkArtiest.CheckedItems.Count;
+            string[] artiesten = new string[count];
+            int i = 0;
+
+            foreach (string itemChecked in chkArtiest.CheckedItems)
+            {
+                artiesten[i] = itemChecked;
+                i++;
+            }
+
+            
+
             plaatje.Saveimage(openFileDialog1);
             track.CreateTrack(tbtitel.Text, tblengte.Text, tbdatrelease.Text, tbproducer.Text, tbtaal.Text,
                 tbyoutube.Text, cbcategorie.Text, cbalbum.Text, name);
@@ -70,9 +77,6 @@ namespace Music
             form.ShowDialog();
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-           
-        }
+
     }
 }

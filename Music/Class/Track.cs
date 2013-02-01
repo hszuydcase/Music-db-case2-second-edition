@@ -39,7 +39,7 @@ namespace Music
         /// <param name="producer"></param>
         /// <param name="taal"></param>
         /// <param name="youtubelink"></param>
-        public void CreateTrack(string titel, string lengte, string datumuitgebracht, string producer, string taal, string youtubelink, string categorie, string album, string image)
+        public void CreateTrack(string titel, string lengte, string datumuitgebracht, string producer, string taal, string youtubelink, string categorie, string album, string image, string[] artiesten)
         {
             try
             {
@@ -64,7 +64,11 @@ namespace Music
                 sqlService.Insert("INSERT INTO cat_tra (cat_id, track_id) VALUES ('" + cat.Getcatid(categorie) + "','" +
                                   SelectHighestTrackId() + "')");
                 sqlService.Insert("INSERT INTO alb_tra (album_id, track_id) VALUES ('" + alb.GetAlbumId(album) + "','" +SelectHighestTrackId() +"' )");
-                
+
+                foreach (string artiest in artiesten)
+                {
+                    sqlService.Insert("INSERT INTO art_tra (track_id, artiest_id) VALUES ('" + SelectHighestTrackId() + "', '"+   +"') ");
+                }
 
             }
 
