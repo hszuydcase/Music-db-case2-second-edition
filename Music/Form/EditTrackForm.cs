@@ -47,9 +47,9 @@ namespace Music
             // Comboboxen
 
 
-           // sql.Fillcombo("SELECT cat_naam  FROM categorie", cbCategorie, false);
-           // sql.Fillcombo("SELECT album_naam FROM album", cbAlbum, "album_naam" + " ", "album_id", true);
-           // sql.Fillcombo("SELECT band_naam FROM band", cbBand, "band_naam", "band_id", true);
+            sql.Fillcombo("SELECT cat_naam  FROM categorie", cbCategorie, false);
+            sql.Fillcombo("SELECT album_naam FROM album", cbAlbum, true);
+            sql.Fillcombo("SELECT band_naam FROM band", cbBand, true);
 
             string catnaam = sql.ReturnFirstValue("SELECT categorie.cat_naam FROM Track INNER JOIN cat_tra ON Track.track_id = cat_tra.track_id INNER JOIN categorie ON cat_tra.cat_id = categorie.cat_id WHERE Track.track_id = " + track_id + "");
             cbCategorie.SelectedItem = catnaam;
@@ -75,7 +75,7 @@ namespace Music
             if (tbDatrelease.Text != null || tbLengte.Text != null || tbProducer.Text != null || tbTaal.Text != null || tbTitel.Text != null || tbYoutube.Text != null || tbtrackimage.Text != null)
             {
                            SQLService sqlService = new SQLService();
-            sqlService.Update("UPDATE Track SET titel = "+tbTitel.Text+", lengte ="+tbLengte.Text+", datum_uitgebracht ="+tbDatrelease.Text+", producer ="+tbProducer.Text+", taal ="+tbTaal.Text+", youtube_link ="+tbYoutube.Text+", track_image ="+tbtrackimage.Text);
+            sqlService.Update("UPDATE Track SET titel = '"+tbTitel.Text+"', lengte = '"+tbLengte.Text+"', datum_uitgebracht = '"+tbDatrelease.Text+"', producer = '"+tbProducer.Text+"', taal = '"+tbTaal.Text+"', youtube_link = '"+tbYoutube.Text+"', track_image = '"+tbtrackimage.Text +"' ");
             sqlService.Update("UPDATE cat_tra SET cat_id = " + categorie.Getcatid(catnaam));
             sqlService.Update("UPDATE alb_tra SET album_id =" + album.GetAlbumId(albnaam));
             sqlService.Update("UPDATE band_tra SET band_id =" + band.GetbandId(bandnaam));
