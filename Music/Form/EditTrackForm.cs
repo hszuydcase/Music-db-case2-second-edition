@@ -75,7 +75,7 @@ namespace Music
             if (tbDatrelease.Text != null || tbLengte.Text != null || tbProducer.Text != null || tbTaal.Text != null || tbTitel.Text != null || tbYoutube.Text != null || tbtrackimage.Text != null)
             {
                            SQLService sqlService = new SQLService();
-            sqlService.Update("UPDATE Track SET titel = "+tbTitel.Text+", lengte ="+tbLengte.Text+", datum_uitgebracht ="+tbDatrelease.Text+", producer ="+tbProducer+", taal ="+tbTaal+", youtube_link ="+tbYoutube+", track_image ="+tbtrackimage);
+            sqlService.Update("UPDATE Track SET titel = "+tbTitel.Text+", lengte ="+tbLengte.Text+", datum_uitgebracht ="+tbDatrelease.Text+", producer ="+tbProducer.Text+", taal ="+tbTaal.Text+", youtube_link ="+tbYoutube.Text+", track_image ="+tbtrackimage.Text);
             sqlService.Update("UPDATE cat_tra SET cat_id = " + categorie.Getcatid(catnaam));
             sqlService.Update("UPDATE alb_tra SET album_id =" + album.GetAlbumId(albnaam));
             sqlService.Update("UPDATE band_tra SET band_id =" + band.GetbandId(bandnaam));
